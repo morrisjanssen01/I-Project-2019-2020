@@ -11,7 +11,7 @@
                 <div class="container">
                     <a href="Test.html" class="brand-logo">Logo placeholder</a>
                     <a href="" class="sidenav-trigger" data-target="mobile-menu">
-                        <i class="material-icons">menu</i>
+                        <i class="material-icons">Menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="Test.html">Home</a></li>
@@ -27,7 +27,7 @@
                 <div class="col s12 l4 offset-l4">
                     <div class="card">
                         <div class="card-action warmSand darken-2 white-text">
-                            <h3 class="center">Inloggen</h3>
+                            <h3 class="center">Registreer</h3>
                         </div>
                         <div class="card-content">
                             <div class="form-field">
@@ -35,17 +35,21 @@
                                 <input type="text" id="username">
                             </div><br>
                             <div class="form-field">
-                                <label for="password">Wachtwoord</label>
+                                <label for="password">wachtwoord</label>
                                 <input type="password" id="password">
                             </div><br>
                             <div class="form-field">
+                                <label for="repeat password">Herhaal wachtwoord</label>
+                                <input type="password" id="repeat password">
+                            <div class="form-field">
+                            </div><br>
                                 <label>
                                 <input type="checkbox" id="remember"/>
-                                <span>Wachtwoord onthouden?</span>
+                                <span>Akkoord met voorwaarden</span>
                                 </label>
                             </div><br>
                             <div class="form-field">
-                                <button class="btn-large warmSand darken-2">Inloggen</button>
+                                <button class="btn-large warmSand darken-2">Registreer</button>
                             </div><br>
                         </div>
                     </div>
