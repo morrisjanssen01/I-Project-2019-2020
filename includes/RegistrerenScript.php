@@ -13,19 +13,19 @@
   <form method="post" action="register.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
-  	  <label>Username</label>
+  	  <label>Gebruikersnaam</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">
   	</div>
   	<div class="input-group">
-  	  <label>Email</label>
+  	  <label>E-mailadres</label>
   	  <input type="email" name="email" value="<?php echo $email; ?>">
   	</div>
   	<div class="input-group">
-  	  <label>Password</label>
+  	  <label>Wachtwoord</label>
   	  <input type="password" name="password_1">
   	</div>
   	<div class="input-group">
-  	  <label>Confirm password</label>
+  	  <label>Bevestig Wachtwoord</label>
   	  <input type="password" name="password_2">
   	</div>
   	<div class="input-group">
