@@ -49,21 +49,21 @@
                         <div class="card-content">
                           <form action="../helpers/RegistrerenScript.php" method="post">
                             <div class="form-field">
-                                <label for="username">E-mail</label>
-                                <input type="text" id="username"> 
+                                <label for="mailadress">E-mail</label>
+                                <input type="text" name= "mailadress" id="mailadress"> 
                             </div><br>
                         <div class="card-content">
                             <div class="form-field">
                                 <label for="username">Gebruikersnaam</label>
-                                <input type="text" id="username">
+                                <input type="text" name="username" id="username">
                             </div><br>
                             <div class="form-field">
                                 <label for="password">Wachtwoord</label>
-                                <input type="password" name = password id="password">
+                                <input type="password" name ="password" id="password">
                             </div><br>
                             <div class="form-field">
                                 <label for="repeat password">Bevestig Wachtwoord</label>
-                                <input type="password" id="repeat password">
+                                <input type="password" name="repeat password" id="repeat password">
                             <div class="form-field">
                             </div><br>
                                 <label>
