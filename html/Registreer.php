@@ -21,7 +21,7 @@
        <div class="modal-content">
        <h4>Vragen</h4> 
        <p> Uitleg </p>
-       <div>
+       </div>
         <div class="modal-footer"> 
              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
           </div>
