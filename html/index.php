@@ -8,8 +8,7 @@
     <body>
         <?php include '../includes/header.php';?>
         <h1 class="center">Homepage</h1>
-        <footer class="page-footer">
-        </footer>
+        <?php include '../includes/footer.php';?>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
