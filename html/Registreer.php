@@ -41,6 +41,7 @@
                             <h3 class="center">Registreren</h3>
                         </div>
                         <div class="card-content">
+                          <form action="../helpers/RegistrerenScript.php" method="post">
                             <div class="form-field">
                                 <label for="username">E-mail adress</label>
                                 <input type="text" id="username"> 
@@ -52,7 +53,7 @@
                             </div><br>
                             <div class="form-field">
                                 <label for="password">Wachtwoord</label>
-                                <input type="password" id="password">
+                                <input type="password" name = password id="password">
                             </div><br>
                             <div class="form-field">
                                 <label for="repeat password">Bevestig Wachtwoord</label>
