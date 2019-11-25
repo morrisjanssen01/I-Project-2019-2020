@@ -7,8 +7,8 @@
 
 
         /* stuur de gebruiker naar de homepage als ze een vak niet invullen */
-        if(empty($username) /*|| empty($password)*/){
-            header("Location: ../html/login.php?username");
+        if(empty($username) || empty($password)){
+            redirect('index.php');
             exit;
 
         }
