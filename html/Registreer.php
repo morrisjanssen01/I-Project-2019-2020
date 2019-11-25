@@ -7,14 +7,8 @@
     </head>
     <body>
         <?php include '../includes/header.php'; ?>
-
-
-
-        <!--  <section class="" id= ""> 
-       </section>  -->
-    
-        
-       <a class="waves-effect waves-light btn modal-trigger"  href="#modal1" >Vragen?</a> 
+     <!-- maakt knop -->
+     <a class="waves-effect waves-light btn modal-trigger"  href="#modal1" >Vragen?</a> 
 
     <!-- structuur vraag knop --> 
       <div id="modal1" class="modal">
@@ -48,7 +42,7 @@
                         </div>
                         <div class="card-content">
                             <div class="form-field">
-                                <label for="username">E-mail</label>
+                                <label for="username">E-mail adress</label>
                                 <input type="text" id="username"> 
                             </div><br>
                         <div class="card-content">
