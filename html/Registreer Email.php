@@ -7,6 +7,28 @@
     </head>
     <body>
         <?php include '../includes/header.php'; ?>
+<!-- maakt de knop --> 
+<a class="waves-effect waves-light btn modal-trigger"  href="#modal1" >Vragen?</a> 
+<!-- structuur vraag knop --> 
+<div id="modal1" class="modal">
+       <div class="modal-content">
+       <h4>Registreer handleiding</h4> 
+            <p> 
+       <ol>
+          <li>Vul uw e-mail adress in.</li>
+          <li>Ga naar uw mailbox en klik op de link die in de mail staat. (indien u de mail niet heeft ontvangen ga naar stap 4)</li>
+          <li>Herhaal het wachtwoord dat u gekozen heeft.</li>
+          <li>Lees de voorwaarden die verbonden zijn aan het registreren.</li> 
+          <li>Als u de voorwaarden gelezen heeft en u hiermee akkoord gaat vink de akkoordknop onder aan het scherm aan.</li> 
+          <li>Druk op de Registreer knop. </li>
+        </ol> 
+            </p>
+       </div>
+        <div class="modal-footer"> 
+             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar registreerpagina</a>
+          </div>
+        </div>
+        <!-- registreer email stuk van de site --> 
         <section class="section container center" id="loginForm">
             <div class="row">
                 <div class="col s12 l4 offset-l4">
@@ -34,6 +56,10 @@
         <script>
             $(document).ready(function(){
                 $('.sidenav').sidenav();
+            });
+            // Vragen knop js
+            $(document).ready(function(){
+               $('.modal').modal();
             });
         </script>
     </body>
