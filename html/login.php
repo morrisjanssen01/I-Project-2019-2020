@@ -15,23 +15,23 @@
                             <h3 class="center">Inloggen</h3>
                         </div>
                         <div class="card-content">
-                            <form action="../helpers/loginScript.php" target="">
+                          <form action="../helpers/loginScript.php" method="post">
                             <div class="form-field">
                                 <label for="username">Gebruikersnaam</label>
-                                <input type="text" id="username">
+                                <input type="text" name="username" id="username">
                             </div><br>
                             <div class="form-field">
                                 <label for="password">Wachtwoord</label>
-                                <input type="password" id="password">
+                                <input type="password" name="password" id="password">
                             </div><br>
                             <div class="form-field">
                                 <label>
-                                <input type="checkbox" id="remember"/>
+                                <input type="checkbox" name="remember"/>
                                 <span>Wachtwoord onthouden?</span>
                                 </label>
                             </div><br>
                             <div class="form-field">
-                                <button class="btn-large warmSand darken-2">Inloggen</button>
+                                <button class="btn-large warmSand darken-2" name="submit" id="submit">Inloggen</button>
                             </div><br>
                             </form>
                         </div>
