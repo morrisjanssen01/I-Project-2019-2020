@@ -30,6 +30,7 @@
                             <h3 class="center">Inloggen</h3>
                         </div>
                         <div class="card-content">
+                            <form action="../helpers/loginScript.php" target="">
                             <div class="form-field">
                                 <label for="username">Gebruikersnaam</label>
                                 <input type="text" id="username">
@@ -47,6 +48,7 @@
                             <div class="form-field">
                                 <button class="btn-large warmSand darken-2">Inloggen</button>
                             </div><br>
+                            </form>
                         </div>
                     </div>
                 </div>
