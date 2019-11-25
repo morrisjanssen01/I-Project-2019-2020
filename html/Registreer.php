@@ -16,15 +16,15 @@
        <h4>Registreer handleiding</h4> 
        <p> 
        <ol>
-          <li>Vul uw e-mail adress in.</li>
-          <li>Ga naar uw mailbox en klik op de link die in de mail staat. daarna ga naar stap 4(indien u de mail niet heeft ontvangen ga naar stap 3)</li>
+          <li>Vul uw e-mailadres in.</li>
+          <li>Ga naar uw mailbox en klik op de link die in de mail staat. Daarna ga naar stap 4 (indien u de mail niet heeft ontvangen, ga naar stap 3)</li>
           <li>Indien u de mail niet heeft ontvangen druk op de e-mail niet ontvangenknop daarna herhaal stap 2</li> 
-          <li>Kies een gebruikersnaam.</li>
-          <li>Kies een wachtwoord.</li>
-          <li>Herhaal het wachtwoord dat u gekozen heeft.</li>
+          <li>Kies een unieke gebruikersnaam.</li>
+          <li>Kies een goed wachtwoord.</li>
+          <li>Onthou het wachtwoord en herhaal het wachtwoord dat u gekozen heeft.</li>
           <li>Lees de voorwaarden die verbonden zijn aan het registreren.</li> 
-          <li>Als u de voorwaarden gelezen heeft en u hiermee akkoord gaat vink de akkoordknop onder aan het scherm aan.</li> 
-          <li>Druk op de Registreer knop. </li>
+          <li>Wanneer u met de voorwaarden akkoord gaat, vink de akkoordknop onder aan het scherm aan.</li> 
+          <li>Druk op de Registreer-knop. </li>
         </ol> 
             </p>
        </div>
