@@ -1,6 +1,7 @@
 <?php
 
-if(isset($_GET["username"])){
+if(isset($_POST["username"])){
+
 	
 }
 
