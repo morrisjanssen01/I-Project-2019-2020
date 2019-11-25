@@ -26,7 +26,8 @@
 
                     session_start();
 
-                    $_SESSION["username"] = $result['gebruikersnaam']
+                    $_SESSION["username"] = $result['gebruikersnaam'];
+                    header('location: index.php');
 
                 }
 

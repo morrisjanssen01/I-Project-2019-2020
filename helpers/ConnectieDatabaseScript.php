@@ -1,6 +1,7 @@
 <?php 
 
-$servername = 'localhost'
+$hostname = 'localhost'
+$dbname = 'EenmaalAndermaal'
 $username = 'username'
 $password = 'password'
 
