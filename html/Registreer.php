@@ -20,8 +20,11 @@
       <div id="modal1" class="modal">
        <div class="modal-content">
        <h4>Registreer handleiding</h4> 
-            <p> 
+       <p> 
        <ol>
+          <li>Vul uw e-mail adress in.</li>
+          <li>Ga naar uw mailbox en klik op de link die in de mail staat. daarna ga naar stap 4(indien u de mail niet heeft ontvangen ga naar stap 3)</li>
+          <li>Indien u de mail niet heeft ontvangen druk op de e-mail niet ontvangenknop daarna herhaal stap 2</li> 
           <li>Kies een gebruikersnaam.</li>
           <li>Kies een wachtwoord.</li>
           <li>Herhaal het wachtwoord dat u gekozen heeft.</li>
@@ -38,13 +41,18 @@
         <!-- Registreer stuk van de site --> 
         <section class="section container center" id="loginForm">
             <div class="row">
-                <div class="col s12 l4 offset-l4">
+                <div class="col s12 l6 offset-l3">
                     <div class="card">
                         <div class="card-action warmSand darken-2 white-text">
                             <h3 class="center">Registreren</h3>
                         </div>
                         <div class="card-content">
                           <form action="../helpers/RegistrerenScript.php" method="post">
+                            <div class="form-field">
+                                <label for="username">E-mail</label>
+                                <input type="text" id="username"> 
+                            </div><br>
+                        <div class="card-content">
                             <div class="form-field">
                                 <label for="username">Gebruikersnaam</label>
                                 <input type="text" id="username">
@@ -66,6 +74,9 @@
                             <div class="form-field">
                                 <button class="btn-large warmSand darken-2">Registreer</button>
                             </div><br>
+                            <div class="form-field">
+                            <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>
+                            </div><br> 
                         </div>
                     </div>
                 </div>
@@ -87,3 +98,4 @@
         
     </body>
 </html>
+<!-- 2de knop maken die een 2de mail stuurd doormiddel van een knop e-mail niet ontvangen of een knop E-mail binnen 5 min niet ontvangen
