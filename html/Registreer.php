@@ -7,14 +7,8 @@
     </head>
     <body>
         <?php include '../includes/header.php'; ?>
-
-
-
-        <!--  <section class="" id= ""> 
-       </section>  -->
-    
-        
-       <a class="waves-effect waves-light btn modal-trigger"  href="#modal1" >Vragen?</a> 
+     <!-- maakt knop -->
+     <a class="waves-effect waves-light btn modal-trigger"  href="#modal1" >Vragen?</a> 
 
     <!-- structuur vraag knop --> 
       <div id="modal1" class="modal">
