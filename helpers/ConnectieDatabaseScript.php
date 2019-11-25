@@ -1,9 +1,9 @@
 <?php 
 
-$hostname = 'localhost'
-$dbname = 'EenmaalAndermaal'
-$username = 'username'
-$password = 'password'
+$hostname = 'localhost';
+$dbname = 'EenmaalAndermaal';
+$username = 'username';
+$password = 'password';
 
 
 try {

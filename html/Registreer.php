@@ -12,7 +12,7 @@
                 <div class="col s12 l4 offset-l4">
                     <div class="card">
                         <div class="card-action warmSand darken-2 white-text">
-                            <h3 class="center">Registreer</h3>
+                            <h3 class="center">Registreren</h3>
                         </div>
                         <div class="card-content">
                             <div class="form-field">
@@ -20,17 +20,17 @@
                                 <input type="text" id="username">
                             </div><br>
                             <div class="form-field">
-                                <label for="password">wachtwoord</label>
+                                <label for="password">Wachtwoord</label>
                                 <input type="password" id="password">
                             </div><br>
                             <div class="form-field">
-                                <label for="repeat password">Herhaal wachtwoord</label>
+                                <label for="repeat password">Bevestig Wachtwoord</label>
                                 <input type="password" id="repeat password">
                             <div class="form-field">
                             </div><br>
                                 <label>
                                 <input type="checkbox" id="remember"/>
-                                <span>Akkoord met voorwaarden</span>
+                                <span>Akkoord met Voorwaarden</span>
                                 </label>
                             </div><br>
                             <div class="form-field">
