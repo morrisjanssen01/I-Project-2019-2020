@@ -6,22 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <header>
-            <nav class="nav-wrapper warmSand">
-                <div class="container">
-                    <a href="Test.html" class="brand-logo">Logo placeholder</a>
-                    <a href="" class="sidenav-trigger" data-target="mobile-menu">
-                        <i class="material-icons">Menu</i>
-                    </a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="Test.html">Home</a></li>
-                    </ul>
-                    <ul class="sidenav grey lighten-2" id="mobile-menu">
-                        <li><a href="Test.html">Home</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        <?php include '../includes/header.php'; ?>
         <section class="section container center" id="loginForm">
             <div class="row">
                 <div class="col s12 l4 offset-l4">
@@ -43,6 +28,7 @@
                 </div>
             </div>
         </section>
+        <?php include '../includes/footer.php'; ?>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
         <script>
