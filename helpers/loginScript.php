@@ -7,7 +7,7 @@
 
         /* stuur de gebruiker naar de homepage als ze een vak niet invullen */
         if(empty($username) || empty($password)){
-            header('location: index.php');
+            redirect('index.php');
             exit;
 
         }
