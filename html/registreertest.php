@@ -22,6 +22,24 @@
                 </div>
             </nav>
         </header>
+
+      <!--  <section class="" id= ""> 
+       </section>  -->
+    
+        
+       <a class="waves-effect waves-light btn modal-trigger"  href="#modal1" > Knop test</a> 
+
+       <!-- structuur vraag knop --> 
+       <div id="modal1" class="modal">
+        <div class="modal-content">
+         <h4>Vragen</h4> 
+         <p> Uitleg </p>
+         </div>
+         <div class="modal-footer"> 
+         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+         </div>
+         </div>
+
         <section class="section container center" id="loginForm">
             <div class="row">
                 <div class="col s12 l4 offset-l4">
@@ -62,6 +80,12 @@
             $(document).ready(function(){
                 $('.sidenav').sidenav();
             });
+            // Vragen knop
+            $(document).ready(function(){
+               $('.modal').modal();
+            });
+      
         </script>
+        
     </body>
 </html>
