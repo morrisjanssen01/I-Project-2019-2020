@@ -29,7 +29,7 @@
             </p>
        </div>
         <div class="modal-footer"> 
-             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar registreerpagina</a>
+             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar de Registreer-pagina</a>
           </div>
         </div>
         <!-- Registreer stuk van de site --> 
@@ -66,7 +66,7 @@
                                 </label>
                             </div><br>
                             <div class="form-field">
-                                <button class="btn-large warmSand darken-2">Registreer</button>
+                                <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
                             </div><br>
                             <div class="form-field">
                             <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>
