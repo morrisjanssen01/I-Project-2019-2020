@@ -1,5 +1,6 @@
 <?php
 
+    require("ConnectieDatabaseScript.php");
     if(isset($_POST["submit"])){
 
         $username = $_POST["username"];
@@ -15,10 +16,10 @@
         }
         else {
 
-            $sql = 'SELECT * FROM gebruikers where gebruikersnaam = :username';
-           /* $query = preparedQuery($dbh , $sql [$username]);  dbh connectie moet nog geschreven worden */
-            /* $result = $query->fetch(PDO::FETCH_ASSOC); */
-            $accountExist = true /*(is_array($result))*/;
+            $sql =  $dbh->prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
+            $query = $sql->execute(array([$username]));
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            $accountExist = is_array($result);
 
             if($accountExist) {
 

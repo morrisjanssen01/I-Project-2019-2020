@@ -5,7 +5,7 @@ $dbname = 'EenmaalAndermaal';
 $username = 'username';
 $password = 'password';
 
-function ConnectionDatabase($hostname, $dbname, $username, $password) {}
+function ConnectionDatabase($hostname, $dbname, $username, $password) {
 try {
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname;ConnectionPooling=0", "$username", "$password");
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
