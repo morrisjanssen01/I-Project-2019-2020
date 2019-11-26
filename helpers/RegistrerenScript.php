@@ -1,25 +1,31 @@
 <?php
 
 $username = $_POST(["username"]);
+$password = $_POST(["password"]);
+$repeatpassword = $_POST(["repeat password"]);
+$mailaddres = $_POST(["mailadress"]);
 
 
-
-/* deze functie checkt of er een gebruikernaam en wachtwoord zijn ingevuld */
-
-
-
-/* deze functie checkt of de wachtwoorden overeenkomen */
-function CheckIfDouble() {
-
+/* checkt of de waarden die bij 'wachtwoord' en 'bevestig wachtwoord' met elkaar overeenkomen */
+if($password == $repeatpassword){
+	submitRegistration();
 }
+	else{
+		echo "Wachtwoorden komen niet overeen";
+	}
 
-
-/* deze functie geeft een melding wanneer niet alle velden zijn ingevuld */
-
+/* Geeft een melding zodra niet alle velden zijn ingevuld */
+if(empty($username) || empty($password) || empty($repeatpassword) || empty($mailaddres) {
+	echo "Nog niet alle velden zijn ingevuld";
+	exit;
+})
 
 
 /* deze functie geeft de ingevulde waarden bij gebruikersnaam en wachtwoord mee aan de variabelen */
+if(isset($_POST["submit"])){
 
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 
 
 /*  Deze functie checkt of de gebruikersnaam nog niet bestaat */
