@@ -8,6 +8,7 @@
 
         /* stuur de gebruiker naar de homepage als ze een vak niet invullen */
         if(empty($username) || empty($password)){
+            echo "Er is iets misgegaan tijdens het invullen";
             redirect('index.php');
             exit;
 

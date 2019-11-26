@@ -1,6 +1,10 @@
 <?php
 
 
-function 
+function CheckRegistration() {
+	if(isset($_POST["submit"])){
+		
+	}
+}
 
 ?>
