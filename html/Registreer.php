@@ -14,8 +14,8 @@
                     <div class="card">
                         <div class="card-action warmSand darken-2 white-text">
                             <h3 class="center">Registreren</h3>
-                            <!-- maakt de vragenknop aan --> 
-                            <a class="waves-effect waves-light btn modal-trigger"  href="#modal1" > Vragen?</a> 
+                            <!-- maakt de vragenknop aan (verander brown om de kleur te veranderen)-->   
+                            <a class="waves-effect waves-light brown btn modal-trigger"  href="#modal1" > Vragen?</a> 
                         </div>
                         <div class="card-content">
                           <form action="../helpers/RegistrerenScript.php" method="post">
@@ -60,8 +60,8 @@
                         <p> 
                           <ol>
                             <li>Vul uw e-mailadres in.</li>
-                             <li>Ga naar uw mailbox en klik op de link die in de mail staat. Daarna ga naar stap 4 (indien u de mail niet heeft ontvangen, ga naar stap 3)</li>
-                             <li>Indien u de mail niet heeft ontvangen druk op de e-mail niet ontvangenknop daarna herhaal stap 2</li> 
+                            <li>Ga naar uw mailbox en klik op de link die in de mail staat. Daarna ga naar stap 4 (indien u de mail niet heeft ontvangen, ga naar stap 3)</li>
+                            <li>Indien u de mail niet heeft ontvangen druk op de e-mail niet ontvangenknop daarna herhaal stap 2</li> 
                             <li>Kies een unieke gebruikersnaam.</li>
                             <li>Kies een goed wachtwoord.</li>
                             <li>Onthou het wachitwoord en herhaal het wachtwoord dat u gekozen heeft.</li>
