@@ -5,22 +5,25 @@
 
     Function getDecayingItems(){
 
-        $sql="";
+       /* $sql="";
         $query = preparedQuery($dbh, $sql);
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-
-        $resultexist = is_array($result);
-        if($resultexist){
-
+         while($result = $query->fetch(PDO::FETCH_ASSOC)){
+                $datas[] = $result;
             
+         }*/
+         /* foreach($datas as $data){ */
+            $data["titel"] = 'henk';
+            $data["naam"] = 'jan';
+            $data["datum"] = 'diederik';
+            $data["beschrijving"] = 'lorum ipsum';
 
-        }
+            echo '<div class="col 4><h1 class="center">'. $data["titel"] . $data["naam"] . $data["datum"]. $data["beschrijving"].'</h1></div>';
 
+
+         /* } */
     }
- *
 
 /* hier komt ga ik de sql uitwerken samen met iemand*/
-
 
   
 ?>
