@@ -15,5 +15,5 @@ catch (PDOException $exception){
     echo "De melding is {$exception->getMessage()}<br><br>";
 };
 
-$data = $dbh->query("SELECT * FROM voornamen");
+
 ?>
