@@ -1,6 +1,8 @@
 <?php
 
     require("ConnectieDatabaseScript.php");
+    require("antiSQLinjection.php");
+    require("redirect.php");
     if(isset($_POST["submit"])){
 
         $username = $_POST["username"];
@@ -10,8 +12,14 @@
         /* stuur de gebruiker naar de homepage als ze een vak niet invullen */
         if(empty($username) || empty($password)){
             echo "Er is iets misgegaan tijdens het invullen";
-            redirect('index.php');
+            redirect('index');
             exit;
+
+        }
+        else if(specialCharacters($_POST)){
+
+            redirect('index');
+
 
         }
         else {

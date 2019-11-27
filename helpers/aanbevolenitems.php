@@ -21,7 +21,7 @@
                     <p>'. $data["beschrijving"].'</p>
                     <h3 class="center">'.$data["looptijdEindeTijdstip"].'
                   </div>';
-            /* Hier moet een img komen ook ergens */
+            /* Hier moet een img komen ook ergens en de design kan ik pas maken als ik een virtueel voorbeeld heb.*/
 
           } 
     }
