@@ -43,9 +43,7 @@ if(isset($_POST["submit"])){
 
 
 /*  Deze functie checkt of de gebruikersnaam nog niet bestaat */
-	if(isset($_POST["username"])){
-
-	}
+	if 
 }
 
 ?>
