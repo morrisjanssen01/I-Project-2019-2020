@@ -56,7 +56,7 @@
           <!-- structuur vraag knop --> 
           <div id="modal1" class="modal">
                      <div class="modal-content">
-                       <h4>Hoe registreer ik me?</h4> 
+                       <h4>Hoe registreert u zich?</h4> 
                         <p> 
                           <ol>
                             <li>Vul uw e-mailadres in.</li>
