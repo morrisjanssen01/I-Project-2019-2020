@@ -1,5 +1,7 @@
 <?php
 
+
+// deze functie aan roepen als er input wordt gegeven die naar de database wordt gestuurd! indien er meerder waarden worden gecheckt geef je $_POST of $_GET mee als parameter
 function specialCharacters($values){
     $hasSpecialCharacters = false;
 
