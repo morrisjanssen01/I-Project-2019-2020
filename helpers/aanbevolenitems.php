@@ -18,13 +18,11 @@
             echo '<div class="col s5">
             <h1 class="valign">'.$data["titel"].'</h1>
             <img src="../images/vaseline.jpg" class="responsive-img"width="150">
-            <h3 class="right" style="">'.$data["looptijdEindeTijdstip"].'</h3>
-            <span class="right">'.$data["beschrijving"].'</span>
-            <form action="">
-               <button class="btn left">
-                  <input type="submit" value="naar artiekel pagina"/>
-               </button>
-             </form>
+            <h3 class="right" style=""> eindingt in '.$data["looptijdEindeTijdstip"].'</h3>
+            <span class="right">'.$data["beschrijving"].'</span><br><br><br>
+               <a href=""><button class="btn left" name="submit">
+                  bied
+               </button></a>
             </div>';
             /* Hier moet een img komen ook ergens en de design kan ik pas maken als ik een virtueel voorbeeld heb.*/
 
@@ -44,28 +42,24 @@
   <body>
     <?php include '../includes/header.php'; ?> 
 
-    <div class="row">
-      <div class="col s5">
-       <h1 class="valign">$data["titel"]</h1>
-       <img src="../images/vaseline.jpg" class="responsive-img"width="150">
-       <h3 class="right" style="">$data["looptijdEindeTijdstip"]</h3>
-       <span class="right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</span>
-       <form action="">
+    <div class="row ">
+      <div class="col l6 m6 s12 sailorBlue z-depth-4">
+       <h1 class="valign grey-text">Vaseline</h1>
+       <img src="../images/vaseline.jpg" class="responsive-img" width="150">
+       <h2 class="right grey-text ">eindigd in 69 : 42 : 00</h3>
+       <span class="left grey-text">gebruikt door de enige echte martijn Driessen</span><br><br><br>
           <button class="btn left">
-             <input type="submit" value="naar artiekel pagina"/>
+            bied
           </button>
-        </form>
        </div>
-       <div class="col s5">
-        <h1 class="valign">$data["titel"]</h1>
+       <div class="col l6 m6 s12 coconutMilk z-depth-4">
+        <h1 class="valign">buttplugg</h1>
         <img src="../images/icabuttplugg.jpg" class="responsive-img" width="150">
-        <h3 class="right">$data["looptijdEindeTijdstip"]</h3>
-        <span class="right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</span>
-        <form action="">
-          <button class="btn">
-             <input type="submit" value="naar artiekel pagina"/>
+        <h2 class="right">eindigd in 42 : 06 : 90</h3>
+        <span class="left">ook gebruikt door de einige echte martijn Driessen tijdens een van zijn beroemde assesments</span><br><br><br>
+          <button class="btn left">
+            bied
           </button>
-        </form>
        </div>
     </div>
 
