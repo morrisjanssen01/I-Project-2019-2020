@@ -30,7 +30,43 @@
                             <div class="form-field">
                                 <label for="repeat password">Bevestig Wachtwoord</label>
                                 <input type="password" name="repeat password" id="repeat password">
+                                <div class="form-field">
+                            </div><br>
                             <div class="form-field">
+                            <label for="username">Voornaam</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Achternaam</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Adres</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Postcode</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Plaatsnaam</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Land</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Geboortedag</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Vraag</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Antwoord</label>
+                                <input type="text" name="username" id="username">
                             </div><br>
                                 <label>
                                 <input type="checkbox" id="remember"/>
@@ -40,9 +76,6 @@
                             <div class="form-field">
                                 <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
                             </div><br>
-                            <div class="form-field">
-                            <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>
-                            </div><br> 
                             </form> 
                         </div>
                     </div>
