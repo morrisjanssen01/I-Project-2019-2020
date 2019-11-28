@@ -18,12 +18,7 @@
                             <a class="waves-effect waves-light brown btn modal-trigger"  href="#modal1" > Vragen?</a> 
                         </div>
                         <div class="card-content">
-                          <form action="../helpers/RegistrerenScript.php" method="post">
-                            <div class="form-field">
-                                <label for="mailadress">E-mail</label>
-                                <input type="text" name= "mailadress" id="mailadress"> 
-                            </div><br>
-                        <div class="card-content">
+                        <form action="../helpers/RegistrerenScript.php" method="post">        
                             <div class="form-field">
                                 <label for="username">Gebruikersnaam</label>
                                 <input type="text" name="username" id="username">
@@ -48,6 +43,7 @@
                             <div class="form-field">
                             <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>
                             </div><br> 
+                            </form> 
                         </div>
                     </div>
                 </div>

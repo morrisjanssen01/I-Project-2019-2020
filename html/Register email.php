@@ -29,6 +29,7 @@
                                 <div class="form-field">
                             <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>                   
                             </div><br>
+                            </form> 
                         </div>
                     </div>
                 </div>
