@@ -58,11 +58,16 @@
                             </div><br>
                             <div class="form-field">
                             <label for="username">Geboortedag</label>
-                                <input type="text" name="username" id="username">
+                                <input type="text" id="date" class="datepicker"> 
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Vraag</label>
-                                <input type="text" name="username" id="username">
+                            <label for="Vragenlijst">Vragen</label>
+                                <select>
+                                     <option value="" disabled selected>Kies uw beveiligingsvraag</option>
+                                     <option value="1">Hoe heet uw huisdier?</option>
+                                     <option value="2">Wat is uw geboorteplaats</option>
+                                     <option value="3">Wat is de naam van uw oude basisschool</option>
+                                </select>    
                             </div><br>
                             <div class="form-field">
                             <label for="username">Antwoord</label>
@@ -115,8 +120,14 @@
             $(document).ready(function(){
                $('.modal').modal();
             });
-      
+            //datepicker
+            $(document).ready(function(){
+             $('.datepicker').datepicker();
+             });
+             //multiselect
+             $(document).ready(function(){
+             $('select').formSelect();
+             });
         </script>
-        
-    </body>
+      </body>
 </html>
