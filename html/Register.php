@@ -91,4 +91,3 @@
         
     </body>
 </html>
-<!-- 2de knop maken die een 2de mail stuurd doormiddel van een knop e-mail niet ontvangen of een knop E-mail binnen 5 min niet ontvangen
