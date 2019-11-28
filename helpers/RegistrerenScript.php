@@ -34,7 +34,7 @@ if(empty($username) || empty($password) || empty($repeatpassword) || empty($mail
 	else {
 	$hashedpassword = password_hash($password, PASSWORD_DEFAULT); 
 	$dbh = "INSERT INTO gebruikers (gebruikersnaam, Emailadres, wachtwoord)
-	VALUES ($username, $mailadress, $hashedpassword)";
+	VALUES ($username, $mailadress, $password)";
 	echo "U bent geregistreerd!"
 	}
 

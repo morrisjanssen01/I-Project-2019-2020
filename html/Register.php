@@ -64,7 +64,7 @@
                             <li>Indien u de mail niet heeft ontvangen druk op de e-mail niet ontvangenknop daarna herhaal stap 2</li> 
                             <li>Kies een unieke gebruikersnaam.</li>
                             <li>Kies een goed wachtwoord.</li>
-                            <li>Onthou het wachitwoord en herhaal het wachtwoord dat u gekozen heeft.</li>
+                            <li>Onthou het wachtwoord en herhaal het wachtwoord dat u gekozen heeft.</li>
                             <li>Lees de voorwaarden die verbonden zijn aan het registreren.</li> 
                             <li>Wanneer u met de voorwaarden akkoord gaat, vink de akkoordknop onder aan het scherm aan.</li> 
                             <li>Druk op de Registreer-knop. </li>
