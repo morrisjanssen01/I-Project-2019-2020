@@ -1,8 +1,6 @@
 <?php
-
 require("ConnectieDatabaseScript.php");
 require("antiSQLinjection.php");
-
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
@@ -13,15 +11,11 @@ if(isset($_POST["submit"])){
 	$password = $dbh->real_escape_string($_POST(["password"]));
 	$repeatpassword = $dbh->real_escape_string($_POST(["Rpassword"]));
 	$mailaddres = $dbh->real_escape_string($_POST(["mailadress"]));
-
 /* Geeft een melding zodra niet alle velden zijn ingevuld */
-
 try {
 if(empty($username) || empty($password) || empty($repeatpassword) || empty($mailadress)) {
 	echo "Nog niet alle velden zijn ingevuld";
-<<<<<<< HEAD
-	
-	
+<<<<<<< HEAD	
 }
 elseif(specialCharacters($_POST)){
 		redirect('index');
@@ -33,9 +27,7 @@ catch (PDOException $exception){
 <<<<<<< HEAD
 }
 =======
-
 >>>>>>> 6bc7ab3443d80b3926e62bc1234323aa3163962e
-
 /* Checkt of wachtwoorden overeenkomen. Wanneer de wachtwoorden overeenkomen, wordt het wachtwoord gehasht */
 
 	if($password != $repeatpassword){

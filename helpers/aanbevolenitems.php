@@ -1,20 +1,14 @@
 <?php
-
   require("ConnectieDatabaseScript.php");
-
    /*deze pagina is voorlopig voor test purposes en testen. Ik ga nog met jullie implementeren op de website maar daarvoor moet iedereen er zijn! ~dylan 26-11 */
    /*deze functie moet worden aangeroepen binnen de container en de row van de aanbevolen veilingen */
-
     Function getDecayingItems(){
-
         $sql= $dbh->prepare("Select * from Voorwerp ORDER BY RAND() LIMIT 4");
         $query = $sql->execute;
          while($result = $query->fetch(PDO::FETCH_ASSOC)){
                 $datas[] = $result;
-            
          }
-         foreach($datas as $data){ 
-            
+         foreach($datas as $data){  
             echo '<div class="col s5">
             <h1 class="valign">'.$data["titel"].'</h1>
             <img src="../images/vaseline.jpg" class="responsive-img"width="150">
@@ -24,7 +18,6 @@
                   bied
                </button></a>
             </div>';
-
            echo '<div class="col l6 m6 s12 coconutMilk z-depth-4">
         <h1 class="valign">'.$data["titel"].'</h1>
         <img src="../images/icabuttplugg.jpg" class="responsive-img" width="150">
@@ -35,13 +28,9 @@
           </button>
        </div>';
             /* Hier moet een img komen ook ergens en de design kan ik pas maken als ik een virtueel voorbeeld heb.*/
-
           } 
     }
-
-  
 ?>
-
 <!-- deze hele pagina moet opnieuw gemaakt worden de HTML CSS klopt niet --> 
 <html>
   <head>
@@ -51,7 +40,6 @@
   </head>
   <body>
     <?php include '../includes/header.php'; ?> 
-
     <div class="row ">
       <div class="col l6 m6 s12 sailorBlue z-depth-4">
        <h1 class="valign grey-text">Vaseline</h1>
@@ -72,13 +60,8 @@
           </button>
        </div>
     </div>
-
-
     <?php include '../includes/footer.php';?>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script> 
   </body>
-  
-
 <!-- deze hele pagina moet opnieuw gemaakt worden de HTML CSS klopt niet --> 
