@@ -36,7 +36,7 @@ catch (PDOException $exception){
 	else {
 	$hashedpassword = password_hash($password, PASSWORD_DEFAULT); 
 	$dbh = "INSERT INTO gebruikers (gebruikersnaam, Emailadres, wachtwoord)
-	VALUES ($username, $mailadress, $password)";
+	VALUES ($username, $mailadress, $hashedpassword)";
 	echo "U bent geregistreerd!";
 	}
 }
