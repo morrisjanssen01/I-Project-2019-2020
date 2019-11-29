@@ -33,7 +33,7 @@
           <button class="btn left">
             bied
           </button>
-       </div>'
+       </div>';
             /* Hier moet een img komen ook ergens en de design kan ik pas maken als ik een virtueel voorbeeld heb.*/
 
           } 
