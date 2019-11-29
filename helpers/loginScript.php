@@ -28,6 +28,7 @@
                     header("Location: ../html/index.php");
                     exit();
                 }
+                // wat is deze ???? 
                 else{
                     header("Location: login.php");
                 }
