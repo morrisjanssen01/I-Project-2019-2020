@@ -2,5 +2,5 @@
 
 
 function redirect($page){
-    header('location: '.$page.'.php');
+    header('location: ../html/'.$page.'.php');
 }

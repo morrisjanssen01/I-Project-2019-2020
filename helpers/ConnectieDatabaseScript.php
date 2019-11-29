@@ -1,11 +1,17 @@
 <?php 
 
-$hostname = 'localhost';
+/*$hostname = 'localhost';
 $dbname = 'EenmaalAndermaal';
 $username = 'username';
-$password = 'password';
+$password = 'password'; */
 
-function ConnectionDatabase($hostname, $dbname, $username, $password) {}
+
+$hostname = 'mssql.iproject.icasites.nl';
+$dbname = 'EenmaalAndermaal';
+$username = 'iproject5';
+$password = 'kFzV56Yuyn';
+
+function ConnectionDatabase($hostname, $dbname, $username, $password) {
 try {
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname;ConnectionPooling=0", "$username", "$password");
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

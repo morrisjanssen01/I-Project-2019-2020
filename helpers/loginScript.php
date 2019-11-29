@@ -1,5 +1,8 @@
 <?php
 
+    require("ConnectieDatabaseScript.php");
+    require("antiSQLinjection.php");
+    require("redirect.php");
     if(isset($_POST["submit"])){
 
         $username = $_POST["username"];
@@ -9,16 +12,22 @@
         /* stuur de gebruiker naar de homepage als ze een vak niet invullen */
         if(empty($username) || empty($password)){
             echo "Er is iets misgegaan tijdens het invullen";
-            redirect('index.php');
+            redirect('index');
             exit;
+
+        }
+        else if(specialCharacters($_POST)){
+
+            redirect('index');
+
 
         }
         else {
 
-            $sql = 'SELECT * FROM gebruikers where gebruikersnaam = :username';
-           /* $query = preparedQuery($dbh , $sql [$username]);  dbh connectie moet nog geschreven worden */
-            /* $result = $query->fetch(PDO::FETCH_ASSOC); */
-            $accountExist = true /*(is_array($result))*/;
+            $sql =  $dbh->prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
+            $query = $sql->execute(array([$username]));
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            $accountExist = is_array($result);
 
             if($accountExist) {
 
