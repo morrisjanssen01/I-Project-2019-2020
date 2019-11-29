@@ -14,7 +14,7 @@
                         echo '<li><a href="../helpers/logOut.php"><i class="small material-icons">exit_to_app</i></a></li>';
                         } else if(!isset($_SESSION["username"])){
                         echo '<li><a href="../html/login.php">Login</a></li>';
-                        echo '<li><a hreft="../html/Register.php">Registreren</a></li>';
+                        echo '<li><a href="../html/Register email.php">Registreren</a></li>';
                         echo '<li><a href="../html/login.php"><i class="small material-icons">notifications</i></a></li>';
                         }
                     ?>
