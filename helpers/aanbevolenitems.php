@@ -42,7 +42,7 @@
   
 ?>
 
-
+<!-- deze hele pagina moet opnieuw gemaakt worden de HTML CSS klopt niet --> 
 <html>
   <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -77,6 +77,8 @@
     <?php include '../includes/footer.php';?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
-    <script>
-  </body
+    <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script> 
+  </body>
+  
+
+<!-- deze hele pagina moet opnieuw gemaakt worden de HTML CSS klopt niet --> 
