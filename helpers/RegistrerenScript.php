@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
 try {
 if(empty($username) || empty($password) || empty($repeatpassword) || empty($mailadress)) {
 	echo "Nog niet alle velden zijn ingevuld";
-<<<<<<< HEAD	
+
 }
 elseif(specialCharacters($_POST)){
 		redirect('index');
@@ -25,10 +25,6 @@ catch (PDOException $exception){
 		echo "Er ging iets mis met het invullen. <br>";
 		echo "De melding is {$exception->getMessage()}<br><br>";
 }
-<<<<<<< HEAD
-}
-=======
->>>>>>> 6bc7ab3443d80b3926e62bc1234323aa3163962e
 /* Checkt of wachtwoorden overeenkomen. Wanneer de wachtwoorden overeenkomen, wordt het wachtwoord gehasht */
 
 	if($password != $repeatpassword){
