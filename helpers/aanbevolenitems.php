@@ -56,8 +56,8 @@
       <div class="col l6 m6 s12 sailorBlue z-depth-4">
        <h1 class="valign grey-text">Vaseline</h1>
        <img src="../images/vaseline.jpg" class="responsive-img" width="150">
-       <h2 class="right grey-text ">eindigd in 69 : 42 : 00</h3>
-       <span class="left grey-text">gebruikt door de enige echte martijn Driessen</span><br><br><br>
+       <h2 class="right grey-text ">eindigt in 69 : 42 : 00</h3>
+       <span class="left grey-text">gebruikt door de enige echte Martijn Driessen</span><br><br><br>
           <button class="btn left">
             bied
           </button>
@@ -65,8 +65,8 @@
        <div class="col l6 m6 s12 coconutMilk z-depth-4">
         <h1 class="valign">buttplugg</h1>
         <img src="../images/icabuttplugg.jpg" class="responsive-img" width="150">
-        <h2 class="right">eindigd in 42 : 06 : 90</h3>
-        <span class="left">ook gebruikt door de einige echte martijn Driessen tijdens een van zijn beroemde assesments</span><br><br><br>
+        <h2 class="right">eindigt in 42 : 06 : 90</h3>
+        <span class="left">ook gebruikt door de enige echte Martijn Driessen tijdens een van zijn beroemde assessments</span><br><br><br>
           <button class="btn left">
             bied
           </button>
