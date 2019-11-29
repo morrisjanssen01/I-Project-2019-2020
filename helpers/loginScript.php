@@ -30,7 +30,7 @@
                 }
                 // wat is deze ???? 
                 else{
-                    header("Location: login.php");
+                    header("Location: ../html/login.php");
                 }
             }
             else {
