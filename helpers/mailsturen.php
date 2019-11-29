@@ -16,9 +16,7 @@ mail($to, $subject, $email, implode("\r\n", $headers), "-f".$from );
 } 
 ?> 
 
-
-
-Een andere methode is: 
+<!-- Een andere methode is: --> 
 <?php 
 function mailsturen2(){
 $subject = 'Dit is de titel van het test bericht'; 

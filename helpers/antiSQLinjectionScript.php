@@ -10,7 +10,6 @@ function specialCharacters($values){
             $specialeKarakters = true;
         }
     }
-
     return $specialeKarakters;
 }
 ?>

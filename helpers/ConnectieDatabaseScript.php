@@ -4,8 +4,6 @@
 $dbname = 'EenmaalAndermaal';
 $username = 'username';
 $password = 'password'; */
-
-
 $hostname = 'mssql.iproject.icasites.nl';
 $dbname = 'EenmaalAndermaal';
 $username = 'iproject5';
@@ -21,5 +19,4 @@ catch (PDOException $exception){
     echo "De melding is {$exception->getMessage()}<br><br>";
 }
 };
-
 ?>
