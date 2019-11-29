@@ -16,10 +16,10 @@ if(isset($_POST["submit"])){
 try {
 if(empty($username) || empty($password) || empty($repeatpassword) || empty($mailadress)) {
 	echo "Nog niet alle velden zijn ingevuld";
-
 }
 elseif(specialCharacters($_POST)){
 		redirect('index');
+}
 }
 catch (PDOException $exception){
 		echo "Er ging iets mis met het invullen. <br>";
