@@ -4,6 +4,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
     </head>
     <body>
         <?php include '../includes/header.php'; ?> 
@@ -78,6 +79,7 @@
                                 <span>Akkoord met Voorwaarden</span>
                                 </label>
                             </div><br>
+                            <div class="g-recaptcha" style="margin-left:20%; margin-bottom:5%;" data-sitekey="6Ld5H8UUAAAAAMr3EOrfgpBEQBpfv2X3yvPnR54V"></div>
                             <div class="form-field">
                                 <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
                             </div><br>
@@ -131,3 +133,42 @@
         </script>
       </body>
 </html>
+<?php
+
+if(isset($_POST['submit'])){
+    function CheckCaptcha($userResponse){
+        $fields_string = '';
+        $fields = array(
+            "secret" => "6Ld5H8UUAAAAALhODoTx6h90-YsgL4KAd0wltr4H",
+            "response" => $userResponse
+        );
+        foreach($fields as $key=>$value)
+        $fields_string .= $key . '=' . $value . '&';
+        $fields_string = rtrim($fields_string, '&');
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recatcha/api/siteverify');
+        curl_setopt($ch, CURLOPT_POST, count($fields));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, True);
+
+        $res = curl_exec($ch);
+        curl_close($ch);
+
+        return json_decode($res, true);
+    }
+
+    //Call the function CheckCaptcha
+    $result = CheckCaptcha($_POST['g-recaptcha-response']);
+
+    if($result['success']){
+        //If the user has checked the captcha box
+        echo "Captcha verified Successfully";
+    }
+    else{
+        //If the CAPTCHA box wasn't checked
+        echo '<script>alert("Error Message");</script>';
+    }
+    }
+?>
+<!-- 2de knop maken die een 2de mail stuurd doormiddel van een knop e-mail niet ontvangen of een knop E-mail binnen 5 min niet ontvangen
