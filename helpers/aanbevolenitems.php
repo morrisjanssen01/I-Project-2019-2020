@@ -24,6 +24,16 @@
                   bied
                </button></a>
             </div>';
+
+           echo '<div class="col l6 m6 s12 coconutMilk z-depth-4">
+        <h1 class="valign">'.$data["titel"].'</h1>
+        <img src="../images/icabuttplugg.jpg" class="responsive-img" width="150">
+        <h2 class="right">eindigd in '.$data["looptijdEindeTijdstip"].'</h3>
+        <span class="left">'.$data["beschrijving"].'</span><br><br><br>
+          <button class="btn left">
+            bied
+          </button>
+       </div>';
             /* Hier moet een img komen ook ergens en de design kan ik pas maken als ik een virtueel voorbeeld heb.*/
 
           } 

@@ -18,12 +18,7 @@
                             <a class="waves-effect waves-light brown btn modal-trigger"  href="#modal1" > Vragen?</a> 
                         </div>
                         <div class="card-content">
-                          <form action="../helpers/RegistrerenScript.php" method="post">
-                            <div class="form-field">
-                                <label for="mailadress">E-mail</label>
-                                <input type="text" name= "mailadress" id="mailadress"> 
-                            </div><br>
-                        <div class="card-content">
+                        <form action="../helpers/RegistrerenScript.php" method="post">        
                             <div class="form-field">
                                 <label for="username">Gebruikersnaam</label>
                                 <input type="text" name="username" id="username">
@@ -35,7 +30,48 @@
                             <div class="form-field">
                                 <label for="repeat password">Bevestig Wachtwoord</label>
                                 <input type="password" name="repeat password" id="repeat password">
+                                <div class="form-field">
+                            </div><br>
                             <div class="form-field">
+                            <label for="username">Voornaam</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Achternaam</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Adres</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Postcode</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Plaatsnaam</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Land</label>
+                                <input type="text" name="username" id="username">
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Geboortedag</label>
+                                <input type="text" id="date" class="datepicker"> 
+                            </div><br>
+                            <div class="form-field">
+                            <label for="Vragenlijst">Vragen</label>
+                                <select>
+                                     <option value="" disabled selected>Kies uw beveiligingsvraag</option>
+                                     <option value="1">Hoe heet uw huisdier?</option>
+                                     <option value="2">Wat is uw geboorteplaats</option>
+                                     <option value="3">Wat is de naam van uw oude basisschool</option>
+                                </select>    
+                            </div><br>
+                            <div class="form-field">
+                            <label for="username">Antwoord</label>
+                                <input type="text" name="username" id="username">
                             </div><br>
                                 <label>
                                 <input type="checkbox" id="remember"/>
@@ -45,9 +81,7 @@
                             <div class="form-field">
                                 <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
                             </div><br>
-                            <div class="form-field">
-                            <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>
-                            </div><br> 
+                            </form> 
                         </div>
                     </div>
                 </div>
@@ -59,12 +93,12 @@
                        <h4>Hoe registreert u zich?</h4> 
                         <p> 
                           <ol>
-                            <li>Vul uw e-mailadres in.</li>
-                            <li>Ga naar uw mailbox en klik op de link die in de mail staat. Daarna ga naar stap 4 (indien u de mail niet heeft ontvangen, ga naar stap 3)</li>
-                            <li>Indien u de mail niet heeft ontvangen druk op de e-mail niet ontvangenknop daarna herhaal stap 2</li> 
                             <li>Kies een unieke gebruikersnaam.</li>
                             <li>Kies een goed wachtwoord.</li>
-                            <li>Onthou het wachtwoord en herhaal het wachtwoord dat u gekozen heeft.</li>
+                            <li>Onthoud het wachtwoord en herhaal het wachtwoord dat u gekozen heeft.</li>
+                            <li>Vul up personalia in.</li>
+                            <li>Kies een beveiligingsvraag.</li> 
+                            <li>Vul een antwoord in op de beveiligingsvraag</li>
                             <li>Lees de voorwaarden die verbonden zijn aan het registreren.</li> 
                             <li>Wanneer u met de voorwaarden akkoord gaat, vink de akkoordknop onder aan het scherm aan.</li> 
                             <li>Druk op de Registreer-knop. </li>
@@ -86,9 +120,14 @@
             $(document).ready(function(){
                $('.modal').modal();
             });
-      
+            //datepicker
+            $(document).ready(function(){
+             $('.datepicker').datepicker();
+             });
+             //multiselect
+             $(document).ready(function(){
+             $('select').formSelect();
+             });
         </script>
-        
-    </body>
+      </body>
 </html>
-<!-- 2de knop maken die een 2de mail stuurd doormiddel van een knop e-mail niet ontvangen of een knop E-mail binnen 5 min niet ontvangen
