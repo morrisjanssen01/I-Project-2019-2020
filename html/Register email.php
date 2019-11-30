@@ -18,7 +18,7 @@
                             <a class="waves-effect waves-light brown btn modal-trigger"  href="#modal1" > Vragen?</a> 
                         </div>
                         <div class="card-content">
-                          <form action="../helpers/RegistrerenScript.php" method="post">
+                          <form action="../helpers/mailsturenScript.php" method="post">
                             <div class="form-field">
                                 <label for="mailadress">E-mail</label>
                                 <input type="text" name= "mailadress" id="mailadress"> 
