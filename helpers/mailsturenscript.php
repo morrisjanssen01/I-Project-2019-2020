@@ -18,7 +18,7 @@ $headers[] = "Reply-To: Realhosting Servicedesk <{$from}>";
 $headers[] = "X-Mailer: PHP/".phpversion(); 
 mail($to, $subject, $email, implode("\r\n", $headers), "-f".$from );
 
-header(location:"register.php");
+redirect(index)
 ?> 
 
 <!-- Een andere methode is: --> 
