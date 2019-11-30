@@ -1,6 +1,7 @@
 <?php
 require("ConnectieDatabaseScript.php");
 require("antiSQLinjectionscript.php");
+include("redirect.php");
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
