@@ -1,3 +1,4 @@
+<div class="header">
 <header>
     <nav class="nav-wrapper warmSand">
         <div class="container">
@@ -26,6 +27,7 @@
         </div>
     </nav>
 </header>
+</div>
 <script>
     $(document).ready(function(){
         $('.sidenav').sidenav();

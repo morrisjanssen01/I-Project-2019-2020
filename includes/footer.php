@@ -1,3 +1,4 @@
+<div class="footer">
 <footer class="warmSand center">
     <div style="display:table;margin: auto;">
         <ul>
@@ -12,3 +13,4 @@
         </div>
     </div>
 </footer>
+</div>

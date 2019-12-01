@@ -7,7 +7,8 @@
     </head>
     <body>
         <?php include '../includes/header.php';?>
-        <div class="container l2 s4">
+        <?php include '../includes/rubrics.php';?>
+        <div class="content">
             <div class="carousel">
                 <a href="#" class="carousel-item"><img src="../images/rickAstley.jpg" alt="Rickrolled!!!"></a>
                 <a href="#" class="carousel-item"><img src="../images/martijn.jpg" alt="Der TEUFEL!!!"></a>
