@@ -55,10 +55,10 @@
                         <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
                             <div class="card-image">
                                 <img src="../images/vaseline.jpg">
-                                <span class="card-title coconutMilk black-text">vaseline</span>
+                                <span class="card-title coconutMilk black-text">Vaseline</span>
                             </div>
                             <div class="card-content coconutMilk">
-                                <p>voor jouw en jaqueline</p>
+                                <p>voor jou en Jaqueline</p>
                             </div>
                             <div class="card-action coconutMilk">
                                 <a href="#">Bieden</a>
@@ -71,7 +71,7 @@
                         <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
                             <div class="card-image">
                                 <img src="../images/wasmachine.jpg">
-                                <span class="card-title coconutMilk black-text">wasmachine</span>
+                                <span class="card-title coconutMilk black-text">Wasmachine</span>
                             </div>
                             <div class="card-content coconutMilk">
                                 <p>kind niet inbegrepen</p>
@@ -85,10 +85,10 @@
                         <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
                             <div class="card-image">
                                 <img src="../images/martijn.jpg">
-                                <span class="card-title coconutMilk black-text">handtekening martijn</span>
+                                <span class="card-title coconutMilk black-text">Handtekening Martijn</span>
                             </div>
                             <div class="card-content coconutMilk">
-                                <p>geschreven met studenten tranen</p>
+                                <p>Geschreven met studenten tranen</p>
                             </div>
                             <div class="card-action coconutMilk">
                                 <a href="#">Bieden</a>
@@ -102,7 +102,7 @@
                                 <span class="card-title coconutMilk black-text">tonk</span>
                             </div>
                             <div class="card-content coconutMilk">
-                                <p>voor al je gta avonturen in real life</p>
+                                <p>Voor al je GTA avonturen in Real Life</p>
                             </div>
                             <div class="card-action coconutMilk">
                                 <a href="#">Bieden</a>
