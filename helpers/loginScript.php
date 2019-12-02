@@ -13,34 +13,40 @@
             redirect('login');
             exit;
         }
-        else if(!specialCharacters($_POST)){
+        else if(specialCharacters($_POST)){
 
             header("Location: ../html/login.php?bitch");
            // redirect('login');
+           exit();
         }
         else {
             ConnectionDatabase();
             global $dbh;
-            $sql =  $dbh->prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
-            $query = $sql->execute(array([$username]));
-            $result = $query->fetch(PDO::FETCH_ASSOC);
-            $accountExist = is_array($result);
-            if($accountExist) {
-                $passwordCorrect = true; /* password_verify($password, $result('wachtwoord'));*/
-                if($passwordCorrect){
-                    session_start();
-                    $_SESSION["username"] = $result['gebruikersnaam'];
-                    header("Location: ../html/index.php");
+            $sql =  $dbh -> prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
+            $sql -> execute(array($username));
+            try{
+                $result = $sql -> fetch(PDO::FETCH_ASSOC);
+                $accountExist = is_array($result);
+                if($accountExist) {
+                    password_verify($password, $result['wachtwoord']);
+                    if($passwordCorrect){
+                        session_start();
+                        $_SESSION["username"] = $result['gebruikersnaam'];
+                        header("Location: ../html/index.php");
+                        exit();
+                    }
+                    else{
+                    header("Location: ../html/login.php");
+                    }
+                }
+                else {
+                    header("Location: ../html/login.php");
                     exit();
                 }
-                // wat is deze ???? 
-                else{
-                    header("Location: ../html/login.php");
-                }
             }
-            else {
-                header("Location: ../html/login.php");
-                exit();
+            catch(PDOException $Exception){
+                echo "Er ging iets mis met de database. <br>";
+                echo "De melding is {$exception->getMessage()}<br><br>";
             }
         }
     }

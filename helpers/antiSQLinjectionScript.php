@@ -6,7 +6,7 @@ function specialCharacters($values){
     $hasSpecialCharacters = false;
 
     foreach ($values as $value) {
-        if (!preg_match('/[^a-zA-Z\d]+_/', $value)) {
+        if (preg_match("/^[a-z0-9+!*(),;?&=\$_.-]$/", $value)) {
             $hasSpecialCharacters = true;
         }
     }
