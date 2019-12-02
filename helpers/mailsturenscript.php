@@ -2,15 +2,16 @@
 require("ConnectieDatabaseScript.php");
 require("antiSQLinjectionscript.php");
 include("redirect.php");
+session_start();
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
 
-
+$_SESSION["e-mail"]=$_POST['mailaddress']
 
 $subject = 'Welkom op EenmaalAndermaal'; 
 $email = 'hier is uw verificatiecode'; 
-$to = 'larsboxmeer@gmail.com'; 
+$to = $_SESSION['e-mail']; 
 $from = 'EenmaalAndermaal@noreply.com'; 
 $headers   = array(); 
 $headers[] = "MIME-Version: 1.0"; 
@@ -21,7 +22,7 @@ $headers[] = "Reply-To: Realhosting Servicedesk <{$from}>";
 $headers[] = "X-Mailer: PHP/".phpversion(); 
 mail($to, $subject, $email, implode("\r\n", $headers), "-f".$from );
 
-//redirect(index)
+redirect(index)
 ?> 
 
 <!-- Een andere methode is: --> 
