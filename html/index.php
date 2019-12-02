@@ -22,7 +22,7 @@
                     <a href="#" class="carousel-item"><img src="../images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
             <div class="container">
-                <div class="row" style="height:80% !important;">
+                <div class="row">
                     <div class="col s12 m4 l4">
                         <div class="card coconutMilk" style="width:100%">
                             <div class="card-image">

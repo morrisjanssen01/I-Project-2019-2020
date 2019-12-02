@@ -3,6 +3,7 @@
     require("ConnectieDatabaseScript.php");
     require("antiSQLinjectionScript.php");
     require("redirect.php");
+
     if(isset($_POST["submit"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
@@ -12,10 +13,14 @@
             redirect('login');
             exit;
         }
-        else if(specialCharacters($_POST)){
-            redirect('index');
+        else if(!specialCharacters($_POST)){
+
+            header("Location: ../html/login.php?bitch");
+           // redirect('login');
         }
         else {
+            ConnectionDatabase();
+            global $dbh;
             $sql =  $dbh->prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
             $query = $sql->execute(array([$username]));
             $result = $query->fetch(PDO::FETCH_ASSOC);
