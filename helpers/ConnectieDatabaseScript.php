@@ -16,7 +16,14 @@ try {
     $hostname = 'mssql.iproject.icasites.nl';
     $dbname = 'iproject5';
     $username = 'iproject5';
-    $password = 'kFzV56Yuyn';
+    $password = 'kFzV56Yuyn'; 
+
+/* inloggen op mijn lokale database
+
+$hostname = 'localhost';
+$dbname = 'EenmaalAndermaal2019';
+$username = 'sa';
+$password = 'SA'; */
     
     Global $dbh;
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname;ConnectionPooling=0", "$username", "$password");
