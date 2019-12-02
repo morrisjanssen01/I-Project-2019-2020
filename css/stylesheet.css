@@ -18,6 +18,10 @@
     grid-gap: 1em;
     grid-template-rows: auto 1fr auto;
   }
+
+  .form{
+    display:inline;
+  }
   
   @media only screen and (max-width: 450px)  {
   .wrapper {
