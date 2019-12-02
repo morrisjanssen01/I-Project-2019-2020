@@ -11,7 +11,7 @@ if(isset($_POST["username"]))
 	if(mysql_num_rows($query) == 0){
 		$result = add_customer($_POST);
  if ($result === true ){	
-	echo 'New reccord added to database';
+	echo 'Nieuwe gebruiker toegevoegd';
 	die();
 	}
 			}
@@ -19,7 +19,7 @@ if(isset($_POST["username"]))
 else {
 	if(isset($_POST["gebruikersnaam"])){
     $existing = existing_customer();
-	echo'Record already exists!';
+	echo'Deze gebruikersnaam staat al geregistreerd!';
 	}	
 }
 
