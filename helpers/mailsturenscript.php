@@ -7,10 +7,16 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
 
+for($i=0; $i<6; $i++){
+	$randomNumber = random_int(0,9);
+	$verificationcode = $verificationcode . $randomNumber;
+}
+$_SESSION["verificationcode"]=$verificationcode;
 $_SESSION["e-mail"]=$_POST['mailaddress'];
 
 $subject = 'Welkom op EenmaalAndermaal'; 
-$email = 'hier is uw verificatiecode'; 
+$email = 'Dank U voor uw aanmelding op EenmaalAndermaal.' .<br> <br> 
+'hier is uw verificatiecode: ' . $_SESSION['verificationcode']; 
 $to = 'desktopmorris@outlook.com';
 //$_SESSION['e-mail']; 
 $from = 'EenmaalAndermaal@noreply.com'; 
