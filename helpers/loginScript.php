@@ -1,8 +1,9 @@
 <?php
 
-    require("ConnectieDatabaseScript.php");
+    require("connectionDatabaseScript.php");
     require("antiSQLinjectionScript.php");
     require("redirect.php");
+    require("rickRoll.php");
 
     if(isset($_POST["submit"])){
         $username = $_POST["username"];
@@ -15,11 +16,11 @@
         }
         else if(!specialCharacters($_POST)){
 
-            header("Location: ../html/login.php?bitch");
+            header("Location: ../login.php?bitch");
            // redirect('login');
         }
         else {
-            ConnectionDatabase();
+            connectionDatabase();
             global $dbh;
             $sql =  $dbh->prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
             $query = $sql->execute(array([$username]));
@@ -30,20 +31,20 @@
                 if($passwordCorrect){
                     session_start();
                     $_SESSION["username"] = $result['gebruikersnaam'];
-                    header("Location: ../html/index.php");
+                    header("Location: ../index.php");
                     exit();
                 }
                 // wat is deze ???? 
                 else{
-                    header("Location: ../html/login.php");
+                    header("Location: ../login.php");
                 }
             }
             else {
-                header("Location: ../html/login.php");
+                header("Location: ../login.php");
                 exit();
             }
         }
     }
     else{
-        header("location: https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLahKLy8pQdCM0SiXNn3EfGIXX19QGzUG3");
+        rickRoll();
     }  

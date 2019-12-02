@@ -2,14 +2,14 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
-        <link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
+        <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css">
+        <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         <div class="wrapper">
             <div class="box header">
-                <?php include '../includes/header.php'; ?> 
+                <?php include 'includes/header.php'; ?> 
             </div>
             <div class="box content">
                 <section class="section container center" id="loginForm">
@@ -22,7 +22,7 @@
                                     <a class="waves-effect waves-light brown btn modal-trigger"  href="#modal1" > Vragen?</a> 
                                 </div>
                                 <div class="card-content">
-                                    <form action="../helpers/mailsturenScript.php" method="post">
+                                    <form action="helpers/mailingScript.php" method="post">
                                     <div class="form-field">
                                         <label for="mailadress">E-mail</label>
                                         <input type="text" name= "mailadress" id="mailadress"> 
@@ -57,11 +57,11 @@
                 </div>
             </div>
             <div class="box footer">
-        <?php include '../includes/footer.php'; ?>
+        <?php include 'includes/footer.php'; ?>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
+        <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
         <script>
             $(document).ready(function(){
                 $('.sidenav').sidenav();

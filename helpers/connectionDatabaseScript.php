@@ -11,14 +11,14 @@ global $username;
 global $password;
 global $dbh;
 
-function ConnectionDatabase() {
+function connectionDatabase() {
 try {
     $hostname = 'mssql.iproject.icasites.nl';
     $dbname = 'iproject5';
     $username = 'iproject5';
     $password = 'kFzV56Yuyn';
     
-    Global $dbh;
+    global $dbh;
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname;ConnectionPooling=0", "$username", "$password");
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
