@@ -4,22 +4,25 @@ require("antiSQLinjectionscript.php");
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
-if(isset($_POST["username"]))
-	{
+if(isset($_POST["username"])) {
 	$record = $_POST["username"];
-    $query = mysql_query("SELECT * FROM gebruikers WHERE gebruikersnaam=='$record'");
-	if(mysql_num_rows($query) == 0){
+	$getUsers = $dbh->prepare ("SELECT * FROM gebruikers WHERE gebruikersnaam=='$record'");
+	$getUsers->execute();
+	$users = $getUsers->fetchAll(pdo::FETCH_ASSOC);
+	foreach ($users as $user){
+		
+	}
+	if(sqlsrv_nums_row($query) == 0){
 		$result = add_customer($_POST);
  if ($result === true ){	
-	echo 'New reccord added to database';
 	die();
 	}
-			}
-		}	
+  }
+}	
 else {
 	if(isset($_POST["gebruikersnaam"])){
     $existing = existing_customer();
-	echo'Record already exists!';
+	echo'Deze gebruikersnaam staat al geregistreerd!';
 	}	
 }
 
@@ -46,7 +49,7 @@ catch (PDOException $exception){
 /* Checkt of wachtwoorden overeenkomen. Wanneer de wachtwoorden overeenkomen, wordt het wachtwoord gehasht */
 
 	if($password != $repeatpassword){
-		echo "wachtwoorden komen niet overeen";
+		echo "Wachtwoorden komen niet overeen";
 	}
 	else {
 	$hashedpassword = password_hash($password, PASSWORD_DEFAULT); 
