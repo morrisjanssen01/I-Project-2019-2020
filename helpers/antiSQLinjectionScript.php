@@ -6,10 +6,10 @@ function specialCharacters($values){
     $hasSpecialCharacters = false;
 
     foreach ($values as $value) {
-        if (!preg_match('/^[a-zA-Z\s]+$/', $value)) {
-            $specialeKarakters = true;
+        if (!preg_match('/[^a-zA-Z\d]+_/', $value)) {
+            $hasSpecialCharacters = true;
         }
     }
-    return $specialeKarakters;
+    return $hasSpecialCharacters;
 }
 ?>
