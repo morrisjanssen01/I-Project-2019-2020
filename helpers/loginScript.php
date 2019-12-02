@@ -1,7 +1,7 @@
 <?php
 
     require("ConnectieDatabaseScript.php");
-    require("antiSQLinjection.php");
+    require("antiSQLinjectionScript.php");
     require("redirect.php");
     if(isset($_POST["submit"])){
         $username = $_POST["username"];

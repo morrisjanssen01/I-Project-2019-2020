@@ -9,7 +9,7 @@ $dbname = 'EenmaalAndermaal';
 $username = 'iproject5';
 $password = 'kFzV56Yuyn';
 
-function ConnectionDatabase($hostname, $dbname, $username, $password) {
+function ConnectionDatabase() {
 try {
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname;ConnectionPooling=0", "$username", "$password");
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

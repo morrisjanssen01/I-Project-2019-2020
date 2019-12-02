@@ -5,9 +5,9 @@
     error_reporting(E_ERROR | E_PARSE);
 
     function generateRubrics(){
-        global $config;
         try{
-            $sql = $dbh->prepare('SELECT rubrieknummer, subrubriek, rubrieknaam, volgnr FROM rubrieken WITH(INDEX(IN_rubrieken)) ORDER BY subrubriek ASC, volgnr');
+            ConnectionDatabase();
+            $sql = $dbh->prepare('SELECT rubrieknummer, subrubriek, rubrieknaam, volgnr FROM rubrieken ORDER BY subrubriek ASC, volgnr');
             $sql->execute();
             $result = $sql->fetchAll(pdo::FETCH_ASSOC);
             $html = '';
