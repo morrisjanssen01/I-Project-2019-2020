@@ -9,24 +9,7 @@
                 $datas[] = $result;
          }
          foreach($datas as $data){  
-            echo '<div class="col s5">
-            <h1 class="valign">'.$data["titel"].'</h1>
-            <img src="../images/vaseline.jpg" class="responsive-img"width="150">
-            <h3 class="right" style=""> eindingt in '.$data["looptijdEindeTijdstip"].'</h3>
-            <span class="right">'.$data["beschrijving"].'</span><br><br><br>
-               <a href=""><button class="btn left" name="submit">
-                  bied
-               </button></a>
-            </div>';
-           echo '<div class="col l6 m6 s12 coconutMilk z-depth-4">
-        <h1 class="valign">'.$data["titel"].'</h1>
-        <img src="../images/icabuttplugg.jpg" class="responsive-img" width="150">
-        <h2 class="right">eindigd in '.$data["looptijdEindeTijdstip"].'</h3>
-        <span class="left">'.$data["beschrijving"].'</span><br><br><br>
-          <button class="btn left">
-            bied
-          </button>
-       </div>';
+     
             /* Hier moet een img komen ook ergens en de design kan ik pas maken als ik een virtueel voorbeeld heb.*/
           } 
     }
@@ -39,28 +22,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <?php include '../includes/header.php'; ?> 
-    <div class="row ">
-      <div class="col l6 m6 s12 sailorBlue z-depth-4">
-       <h1 class="valign grey-text">Vaseline</h1>
-       <img src="../images/vaseline.jpg" class="responsive-img" width="150">
-       <h2 class="right grey-text ">eindigt in 69 : 42 : 00</h3>
-       <span class="left grey-text">gebruikt door de enige echte Martijn Driessen</span><br><br><br>
-          <button class="btn left">
-            bied
-          </button>
-       </div>
-       <div class="col l6 m6 s12 coconutMilk z-depth-4">
-        <h1 class="valign">buttplugg</h1>
-        <img src="../images/icabuttplugg.jpg" class="responsive-img" width="150">
-        <h2 class="right">eindigt in 42 : 06 : 90</h3>
-        <span class="left">ook gebruikt door de enige echte Martijn Driessen tijdens een van zijn beroemde assessments</span><br><br><br>
-          <button class="btn left">
-            bied
-          </button>
-       </div>
+    <div class="row">
+    <div class="col s12 m6 l6">
+      <div class="card coconutMilk" style="max-width:30%; max-height:40%;">
+        <div class="card-image">
+          <img src="../images/icaButtplugg.jpg">
+          <span class="card-title coconutMilk black-text">StandBeeld</span>
+        </div>
+        <div class="card-content coconutMilk">
+          <p>Never gonna give you up</p>
+        </div>
+        <div class="card-action coconutMilk">
+          <a href="#">Bieden</a>
+        </div>
+      </div>
     </div>
-    <?php include '../includes/footer.php';?>
+  </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script> 
   </body>
