@@ -5,7 +5,7 @@ $dbname = 'EenmaalAndermaal';
 $username = 'username';
 $password = 'password'; */
 $hostname = 'mssql.iproject.icasites.nl';
-$dbname = 'EenmaalAndermaal';
+$dbname = 'iproject5';
 $username = 'iproject5';
 $password = 'kFzV56Yuyn';
 global $dbh;
