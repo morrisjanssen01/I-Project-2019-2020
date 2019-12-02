@@ -4,6 +4,24 @@ require("antiSQLinjectionscript.php");
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
+if(isset($_POST["username"]))
+	{
+	$record = $_POST["username"];
+    $query = mysql_query("SELECT * FROM gebruikers WHERE gebruikersnaam=='$record'");
+	if(mysql_num_rows($query) == 0){
+		$result = add_customer($_POST);
+ if ($result === true ){	
+	echo 'Nieuwe gebruiker toegevoegd';
+	die();
+	}
+			}
+		}	
+else {
+	if(isset($_POST["gebruikersnaam"])){
+    $existing = existing_customer();
+	echo'Deze gebruikersnaam staat al geregistreerd!';
+	}	
+}
 
 /* Geeft de ingevulde waarden bij gebruikersnaam en wachtwoord mee aan de variabelen */
 /* zet het mailadres in een sessie en unset deze nadat je hem in de database hebt gestopt.	*/
@@ -36,5 +54,7 @@ catch (PDOException $exception){
 	VALUES ($username, $mailadress, $hashedpassword)";
 	echo "U bent geregistreerd!";
 	}
+
+	
 }
 ?>
