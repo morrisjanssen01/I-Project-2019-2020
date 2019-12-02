@@ -5,13 +5,14 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
 if(isset($_POST["username"])) {
+	global $dbh;
 	$record = $_POST["username"];
-	$getUsers = $dbh->prepare ("SELECT * FROM gebruikers WHERE gebruikersnaam=='$record'");
+	$getUsers = $dbh->prepare("SELECT * FROM gebruikers WHERE gebruikersnaam == $record");
 	$getUsers->execute();
 	$users = $getUsers->fetchAll(pdo::FETCH_ASSOC);
 	foreach ($users as $user){
 		
-	}
+	};
 	if(sqlsrv_nums_row($query) == 0){
 		$result = add_customer($_POST);
  if ($result === true ){	
