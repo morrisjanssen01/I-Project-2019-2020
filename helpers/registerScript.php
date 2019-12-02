@@ -1,10 +1,14 @@
 <?php
 require("connectionDatabaseScript.php");
 require("antiSQLinjectionscript.php");
+
+error_reporting(E_ERROR | E_PARSE);
+
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
 if(isset($_POST["username"])) {
+	ConnectionDatabase();
 	global $dbh;
 	$record = $_POST["username"];
 	$getUsers = $dbh->prepare("SELECT * FROM gebruikers WHERE gebruikersnaam == $record");
@@ -15,9 +19,9 @@ if(isset($_POST["username"])) {
 	};
 	if(sqlsrv_nums_row($query) == 0){
 		$result = add_customer($_POST);
- if ($result === true ){	
-	die();
-	}
+ 		if ($result === true ){	
+			die();
+		}
   }
 }	
 else {
