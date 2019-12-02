@@ -4,8 +4,7 @@ require("antiSQLinjectionscript.php");
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
-if(isset($_POST["username"]))
-	{
+if(isset($_POST["username"])) {
 	$record = $_POST["username"];
     $query = mysql_query("SELECT * FROM gebruikers WHERE gebruikersnaam=='$record'");
 	if(mysql_num_rows($query) == 0){
@@ -14,8 +13,8 @@ if(isset($_POST["username"]))
 	echo 'Nieuwe gebruiker toegevoegd';
 	die();
 	}
-			}
-		}	
+  }
+}	
 else {
 	if(isset($_POST["gebruikersnaam"])){
     $existing = existing_customer();
