@@ -22,15 +22,94 @@
                     <a href="#" class="carousel-item"><img src="../images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
             <div class="container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin augue, molestie malesuada urna lobortis id. Maecenas lobortis lacus vel diam convallis sagittis. Sed cursus diam tellus, a hendrerit mauris laoreet in. In hendrerit efficitur aliquam. Morbi nec velit et felis faucibus tempor finibus a diam. Duis dictum odio at leo sagittis, id viverra sapien feugiat. In ac ex sit amet lectus ullamcorper gravida. Donec nisl lorem, sodales vel erat varius, condimentum sodales eros. Mauris dignissim auctor lacinia. Donec faucibus lectus in sollicitudin eleifend. Proin feugiat, nunc et aliquet consectetur, enim diam bibendum velit, in feugiat elit magna vitae ligula. Suspendisse fermentum erat libero, eu ultrices ligula fermentum nec. Suspendisse egestas laoreet ornare. Etiam id semper felis. Maecenas tortor elit, sollicitudin id consectetur vitae, blandit ac urna.
-
-Praesent feugiat mi sapien, placerat ultrices odio rutrum et. Etiam at varius enim. Curabitur sollicitudin accumsan est. Nulla facilisi. Suspendisse a varius velit, ut ultricies nisl. Duis in fringilla augue. Aliquam consectetur enim vitae dictum lacinia. Proin lacus eros, consectetur non lectus in, aliquam tincidunt nisi. Pellentesque tempus commodo ligula. Nulla sollicitudin malesuada finibus. Donec ut egestas velit. Mauris eleifend faucibus leo, at imperdiet velit euismod et. Vestibulum at ullamcorper sapien.
-
-Nullam semper ante vel lectus rhoncus, sed viverra tellus venenatis. Phasellus condimentum, sapien at dapibus maximus, ligula urna cursus neque, vel dapibus tellus mauris sit amet tellus. Praesent placerat ullamcorper sem, ut imperdiet turpis sodales dignissim. Donec ac sem maximus leo tempor placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed gravida condimentum mi feugiat fringilla. Suspendisse ullamcorper dapibus magna. Duis sem tortor, blandit quis odio nec, suscipit malesuada nulla.
-
-Donec ullamcorper tincidunt hendrerit. Proin eleifend gravida ipsum. Nam faucibus, nunc eget semper ullamcorper, quam dolor eleifend ex, finibus elementum libero mauris sit amet ligula. Nam sed tellus ac nulla vulputate pharetra ac in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla interdum sem nec leo luctus, eu egestas metus sagittis. Quisque sit amet magna id eros consequat suscipit. Duis ullamcorper odio a ipsum sollicitudin facilisis. In vitae ultricies lectus, sed congue arcu. Aliquam neque magna, consectetur auctor euismod vel, eleifend vel augue. Integer ut sollicitudin justo.
-
-Duis cursus felis nibh, sit amet sagittis augue ullamcorper id. Proin sed lectus eget nisl egestas ultrices. Morbi rhoncus, sem non sollicitudin mattis, velit augue dapibus elit, non bibendum velit ex ac purus. Morbi vitae rhoncus lacus. Quisque rutrum ultrices lacus et suscipit. Praesent fermentum lectus et tortor gravida lacinia. Nulla semper rutrum dignissim. Vestibulum consectetur lectus nulla, et egestas magna gravida sit amet. Sed luctus lobortis urna. Mauris consequat euismod tellus vel bibendum. Aliquam erat volutpat. Aenean gravida leo a pulvinar pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc tellus nunc, consequat sit amet lectus placerat, vulputate venenatis est. Vivamus vitae consequat lorem, at molestie ipsum. Suspendisse finibus, urna tempus scelerisque rutrum, eros ex convallis massa, sed hendrerit enim eros id nulla.</p>
+                <div class="row" style="height:80% !important;">
+                    <div class="col s12 m4 l4">
+                        <div class="card coconutMilk" style="width:100%">
+                            <div class="card-image">
+                                <img src="../images/rickAstley.jpg">
+                                <span class="card-title coconutMilk black-text">Rick Astley bodypillow</span>
+                            </div>
+                            <div class="card-content coconutMilk">
+                                <p>Will never gonna give you up</p>
+                            </div>
+                            <div class="card-action coconutMilk">
+                                <a href="#">Bieden</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <div class="card coconutMilk" style="width:100%; height:80%;">
+                            <div class="card-image">
+                                <img src="../images/icaButtplugg.jpg">
+                                <span class="card-title coconutMilk black-text">StandBeeld</span>
+                            </div>
+                            <div class="card-content coconutMilk">
+                                <p>voor alle feestjes</p>
+                            </div>
+                            <div class="card-action coconutMilk">
+                                <a href="#">Bieden</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                            <div class="card-image">
+                                <img src="../images/vaseline.jpg">
+                                <span class="card-title coconutMilk black-text">vaseline</span>
+                            </div>
+                            <div class="card-content coconutMilk">
+                                <p>voor jouw en jaqueline</p>
+                            </div>
+                            <div class="card-action coconutMilk">
+                                <a href="#">Bieden</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m4 l4">
+                        <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                            <div class="card-image">
+                                <img src="../images/wasmachine.jpg">
+                                <span class="card-title coconutMilk black-text">wasmachine</span>
+                            </div>
+                            <div class="card-content coconutMilk">
+                                <p>kind niet inbegrepen</p>
+                            </div>
+                            <div class="card-action coconutMilk">
+                                <a href="#">Bieden</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                            <div class="card-image">
+                                <img src="../images/martijn.jpg">
+                                <span class="card-title coconutMilk black-text">handtekening martijn</span>
+                            </div>
+                            <div class="card-content coconutMilk">
+                                <p>geschreven met studenten tranen</p>
+                            </div>
+                            <div class="card-action coconutMilk">
+                                <a href="#">Bieden</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                            <div class="card-image">
+                                <img src="../images/tonk.jpg">
+                                <span class="card-title coconutMilk black-text">tonk</span>
+                            </div>
+                            <div class="card-content coconutMilk">
+                                <p>voor al je gta avonturen in real life</p>
+                            </div>
+                            <div class="card-action coconutMilk">
+                                <a href="#">Bieden</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="box footer">
