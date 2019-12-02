@@ -5,18 +5,18 @@ $dbname = 'EenmaalAndermaal';
 $username = 'username';
 $password = 'password'; */
 
-$hostname = 'mssql.iproject.icasites.nl';
-$dbname = 'iproject5';
-$username = 'iproject5';
-$password = 'kFzV56Yuyn';
+global $hostname;
+global $dbname;
+global $username;
+global $password;
 global $dbh;
 
 function ConnectionDatabase() {
 try {
-    /*$hostname = 'mssql.iproject.icasites.nl';
+    $hostname = 'mssql.iproject.icasites.nl';
     $dbname = 'iproject5';
     $username = 'iproject5';
-    $password = 'kFzV56Yuyn'; */
+    $password = 'kFzV56Yuyn';
     
     Global $dbh;
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname;ConnectionPooling=0", "$username", "$password");
