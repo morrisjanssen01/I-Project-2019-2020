@@ -8,7 +8,7 @@
         try{
             ConnectionDatabase();
             global $dbh;
-            $sql = $dbh->prepare('SELECT rubrieknummer, subrubriek, rubrieknaam, volgnr FROM rubrieken ORDER BY subrubriek ASC, rubrieknaam');
+            $sql = $dbh->prepare('SELECT rubrieknummer, rubrieknaam, subrubriek, volgnr FROM rubrieken ORDER BY subrubriek ASC, rubrieknaam');
             $sql->execute();
             $result = $sql->fetchAll(pdo::FETCH_ASSOC);
             $html = '';
