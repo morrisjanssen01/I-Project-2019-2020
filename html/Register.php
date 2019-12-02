@@ -27,42 +27,46 @@
                             <div class="form-field">
                                 <label for="password">Wachtwoord</label>
                                 <input type="password" name ="password" id="password">
-                            </div><br>
+                            </div>
                             <div class="form-field">
                                 <label for="repeat password">Bevestig Wachtwoord</label>
                                 <input type="password" name="repeat password" id="repeat password">
                                 <div class="form-field">
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Voornaam</label>
-                                <input type="text" name="username" id="username">
+                            <label for="firstName">Voornaam</label>
+                                <input type="text" name="firstName" id="firstName">
+                            </div>
+                            <div class="form-field">
+                            <label for="lastName">Achternaam</label>
+                                <input type="text" name="lastName" id="lastName">
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Achternaam</label>
-                                <input type="text" name="username" id="username">
+                            <label for="adress1">Adres 1</label>
+                                <input type="text" name="adress1" id="adress1">
+                            </div>
+                            <div class="form-field">
+                            <label for="adress2">Adres 2</label>
+                                <input type="text" name="adress2" id="adress2">
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Adres</label>
-                                <input type="text" name="username" id="username">
+                            <label for="postalCode">Postcode</label>
+                                <input type="text" name="postalCode" id="postalCode">
+                            </div>
+                            <div class="form-field">
+                            <label for="city">Plaatsnaam</label>
+                                <input type="text" name="city" id="city">
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Postcode</label>
-                                <input type="text" name="username" id="username">
+                            <label for="land">Land</label>
+                                <input type="text" name="land" id="land">
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Plaatsnaam</label>
-                                <input type="text" name="username" id="username">
+                            <label for="birthDate">Geboortedag</label>
+                                <input type="text" id="birthDate" class="datepicker"> 
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Land</label>
-                                <input type="text" name="username" id="username">
-                            </div><br>
-                            <div class="form-field">
-                            <label for="username">Geboortedag</label>
-                                <input type="text" id="date" class="datepicker"> 
-                            </div><br>
-                            <div class="form-field">
-                            <label for="Vragenlijst">Vragen</label>
+                            <label for="questionList">Vragen</label>
                                 <select>
                                      <option value="" disabled selected>Kies uw beveiligingsvraag</option>
                                      <option value="1">Hoe heet uw huisdier?</option>
@@ -71,8 +75,8 @@
                                 </select>    
                             </div><br>
                             <div class="form-field">
-                            <label for="username">Antwoord</label>
-                                <input type="text" name="username" id="username">
+                            <label for="answer">Antwoord</label>
+                                <input type="text" name="answer" id="answer">
                             </div><br>
                                 <label>
                                 <input type="checkbox" id="remember"/>
