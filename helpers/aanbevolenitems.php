@@ -24,7 +24,7 @@
   <body>
     <div class="row">
     <div class="col s12 m6 l6">
-      <div class="card coconutMilk" style="max-width:30%; max-height:40%;">
+      <div class="card coconutMilk" style="max-width:50%; max-height:60%;">
         <div class="card-image">
           <img src="../images/icaButtplugg.jpg">
           <span class="card-title coconutMilk black-text">StandBeeld</span>
