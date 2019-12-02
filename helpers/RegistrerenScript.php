@@ -1,10 +1,14 @@
 <?php
 require("ConnectieDatabaseScript.php");
 require("antiSQLinjectionscript.php");
+
+error_reporting(E_ERROR | E_PARSE);
+
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
 if(isset($_POST["username"])) {
+	ConnectionDatabase();
 	global $dbh;
 	$record = $_POST["username"];
 	$getUsers = $dbh->prepare("SELECT * FROM gebruikers WHERE gebruikersnaam == $record");
