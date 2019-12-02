@@ -52,7 +52,7 @@
                         </p>
                     </div>
                     <div class="modal-footer"> 
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar de Registreer-pagina</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar de Registratiepagina</a>
                     </div>
                 </div>
             </div>

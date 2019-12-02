@@ -7,11 +7,12 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
 
-$_SESSION["e-mail"]=$_POST['mailaddress']
+$_SESSION["e-mail"]=$_POST['mailaddress'];
 
 $subject = 'Welkom op EenmaalAndermaal'; 
 $email = 'hier is uw verificatiecode'; 
-$to = $_SESSION['e-mail']; 
+$to = 'desktopmorris@outlook.com';
+//$_SESSION['e-mail']; 
 $from = 'EenmaalAndermaal@noreply.com'; 
 $headers   = array(); 
 $headers[] = "MIME-Version: 1.0"; 
