@@ -15,9 +15,9 @@ if(isset($_POST["username"])) {
 	};
 	if(sqlsrv_nums_row($query) == 0){
 		$result = add_customer($_POST);
- if ($result === true ){	
-	die();
-	}
+ 		if ($result === true ){	
+			die();
+		}
   }
 }	
 else {
