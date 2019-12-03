@@ -153,40 +153,6 @@
 </html>
 <?php
 
-if(isset($_POST['submit'])){
-    function CheckCaptcha($userResponse){
-        $fields_string = '';
-        $fields = array(
-            "secret" => "6Ld5H8UUAAAAALhODoTx6h90-YsgL4KAd0wltr4H",
-            "response" => $userResponse
-        );
-        foreach($fields as $key=>$value)
-        $fields_string .= $key . '=' . $value . '&';
-        $fields_string = rtrim($fields_string, '&');
-        
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recatcha/api/siteverify');
-        curl_setopt($ch, CURLOPT_POST, count($fields));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, True);
 
-        $res = curl_exec($ch);
-        curl_close($ch);
-
-        return json_decode($res, true);
-    }
-
-    //Call the function CheckCaptcha
-    $result = CheckCaptcha($_POST['g-recaptcha-response']);
-
-    if($result['success']){
-        //If the user has checked the captcha box
-        echo "Captcha verified Successfully";
-    }
-    else{
-        //If the CAPTCHA box wasn't checked
-        echo '<script>alert("Error Message");</script>';
-    }
-    }
 ?>
 <!-- 2de knop maken die een 2de mail stuurd doormiddel van een knop e-mail niet ontvangen of een knop E-mail binnen 5 min niet ontvangen
