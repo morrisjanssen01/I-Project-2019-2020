@@ -24,8 +24,7 @@
                                     <a class="waves-effect waves-light brown btn modal-trigger"  href="#modal1" > Vragen?</a> 
                                 </div>
                                 <div class="card-content">
-                                    
-                                    <form action="helpers/RegistrerenScript.php" method="post">        
+                                    <form action="helpers/registerScript.php" method="post">        
                                         <div class="form-field">
                                             <label for="username">Gebruikersnaam</label>
                                             <input type="text" name="username" id="username">
