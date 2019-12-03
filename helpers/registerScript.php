@@ -1,5 +1,5 @@
 <?php
-require("ConnectieDatabaseScript.php");
+require("connectionDatabaseScript.php");
 require("antiSQLinjectionscript.php");
 
 error_reporting(E_ERROR | E_PARSE);

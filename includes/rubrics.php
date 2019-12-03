@@ -1,12 +1,12 @@
 <?php
 
-    require("../helpers/ConnectieDatabaseScript.php");
+    require("helpers/connectionDatabaseScript.php");
     
     error_reporting(E_ERROR | E_PARSE);
 
     function generateRubrics(){
         try{
-            ConnectionDatabase();
+            connectionDatabase();
             global $dbh;
             $sql = $dbh->prepare('SELECT rubrieknummer, rubrieknaam, subrubriek, volgnr FROM rubrieken ORDER BY subrubriek ASC, rubrieknaam');
             $sql->execute();
@@ -39,15 +39,12 @@
                 $parent = array_pop($parent_stack);
             }
         }
-    $html .= '</li>';                
+    $html .= '</li></div>';                
     } catch(\Throwable $th){
         echo $th->getMessage();
         $html = "";
     }
     return $html;
 }
+ echo generateRubrics(); 
 ?>
-
-<div class="sidebar">
-    <?php echo generateRubrics(); ?>
-</div>
