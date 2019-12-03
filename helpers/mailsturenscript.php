@@ -16,7 +16,7 @@ $_SESSION["e-mail"]=$_POST['mailaddress'];
 
 $subject = 'Welkom op EenmaalAndermaal'; 
 $email = 'Dank U voor uw aanmelding op EenmaalAndermaal.' . '<br> <br>' .
- 'hier is uw verificatiecode: ' . $_SESSION["verificationcode"]; 
+'hier is uw verificatiecode: ' . $_SESSION["verificationcode"]; 
 $to = 'coen.klabbers@gmail.com';
 //$_SESSION['e-mail']; 
 $from = 'EenmaalAndermaal@noreply.com'; 
