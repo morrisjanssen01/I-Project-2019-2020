@@ -11,9 +11,9 @@ if(isset($_POST["username"])) {
 	ConnectionDatabase();
 	global $dbh;
 	$record = $_POST["username"];
-	$getUsers = $dbh->prepare("SELECT * FROM gebruikers WHERE gebruikersnaam == $record");
-	$getUsers->execute();
-	$users = $getUsers->fetchAll(pdo::FETCH_ASSOC);
+	$sql = $dbh->prepare("SELECT * FROM gebruikers WHERE gebruikersnaam = ?");
+	$query = $sql->execute(array([$username]));
+	$users = $query->fetchAll(pdo::FETCH_ASSOC);
 	foreach ($users as $user){
 		
 	};
