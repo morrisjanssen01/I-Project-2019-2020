@@ -52,7 +52,7 @@
   
   @media only screen and (min-width: 1024px){
   .wrapper{
-       grid-template-columns: 20% 40% 40%; 
+       grid-template-columns: 16% 42% 42%; 
        grid-template-rows: auto auto 1fr auto;   /* want een rij extra!! */
        grid-template-areas: 
       "header   header   header"
