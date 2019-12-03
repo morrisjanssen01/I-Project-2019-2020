@@ -1,3 +1,4 @@
+<?php session_start();?>
 <div class="header">
 <header>
     <nav class="nav-wrapper warmSand">
