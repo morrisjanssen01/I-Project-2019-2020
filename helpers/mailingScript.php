@@ -13,7 +13,6 @@ for($i=0; $i<6; $i++){
 }
 $_SESSION["verificationcode"]=$verificationcode;
 $_SESSION["e-mail"]=$_POST['mailaddress'];
-
 $subject = 'Welkom op EenmaalAndermaal'; 
 $email = 'Dank U voor uw aanmelding op EenmaalAndermaal.' . '<br> <br>' .
 'hier is uw verificatiecode: ' . $_SESSION['verificationcode'] .'<br> <br>' .
