@@ -17,7 +17,7 @@
             <div class="box content">
                 <div class="carousel">
                     <a href="#" class="carousel-item"><img src="images/rickAstley.jpg" alt="Rickrolled!!!"></a>
-                    <a href="#" class="carousel-item"><img src="images/martijn.jpg" alt="Der TEUFEL!!!"></a>
+                    <a href="#" class="carousel-item"><img src="images/Sans.jpg" alt="Der TEUFEL!!!"></a>
                     <a href="#" class="carousel-item"><img src="images/icaButtplugg.jpg" alt="ICA ButtPlugg"></a>
                     <a href="#" class="carousel-item"><img src="images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
@@ -41,10 +41,10 @@
                             <div class="card coconutMilk" style="width:100%; height:80%;">
                                 <div class="card-image">
                                     <img src="images/icaButtplugg.jpg">
-                                    <span class="card-title coconutMilk black-text">StandBeeld</span>
+                                    <span class="card-title coconutMilk black-text">Standbeeld</span>
                                 </div>
                                 <div class="card-content coconutMilk">
-                                    <p>voor alle feestjes</p>
+                                    <p>mooi standbeeld replica van het beeld op de han</p>
                                 </div>
                                 <div class="card-action coconutMilk">
                                     <a href="#">Bieden</a>
@@ -58,7 +58,7 @@
                                     <span class="card-title coconutMilk black-text">Vaseline</span>
                                 </div>
                                 <div class="card-content coconutMilk">
-                                    <p>voor jou en Jaqueline</p>
+                                    <p>gekocht en nooit gebruikt</p>
                                 </div>
                                 <div class="card-action coconutMilk">
                                     <a href="#">Bieden</a>
@@ -74,7 +74,7 @@
                                     <span class="card-title coconutMilk black-text">Wasmachine</span>
                                 </div>
                                 <div class="card-content coconutMilk">
-                                    <p>kind niet inbegrepen</p>
+                                    <p>3 jaar oude wasmachine</p>
                                 </div>
                                 <div class="card-action coconutMilk">
                                     <a href="#">Bieden</a>
@@ -84,11 +84,11 @@
                         <div class="col s12 m4 l4">
                             <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
                                 <div class="card-image">
-                                    <img src="images/martijn.jpg">
-                                    <span class="card-title coconutMilk black-text">Handtekening Martijn</span>
+                                    <img src="images/Sans.jpg">
+                                    <span class="card-title coconutMilk black-text">Undertale game</span>
                                 </div>
                                 <div class="card-content coconutMilk">
-                                    <p>Geschreven met studenten tranen</p>
+                                    <p>Game Undertale, save file is gewist</p>
                                 </div>
                                 <div class="card-action coconutMilk">
                                     <a href="#">Bieden</a>
@@ -102,7 +102,7 @@
                                     <span class="card-title coconutMilk black-text">tonk</span>
                                 </div>
                                 <div class="card-content coconutMilk">
-                                    <p>Voor al je GTA avonturen in Real Life</p>
+                                    <p>speelgoed tonk</p>
                                 </div>
                                 <div class="card-action coconutMilk">
                                     <a href="#">Bieden</a>
