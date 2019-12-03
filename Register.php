@@ -83,6 +83,10 @@
                                             <input type="text" name="answer" id="answer">
                                         </div><br>
                                         <div class="form-field">
+                                            <label for="verification">verificatiecode</label>
+                                            <input type="text" name="verificationcode" id="verificationcode">
+                                        </div><br>
+                                        <div class="form-field">
                                             <label>
                                                 <input type="checkbox" id="remember"/>
                                                 <span>Akkoord met Voorwaarden</span>
