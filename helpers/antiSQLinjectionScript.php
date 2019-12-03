@@ -5,10 +5,11 @@
 function specialCharacters($value){
     $hasSpecialCharacters = false;
 
+    foreach($values as $value){
         if (!preg_match("/\w/", $value)) {
             $hasSpecialCharacters = true;
         }
-
+    }
     return $hasSpecialCharacters;
 }
 ?>

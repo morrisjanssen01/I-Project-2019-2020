@@ -14,9 +14,9 @@
             redirect('login');
             exit;
         }
-        else if(specialCharacters($username) || specialCharacters($password)){
+        else if(specialCharacters($_POST)){
 
-            header("Location: ../login.php?bitch");
+            header("Location: ../login.php");
            // redirect('login');
            exit();
         }
@@ -35,15 +35,15 @@
                     if(/*$passwordCorrect*/ $result['wachtwoord'] == $password){
                         session_start();
                         $_SESSION["username"] = $result['gebruikersnaam'];
-                        header("Location: ../index.php?username=".$_SESSION['username']);
+                        header("Location: ../index.php");
                         exit();
                     }
                     else{
-                    header("Location: ../login.php?passwordfout");
+                    header("Location: ../login.php");
                     }
                 }
                 else {
-                    header("Location: ../login.php?besaatniet");
+                    header("Location: ../login.php");
                     exit();
                 }
             } 
