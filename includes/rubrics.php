@@ -1,12 +1,12 @@
 <?php
 
-    require("../helpers/ConnectieDatabaseScript.php");
+    require("helpers/connectionDatabaseScript.php");
     
     error_reporting(E_ERROR | E_PARSE);
 
     function generateRubrics(){
         try{
-            ConnectionDatabase();
+            connectionDatabase();
             global $dbh;
             $sql = $dbh->prepare('SELECT rubrieknummer, rubrieknaam, subrubriek, volgnr FROM rubrieken ORDER BY subrubriek ASC, rubrieknaam');
             $sql->execute();
@@ -27,17 +27,17 @@
             while(($option = each($children[$parent])) || ($parent > 0)){
                 if(!empty($option)){
                     if(!empty($children[$option['value']['rubrieknr']])){
-                        $html .= '<ul class="collapsible collapsible-accordion"><li class="bold"><a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a>';
-                        $html .= '<div class="collapsible-body" style="display: block;"><ul>';
+                        $html .= '<ul class="collapsible collapsible-accordion" style="margin:0; width:100%;"><li class="bold"><a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a>';
+                        
                         array_push($parent_stack, $parent);
                         $parent = $option['value']['rubrieknr'];
                     }else{
-                    $html .= '<li class="bold"><a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a></li>';
+                    $html .= '<a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a>';
                 }
-            }else{
-                $html .= '</ul></div></li></ul>';
-                $parent = array_pop($parent_stack);
             }
+                $html .= '</ul>';
+                $parent = array_pop($parent_stack);
+            
         }
     $html .= '</li>';                
     } catch(\Throwable $th){
@@ -46,8 +46,5 @@
     }
     return $html;
 }
+ echo generateRubrics(); 
 ?>
-
-<div class="sidebar">
-    <?php echo generateRubrics(); ?>
-</div>
