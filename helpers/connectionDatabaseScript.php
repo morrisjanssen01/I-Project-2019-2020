@@ -10,6 +10,7 @@ global $dbname;
 global $username;
 global $password;
 global $dbh;
+global $verificationcode;
 
 function connectionDatabase() {
 try {

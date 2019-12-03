@@ -13,7 +13,7 @@ for($i=0; $i<6; $i++){
 }
 $_SESSION["verificationcode"]=$verificationcode;
 $_SESSION["e-mail"]=$_POST['mailaddress'];
-
+print_r($_SESSION);
 $subject = 'Welkom op EenmaalAndermaal'; 
 $email = 'Dank U voor uw aanmelding op EenmaalAndermaal.' . '<br> <br>' .
 'hier is uw verificatiecode: ' . $_SESSION['verificationcode'] .'<br> <br>' .
@@ -30,7 +30,7 @@ $headers[] = "Reply-To: Realhosting Servicedesk <{$from}>";
 $headers[] = "X-Mailer: PHP/".phpversion(); 
 mail($to, $subject, $email, implode("\r\n", $headers), "-f".$from );
 
-redirect(register);
+//redirect(register);
 ?> 
 
 <!-- Een andere methode is: --> 
