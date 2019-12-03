@@ -115,18 +115,18 @@
             <div class="box footer">
                 <?php include 'includes/footer.php';?>
             </div>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-            <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
-            <script>
-                $(document).ready(function(){
-                $('.sidenav').sidenav();
-                });
-            </script>
-            <script>
-                $(document).ready(function(){
-                $('.carousel').carousel();
-                });
-            </script>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('.sidenav').sidenav();
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+            $('.carousel').carousel();
+            });
+        </script>
     </body>
 </html>
