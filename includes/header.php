@@ -1,3 +1,4 @@
+<?php session_start();?>
 <div class="header">
 <header>
     <nav class="nav-wrapper warmSand">
@@ -8,7 +9,7 @@
             </a>
             <div class="right">
                 <ul class="right">
-                    <?php if (isset($_SESSION["username"])&&!empty($_SESSION["username"])){
+                    <?php if (isset($_SESSION["username"]) && !empty($_SESSION["username"])){
                         echo '<li><span>Welkom <strong style="font-size:1.5rem;">'.$_SESSION["username"].'</strong></span></li>';
                         echo '<li><a href="account.php"><i class="small material-icons">account_circle</i></a></li>';
                         echo '<li><a href="meldingen.php"><i class="small material-icons">notifications</i></a></li>';
