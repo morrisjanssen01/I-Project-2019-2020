@@ -2,14 +2,13 @@
 
 
 // deze functie aan roepen als er input wordt gegeven die naar de database wordt gestuurd! indien er meerder waarden worden gecheckt geef je $_POST of $_GET mee als parameter
-function specialCharacters($values){
+function specialCharacters($value){
     $hasSpecialCharacters = false;
 
-    foreach ($values as $value) {
-        if (preg_match("/^[a-z0-9+!*(),;?&=\$_.-]$/", $value)) {
+        if (!preg_match("/\w/", $value)) {
             $hasSpecialCharacters = true;
         }
-    }
+
     return $hasSpecialCharacters;
 }
 ?>
