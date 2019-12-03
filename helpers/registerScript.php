@@ -6,7 +6,7 @@ require("redirect.php");
 error_reporting(E_ERROR | E_PARSE);
 echo($_SESSION["verificationcode"]);
 
-if(!isset($_SESSION["mailadress"])){
+if(!isset($_SESSION["e-mail"])){
 	redirect("register email");
 	exit();
 }
