@@ -3,6 +3,7 @@ require("connectionDatabaseScript.php");
 require("antiSQLinjectionscript.php");
 
 error_reporting(E_ERROR | E_PARSE);
+echo($_SESSION["verificationcode"]);
 
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
