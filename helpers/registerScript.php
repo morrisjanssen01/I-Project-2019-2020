@@ -6,8 +6,7 @@ require("redirect.php");
 session_start();
 
 error_reporting(E_ERROR | E_PARSE);
-echo(var_dump($_SESSION()));
-print_r($_SESSION);
+
 
 if(!isset($_SESSION["e-mail"])){
 	redirect("register email");
