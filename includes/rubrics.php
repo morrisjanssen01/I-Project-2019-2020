@@ -27,7 +27,7 @@
             while(($option = each($children[$parent])) || ($parent > 0)){
                 if(!empty($option)){
                     if(!empty($children[$option['value']['rubrieknr']])){
-                        $html .= '<ul class="collapsible collapsible-accordion" style="margin:0; width:30%;"><li class="bold"><a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a>';
+                        $html .= '<ul class="collapsible collapsible-accordion" style="margin:0; width:100%;"><li class="bold"><a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a>';
                         
                         array_push($parent_stack, $parent);
                         $parent = $option['value']['rubrieknr'];
