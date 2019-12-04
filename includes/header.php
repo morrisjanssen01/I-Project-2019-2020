@@ -1,6 +1,6 @@
 <?php session_start();?>
 <div class="header">
-<header>
+<header style="margin:0; padding:0;">
     <nav class="nav-wrapper warmSand">
         <div class="container">
             <a href="index.php" class="brand-logo">Logo placeholder</a>
