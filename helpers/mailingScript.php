@@ -17,8 +17,9 @@ $subject = 'Welkom op EenmaalAndermaal';
 $email = 'Dank U voor uw aanmelding op EenmaalAndermaal.' . '<br> <br>' .
 'hier is uw verificatiecode: ' . $_SESSION['verificationcode'] .'<br> <br>' .
 'M.V.G.<br>Team EenmaalAndermaal'; 
-$to = 'coen.klabbers@gmail.com';
-//$_SESSION['e-mail']; 
+
+$to = $_SESSION['e-mail']; 
+//'coen.klabbers@gmail.com';
 $from = 'EenmaalAndermaal@noreply.com'; 
 $headers   = array(); 
 $headers[] = "MIME-Version: 1.0"; 
