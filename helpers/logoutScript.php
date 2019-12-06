@@ -1,5 +1,5 @@
 <?php
-require("redirct.php");
+require("redirect.php");
 session_start();
 session_unset();
 session_destroy();

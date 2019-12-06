@@ -27,7 +27,6 @@
             $sql->execute(array($username));
             try{
                 $result = $sql->fetch(PDO::FETCH_ASSOC);
-                var_dump($result);
                 $accountExist = is_array($result);
                 if($accountExist) {
                     /*password_verify($password, $result['wachtwoord']); */
@@ -39,11 +38,13 @@
                         exit();
                     }
                     else{
-                    header("Location: ../login.php");
+                    
+                    header("Location: ../login.php?error=wachtwoord");
                     }
                 }
                 else {
-                    header("Location: ../login.php");
+                    header("Location: ../login.php?error=gebruiker");
+                    echo'gebruiker niet gevonden';
                     exit();
                 }
             } 

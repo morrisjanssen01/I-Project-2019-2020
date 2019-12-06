@@ -28,6 +28,11 @@
                                         <div class="form-field">
                                             <label for="password">Wachtwoord</label>
                                             <input type="password" name="password" id="password">
+                                            <?php
+                                                if(isset($_GET["error"])){
+                                                  echo"<p class='red-text'>de inloggevens matchen niet met de gevens in de database</p>";
+                                                }
+                                            ?>
                                         </div><br>
                                         <div class="form-field">
                                             <label>
