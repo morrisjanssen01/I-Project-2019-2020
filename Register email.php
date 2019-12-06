@@ -24,11 +24,11 @@
                                 <div class="card-content">
                                     <form action="helpers/mailingScript.php" method="post">
                                     <div class="form-field">
-                                        <label for="mailadress">E-mail</label>
-                                        <input type="text" name= "mailadress" id="mailadress"> 
+                                        <label for="mailaddress">E-mail</label>
+                                        <input type="text" name= "mailaddress" id="mailaddress"> 
                                     </div><br>
                                     <div class="form-field">
-                                        <button class="btn-large warmSand darken-2">Stuur verificatie mail</button>
+                                        <button class="btn-large warmSand darken-2" type="submit">Stuur verificatie mail</button>
                                     </div><br> 
                                     <div class="form-field">
                                         <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>                   

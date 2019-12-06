@@ -23,16 +23,16 @@
             foreach($items as $item){
                 $children[$item['subrubriek']][] = $item;
                 }
-            $html .= '<li class="no-padding">';
+            $html .= '<li class="no-padding" style="margin-top:0;">';
             while(($option = each($children[$parent])) || ($parent > 0)){
                 if(!empty($option)){
                     if(!empty($children[$option['value']['rubrieknr']])){
-                        $html .= '<ul class="collapsible collapsible-accordion" style="margin:0; width:100%;"><li class="bold"><a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a>';
+                        $html .= '<ul class="collapsible collapsible-accordion" style="margin:0; margin-top:0; width:100%;"><li class="bold" style="margin-top:0;"><a class="collapsible-header waves-effect waves-teal" style="margin-top:0;">' . $option['value']['rubrieknaam'] . '</a>';
                         
                         array_push($parent_stack, $parent);
                         $parent = $option['value']['rubrieknr'];
                     }else{
-                    $html .= '<a class="collapsible-header waves-effect waves-teal">' . $option['value']['rubrieknaam'] . '</a>';
+                    $html .= '<a class="collapsible-header waves-effect waves-teal" style=>' . $option['value']['rubrieknaam'] . '</a>';
                 }
             }
                 $html .= '</ul>';
