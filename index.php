@@ -12,14 +12,14 @@
                 <?php include 'includes/header.php';?>
             </div>
             <div class="box content">
-                <div class="carousel">
-                    <a href="#" class="carousel-item"><img src="images/rickAstley.jpg" alt="Rickrolled!!!"></a>
-                    <a href="#" class="carousel-item"><img src="images/Sans.jpg" alt="Der TEUFEL!!!"></a>
-                    <a href="#" class="carousel-item"><img src="images/icaButtplugg.jpg" alt="ICA ButtPlugg"></a>
-                    <a href="#" class="carousel-item"><img src="images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
+                <div class="carousel" style="height:500px;">
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/rickAstley.jpg" alt="Rickrolled!!!"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Sans.jpg" alt="Der TEUFEL!!!"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/icaButtplugg.jpg" alt="ICA ButtPlugg"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
                 <div class="container">
-                <p style="margin-bottom:10%; font-size:200%;" class="center">Laatste Kans!</p>
+                <p style="margin-top:10%; font-size:200%;" class="center">Laatste Kans!</p>
                     <div class="auctions">
                         <div class="row">
                             <div class="col s12 m4 l4">
@@ -114,6 +114,7 @@
                     </div>                        
                 </div>
                 <div class="container">
+                    <p style="margin-top:10%; font-size:200%;" class="center">Koopjes</p>
                     <div class="auctions">
                         <div class="row">
                             <div class="col s12 m4 l4">

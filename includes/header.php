@@ -3,10 +3,10 @@
 <header style="margin:0; padding:0;">
     <nav class="nav-wrapper warmSand">
         <div class="container">
-            <a href="index.php" class="brand-logo">Logo placeholder</a>
+            <a href="index.php" class="brand-logo center">Logo placeholder</a>
             <a id="sidenav" href="" class="sidenav-trigger" data-target="mobile-menu">
                 <i class="material-icons">menu</i>
-            </a>
+                </a>
             <div class="right">
                 <ul class="right">
                     <?php if (isset($_SESSION["username"]) && !empty($_SESSION["username"])){
@@ -22,8 +22,8 @@
                     ?>
                 </ul>
             </div>
-            <ul class="sidenav grey lighten-2" id="mobile-menu">
-                <li><a href="login.html">Login</a></li>
+            <ul style="height:100%;" class="sidenav grey lighten-2" id="mobile-menu">
+                <?php include 'rubrics.php'; ?>
             </ul>
         </div>
     </nav>
