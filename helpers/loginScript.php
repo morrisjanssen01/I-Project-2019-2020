@@ -15,10 +15,8 @@
             exit;
         }
         else if(specialCharacters($_POST)){
-
-            header("Location: ../login.php");
-           // redirect('login');
-           exit();
+            redirect('login');
+            exit();
         }
         else {
             connectionDatabase();
