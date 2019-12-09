@@ -93,8 +93,6 @@
                                                 <span>Akkoord met Voorwaarden</span>
                                             </label>
                                         </div><br>
-                                        <div class="g-recaptcha" style="margin-left:20%; margin-bottom:5%;" data-sitekey="6Ld5H8UUAAAAAMr3EOrfgpBEQBpfv2X3yvPnR54V">
-                                        </div>
                                         <div class="form-field">
                                             <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
                                         </div><br>
