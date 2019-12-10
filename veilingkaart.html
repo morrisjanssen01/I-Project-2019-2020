@@ -18,7 +18,7 @@
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <h4>Bieden op "title"</h4>
-                    <form action="$_POST">
+                    <form action="" method="POST">
                        <div class="input-field">
                         <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="0.50">
                         <label>Bedrag:</label>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="modal-footer">
                     <a class="modal-close waves-effect waves-green btn-flat">terug</a>
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">akkoord</a>
+                    <button type="submit" class="modal-close waves-effect waves-green btn-flat">akkoord</a>
                 </div>
             </div>       
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -36,6 +36,11 @@
          $(document).ready(function(){
             $('.modal').modal();
          });
+        </script>
+        <script>
+            $(document).ready(function(){
+            $('.sidenav').sidenav();
+            });
         </script>
     </body>
 </html>
