@@ -1,3 +1,7 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .content {
     display:grid;    /* moet erin voor de 2e kolom display */
     grid-area: content;
