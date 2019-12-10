@@ -12,15 +12,21 @@
                 <figcaption>
                     <h5>title</h3>
                     <h5>prijs</h5>
-                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" href="#modal1" style="margin: 5px;" target>bied</button>
+                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
                 </figcaption>
             </figure>
             <div id="modal1" class="modal">
                 <div class="modal-content">
-                    <h4>Bieden</h4>
-                    <p>hier komt bied functie</p>
+                    <h4>Bieden op "title"</h4>
+                    <form action="$_POST">
+                       <div class="input-field">
+                        <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="0.50">
+                        <label>Bedrag:</label>
+                       </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
+                    <a class="modal-close waves-effect waves-green btn-flat">terug</a>
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">akkoord</a>
                 </div>
             </div>       
