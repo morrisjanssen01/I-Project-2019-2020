@@ -8,13 +8,22 @@
     </head>
     <body>
         <!--inline style laten staan als we dit in css stoppen kunnen we de img link niet uit de database halen danku-->
-            <figure onclick="window.location.href =''" style='background-image: url("images/rickAstley.jpg"); background-size: 300px 300px; background-repeat: no-repeat;height: 300px; width: 300px;'>
+            <figure style='background-image: url("images/rickAstley.jpg"); background-size: 300px 300px; background-repeat: no-repeat;height: 300px; width: 300px;'>
                 <figcaption>
                     <h5>title</h3>
                     <h5>prijs</h5>
-                    <button class="btn-large coconutMilk black-text waves-effect waves-green" onclick="window.location.href ='google.com'" style="margin: 5px;" target>bied</button>
+                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" href="#modal1" style="margin: 5px;" target>bied</button>
                 </figcaption>
-            </figure> 
+            </figure>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Bieden</h4>
+                    <p>hier komt bied functie</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">akkoord</a>
+                </div>
+            </div>       
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
         <script>

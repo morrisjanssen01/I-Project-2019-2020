@@ -1,9 +1,11 @@
 
 <?php
 // dit is nog niet af 
+
 require("connectionDatabaseScript.php");
 require("antiSQLinjectionscript.php");
 require("redirect.php");
+session_start();
 
 if(!isset($_SESSION["e-mail"])){
 	redirect("register email");
