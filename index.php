@@ -18,42 +18,90 @@
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/icaButtplugg.jpg" alt="ICA ButtPlugg"></a>
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
-                <div class="container">
-                <p style="margin-top:10%; font-size:200%;" class="center">Laatste Kans!</p>
-                    <div class="auctions">
-                        <div class="row">
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style="width:100%">
-                                    <div class="card-image">
-                                        <img src="images/rickAstley.jpg">
-                                        <span class="card-title coconutMilk black-text">Rick Astley bodypillow</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>Will never gonna give you up</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>    
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style="width:100%; height:80%;">
-                                    <div class="card-image">
-                                        <img src="images/icaButtplugg.jpg">
-                                        <span class="card-title coconutMilk black-text">Standbeeld</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>mooi standbeeld replica van het beeld op de han</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
+                <div class="card">
+                    <p style="font-size:200%;">Laatste Kans!</p>
+                    <div class="row">
+                        <div class="col s2 offset-s2" style="height:30%;">
+                            <div class="card coconutMilk">
+                                <div class="card-image">
+                                    <img src="images/rickAstley.jpg">
                                 </div>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/vaseline.jpg">
+                        </div>    
+                        <div class="col s2 offset-s1" style="height:30%;">
+                            <div class="card coconutMilk">
+                                <div class="card-image">
+                                    <img src="images/icaButtplugg.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s2 offset-s1">
+                            <div class="card coconutMilk" style=" max-width:100%; max-height: 20%;">
+                                <div class="card-image">
+                                    <img src="images/vaseline.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2 offset-s2">
+                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                                <div class="card-image">
+                                    <img src="images/wasmachine.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s2 offset-s1">
+                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                                <div class="card-image">
+                                    <img src="images/Sans.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s2 offset-s1">
+                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                                <div class="card-image">
+                                    <img src="images/tonk.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                        
+                <p style="margin-top:10%; font-size:200%;" class="center">Koopjes</p>
+                <div class="auctions">
+                    <div class="row">
+                        <div class="col s12 m4 l4">
+                            <div class="card coconutMilk" style="width:100%">
+                                <div class="card-image">
+                                    <img src="images/rickAstley.jpg">
+                                    <span class="card-title coconutMilk black-text">Rick Astley bodypillow</span>
+                                </div>
+                                <div class="card-content coconutMilk">
+                                    <p>Will never gonna give you up</p>
+                                </div>
+                                <div class="card-action coconutMilk">
+                                    <a href="#">Bieden</a>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="col s12 m4 l4">
+                            <div class="card coconutMilk" style="width:100%; height:80%;">
+                                <div class="card-image">
+                                    <img src="images/icaButtplugg.jpg">
+                                    <span class="card-title coconutMilk black-text">Standbeeld</span>
+                                </div>
+                                <div class="card-content coconutMilk">
+                                    <p>mooi standbeeld replica van het beeld op de han</p>
+                                </div>
+                                <div class="card-action coconutMilk">
+                                    <a href="#">Bieden</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4 l4">
+                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
+                                <div class="card-image">
+                                    <img src="images/vaseline.jpg">
                                         <span class="card-title coconutMilk black-text">Vaseline</span>
                                     </div>
                                     <div class="card-content coconutMilk">
@@ -112,102 +160,7 @@
                             </div>
                         </div>
                     </div>                        
-                </div>
-                <div class="container">
-                    <p style="margin-top:10%; font-size:200%;" class="center">Koopjes</p>
-                    <div class="auctions">
-                        <div class="row">
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style="width:100%">
-                                    <div class="card-image">
-                                        <img src="images/rickAstley.jpg">
-                                        <span class="card-title coconutMilk black-text">Rick Astley bodypillow</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>Will never gonna give you up</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>    
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style="width:100%; height:80%;">
-                                    <div class="card-image">
-                                        <img src="images/icaButtplugg.jpg">
-                                        <span class="card-title coconutMilk black-text">Standbeeld</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>mooi standbeeld replica van het beeld op de han</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/vaseline.jpg">
-                                        <span class="card-title coconutMilk black-text">Vaseline</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>gekocht en nooit gebruikt</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="auctions">
-                        <div class="row">
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/wasmachine.jpg">
-                                        <span class="card-title coconutMilk black-text">Wasmachine</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>3 jaar oude wasmachine</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/Sans.jpg">
-                                        <span class="card-title coconutMilk black-text">Undertale game</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>Game Undertale, save file is gewist</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/tonk.jpg">
-                                        <span class="card-title coconutMilk black-text">tonk</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>speelgoed tonk</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                        
-                </div>
+                
             </div>
             <div class="box footer">
                 <?php include 'includes/footer.php';?>
