@@ -22,6 +22,27 @@
   .form{
     display:inline;
   }
+
+  figure {
+    position: relative;
+    display: inline-block;
+}
+
+figcaption {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #C0AB8C;
+}
+
+
+figure:hover figcaption {
+    display: -webkit-inline-flex;
+    justify-content: space-around;
+    opacity: 80%;
+}
   
   @media only screen and (max-width: 450px)  {
   .wrapper {
