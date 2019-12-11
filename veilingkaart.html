@@ -38,7 +38,7 @@
         </div>
     </div>
         <div id="modal1" class="modal" style="width:30%; height:30%">
-            <form action="biedScript.php?$_POST" style="margin-top:10%;">
+            <form action="biedScript.php?" method="POST" style="margin-top:10%;">
                 <div class="modal-header">
                     <h4 class="center">Bieden op "title"</h4>
                 </div>
@@ -61,6 +61,11 @@
          $(document).ready(function(){
             $('.modal').modal();
          });
+        </script>
+        <script>
+            $(document).ready(function(){
+            $('.sidenav').sidenav();
+            });
         </script>
     </body>
 </html>
