@@ -32,7 +32,6 @@ else{
                     redirect("register");
                     exit();
                 }
-                if
 				else{
                     connectionDatabase();
                     $data = $dbh->prepare("INSERT INTO Gebruikers (gebruikersnaam, voornaam, achternaam, adresregel1, adresregel2, postcode, plaatsnaam, landnaam, geboortedag, Emailadres, wachtwoord, vraagnummer, antwoordtext)
@@ -40,13 +39,13 @@ else{
 
                     $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
                     if (checkusername($username) == false) {
-                        echo "<p>Gebruikersnaam al in gebruik, wees is wat meer origineel</p>";
+                        
                     }
                     if (checkMail($email) == false) {
-                        echo "<p>Dit E-mailadres is al in gebruik!</p>";
+                        
                     }
                     if ($password !== $repeatpassword) {
-                        echo "<p>Wachtwoord komt NIET overeen, voer 2 dezelfde wachtwoorden in!</p>";
+                        
                     }
 
                     if ($password == $repeatpassword) {
