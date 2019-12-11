@@ -29,8 +29,3 @@
     </nav>
 </header>
 </div>
-<script>
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-    });
-</script>

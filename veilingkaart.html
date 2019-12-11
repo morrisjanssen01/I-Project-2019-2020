@@ -37,21 +37,24 @@
             </figure>
         </div>
     </div>
-            <div id="modal1" class="modal">
+        <div id="modal1" class="modal" style="width:30%; height:30%">
+            <form action="biedScript.php?$_POST" style="margin-top:10%;">
+                <div class="modal-header">
+                    <h4 class="center">Bieden op "title"</h4>
+                </div>
                 <div class="modal-content">
-                    <h4>Bieden op "title"</h4>
-                    <form action="$_POST">
-                       <div class="input-field">
-                        <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="0.50">
+                    <div class="input-field">
+                        <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="1">
                         <label>Bedrag:</label>
-                       </div>
-                    </form>
+                    </div>
+                    <div class="right">
+                        <a class="modal-close waves-effect waves-green btn-flat">terug</a>
+                        <button type="submit" class="waves-effect waves-green btn-flat">akkoord</a></button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <a class="modal-close waves-effect waves-green btn-flat">terug</a>
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">akkoord</a>
-                </div>
-            </div>       
+            </form>
+        </div>       
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
         <script>

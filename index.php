@@ -22,146 +22,142 @@
                     <p style="font-size:200%;">Laatste Kans!</p>
                     <div class="row">
                         <div class="col s2 offset-s2" style="height:30%;">
-                            <div class="card coconutMilk">
-                                <div class="card-image">
-                                    <img src="images/rickAstley.jpg">
-                                </div>
-                            </div>
-                        </div>    
+                            <figure style='background-image: url("images/rickAstley.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
+                        </div>
                         <div class="col s2 offset-s1" style="height:30%;">
-                            <div class="card coconutMilk">
-                                <div class="card-image">
-                                    <img src="images/icaButtplugg.jpg">
-                                </div>
-                            </div>
+                            <figure style='background-image: url("images/icaButtplugg.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="col s2 offset-s1">
-                            <div class="card coconutMilk" style=" max-width:100%; max-height: 20%;">
-                                <div class="card-image">
-                                    <img src="images/vaseline.jpg">
-                                </div>
-                            </div>
+                            <figure style='background-image: url("images/vaseline.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s2 offset-s2">
-                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                <div class="card-image">
-                                    <img src="images/wasmachine.jpg">
-                                </div>
-                            </div>
+                            <figure style='background-image: url("images/wasmachine.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="col s2 offset-s1">
-                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                <div class="card-image">
-                                    <img src="images/Sans.jpg">
-                                </div>
-                            </div>
+                            <figure style='background-image: url("images/Sans.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="col s2 offset-s1">
-                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                <div class="card-image">
-                                    <img src="images/tonk.jpg">
-                                </div>
-                            </div>
+                            <figure style='background-image: url("images/tonk.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>                        
-                <p style="margin-top:10%; font-size:200%;" class="center">Koopjes</p>
-                <div class="auctions">
+                <div class="card">
+                    <p style="font-size:200%;">Koopjes</p>
                     <div class="row">
-                        <div class="col s12 m4 l4">
-                            <div class="card coconutMilk" style="width:100%">
-                                <div class="card-image">
-                                    <img src="images/rickAstley.jpg">
-                                    <span class="card-title coconutMilk black-text">Rick Astley bodypillow</span>
-                                </div>
-                                <div class="card-content coconutMilk">
-                                    <p>Will never gonna give you up</p>
-                                </div>
-                                <div class="card-action coconutMilk">
-                                    <a href="#">Bieden</a>
-                                </div>
-                            </div>
-                        </div>    
-                        <div class="col s12 m4 l4">
-                            <div class="card coconutMilk" style="width:100%; height:80%;">
-                                <div class="card-image">
-                                    <img src="images/icaButtplugg.jpg">
-                                    <span class="card-title coconutMilk black-text">Standbeeld</span>
-                                </div>
-                                <div class="card-content coconutMilk">
-                                    <p>mooi standbeeld replica van het beeld op de han</p>
-                                </div>
-                                <div class="card-action coconutMilk">
-                                    <a href="#">Bieden</a>
-                                </div>
-                            </div>
+                        <div class="col s2 offset-s2" style="height:30%;">
+                            <figure style='background-image: url("images/rickAstley.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
                         </div>
-                        <div class="col s12 m4 l4">
-                            <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                <div class="card-image">
-                                    <img src="images/vaseline.jpg">
-                                        <span class="card-title coconutMilk black-text">Vaseline</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>gekocht en nooit gebruikt</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col s2 offset-s1" style="height:30%;">
+                            <figure style='background-image: url("images/icaButtplugg.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col s2 offset-s1">
+                            <figure style='background-image: url("images/vaseline.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
-                    <div class="auctions">
-                        <div class="row">
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/wasmachine.jpg">
-                                        <span class="card-title coconutMilk black-text">Wasmachine</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>3 jaar oude wasmachine</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
+                    <div class="row">
+                        <div class="col s2 offset-s2">
+                            <figure style='background-image: url("images/wasmachine.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col s2 offset-s1">
+                            <figure style='background-image: url("images/Sans.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col s2 offset-s1">
+                            <figure style='background-image: url("images/tonk.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                                <figcaption>
+                                    <h5>title</h3>
+                                    <h5>prijs</h5>
+                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal1" class="modal" style="width:30%; height:30%">
+                    <form action="biedScript.php?$_POST" style="margin-top:10%;">
+                        <div class="modal-header">
+                            <h4 class="center">Bieden op "title"</h4>
+                        </div>
+                        <div class="modal-content">
+                            <div class="input-field">
+                                <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="1">
+                                <label>Bedrag:</label>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/Sans.jpg">
-                                        <span class="card-title coconutMilk black-text">Undertale game</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>Game Undertale, save file is gewist</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <div class="card coconutMilk" style=" max-width:100%; min-height: 100%;">
-                                    <div class="card-image">
-                                        <img src="images/tonk.jpg">
-                                        <span class="card-title coconutMilk black-text">tonk</span>
-                                    </div>
-                                    <div class="card-content coconutMilk">
-                                        <p>speelgoed tonk</p>
-                                    </div>
-                                    <div class="card-action coconutMilk">
-                                        <a href="#">Bieden</a>
-                                    </div>
-                                </div>
+                            <div class="right">
+                                <a class="modal-close waves-effect waves-green btn-flat">terug</a>
+                                <button type="submit" class="waves-effect waves-green btn-flat">akkoord</a></button>
                             </div>
                         </div>
-                    </div>                        
-                
-            </div>
+                    </form>
+                </div>      
+            </div>     
             <div class="box footer">
                 <?php include 'includes/footer.php';?>
             </div>
@@ -170,12 +166,17 @@
         <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
         <script>
             $(document).ready(function(){
-            $('.sidenav').sidenav();
+                $('.sidenav').sidenav();
             });
         </script>
         <script>
             $(document).ready(function(){
-            $('.carousel').carousel();
+                $('.carousel').carousel();
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('.modal').modal();
             });
         </script>
     </body>
