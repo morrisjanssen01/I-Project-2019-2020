@@ -3,7 +3,7 @@
 <header style="margin:0; padding:0;">
     <nav class="nav-wrapper warmSand">
         <div class="container">
-            <a href="index.php" class="brand-logo center">Logo placeholder</a>
+            <a href="index.php" class="brand-logo center" style="height:6.5%;"><img src="images/Logo.png" style="height:100%;" alt="Logo"></a>
             <a id="sidenav" href="" class="sidenav-trigger" data-target="mobile-menu">
                 <i class="material-icons">menu</i>
                 </a>
