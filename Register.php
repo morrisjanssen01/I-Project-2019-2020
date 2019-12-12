@@ -146,9 +146,14 @@
                    $('.modal').modal();
                 });
                 //datepicker
-                $(document).ready(function(){
-                    $('.datepicker').datepicker();
-                 });
+                /* $(document).ready(function(){
+                   $('.datepicker').datepicker();
+                 });  */
+                 $(document).ready(function() {
+                    $('.datepicker').datepicker({
+                        format: 'yyyy mm dd',
+                    });
+                });
                 //multiselect
                 $(document).ready(function(){
                     $('select').formSelect();

@@ -5,9 +5,10 @@
 require("connectionDatabaseScript.php");
 require("antiSQLinjectionscript.php");
 require("redirect.php");
+require("existingfieldcheck.php")
 session_start();
 
-if(!isset($_SESSION["e-mail"])){
+if(empty($_SESSION["e-mail"])){
 	redirect("register email");
 	exit();
 }
@@ -25,36 +26,36 @@ else{
                     $city = $_POST['postcode'];
                     $country = $_POST['country'];
                     $birthdate = $_POST['birthdate'];
+                    $email = $_SESSION['e-mail'];
                     $question = $_POST['control'];
                     $answer = $_POST['answer'];
 					
-				if(!(isset($_POST["username"]) || isset($_POST["password"]) || isset($_POST["repeatpassword"]) || isset($_POST["firstname"]) || isset($_POST["lastname"]) || isset($_POST["address"]) || isset($_POST["control"]) || isset($_POST["postcode"]) || isset($_POST["country"]) || isset($_POST["birthdate"]) || isset($_POST["control"]) || isset($_POST["answer"]))){
+				if(empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["repeatpassword"]) || empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["address"]) || empty($_POST["control"]) || empty($_POST["postcode"]) || empty($_POST["country"]) || isset($_POST["birthdate"]) || empty($_POST["control"]) || empty($_POST["answer"]))){
                     redirect("register");
                     exit();
+                }
+                if(specialCharacters($_POST)){
+                    redirect("register");
                 }
 				else{
                     connectionDatabase();
                     $data = $dbh->prepare("INSERT INTO Gebruikers (gebruikersnaam, voornaam, achternaam, adresregel1, adresregel2, postcode, plaatsnaam, landnaam, geboortedag, Emailadres, wachtwoord, vraagnummer, antwoordtext)
-                                           Values (:username, :firstname, :surname, :adres1, :adres2, :postalcode, :city, :country, :birthdate, :question, :answer");
+                                           Values (:username, :firstname, :surname, :adres1, :adres2, :postalcode, :city, :country, :birthdate, :email, :question, :answer");
 
                     $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
-                    if (checkusername($username) == false) {
-                        
-                    }
-                    if (checkMail($email) == false) {
-                        
                     }
                     if ($password !== $repeatpassword) {
-                        
+                        redirect("register");
                     }
-
+                    if(fieldExist($username, 'gebruikersnaam', 'gebruikers')){
+                        redirect("register");
+                    }
                     if ($password == $repeatpassword) {
                         if (checkUsername($username) == true) {
                             if (checkMail($email) == true) {
                                 $data->execute(
-                                    array(':firstname' => $firstname, ':surname' => $surname, ':birthdate' => $birthdate,
-                                        ':mail' => $email, ':username' => $username, ':hashedpassword' => $hashedpassword, ':question' => $question,
-                                        ':answer' => $answer, ':country' => $country, ':postcode' => $postcode, ':city' => $city, ':street' => $address, ':phone' => $phoneNumber));
+                                    array(':username' => $username, ':firstname' => $firstname, ':surname' => $surname, ':adres1' => $address, ':adres2' => $adres2, ':postalcode' => $postalcode, 
+                                           ':city' => $city, ':country' => $country, ':birthdate' => $birthdate, ':email' => $email, ':question' => $question, ':answer' => $answer));
                                         header("Location: index.php");
                             }
                         }
