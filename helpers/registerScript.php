@@ -35,7 +35,7 @@ else{
                 header("location: ../register.php?empty");
                 exit();
             }
-            else if($_SESSION['verificationcode'] == $_POST["verificationcode"]){
+            else if($_SESSION['verificationcode'] !== $_POST['verificationcode']){
                 redirect('register');
             }
             else{
@@ -60,6 +60,7 @@ else{
                     }
                     else if($password == $repeatpassword) {
                         $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+                        var_dump($hashedpassword);
                         $data->execute(
                             array(':username' => $username, ':firstname' => $firstname, ':surname' => $surname, ':adres1' => $adres1, ':adres2' => $adres2, ':postalcode' => $postalcode, 
                                     ':city' => $city, ':country' => $country, ':birthdate' => $birthdate, ':email' => $email, ':wachtwoord' => $hashedpassword, ':question' => $question, ':answer' => $answer));
