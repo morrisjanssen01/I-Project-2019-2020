@@ -27,9 +27,8 @@
                 $result = $sql->fetch(PDO::FETCH_ASSOC);
                 $accountExist = is_array($result);
                 if($accountExist) {
-                    /*password_verify($password, $result['wachtwoord']); */
 
-                    if(/*$passwordCorrect*/ $result['wachtwoord'] == $password){
+                    if(password_verify($password, $result['wachtwoord'])){
                         session_start();
                         $_SESSION["username"] = $result['gebruikersnaam'];
                         header("Location: ../index.php");

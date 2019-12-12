@@ -1,12 +1,16 @@
 <?php
 require("connectionDatabaseScript.php");
 require("antiSQLinjectionscript.php");
+require("existingfieldcheck.php");
 include("redirect.php");
 session_start();
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$_SESSION["postedData"]=$_POST;
 }
-
+if(fieldExist($_POST["mailaddress"], 'Emailadres', 'gebruikers')){
+	redirect("Register email");
+	exit();
+}
 for($i=0; $i<6; $i++){
 	$randomNumber = random_int(0,9);
 	$verificationcode = $verificationcode . $randomNumber;

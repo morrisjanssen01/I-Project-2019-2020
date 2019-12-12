@@ -36,11 +36,13 @@ else{
                 exit();
             }
             else if($_SESSION['verificationcode'] !== $_POST['verificationcode']){
-                redirect('register');
+                header("location: ../register.php?code");
+                exit();
             }
             else{
                 if(specialCharacters($_POST)){
                     header("location: ../register.php?karakters");
+                    exit();
                 }
 				else{
                     if(empty($adres2)){
@@ -53,10 +55,12 @@ else{
                     if ($password !== $repeatpassword) {
                         //redirect("register");
                         header("location: ../register.php?password");
+                        exit();
                     }
                     else if(fieldExist($username, 'gebruikersnaam', 'gebruikers')){
                         //redirect("register");
                         header("location: ../register.php?mijnding");
+                        exit();
                     }
                     else if($password == $repeatpassword) {
                         $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
