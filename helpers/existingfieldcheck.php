@@ -2,7 +2,7 @@
  require("connectionDatabaseScript.php");
  
  function fieldExist($value, $rowname, $tablename){
-    connectionDatabase();
+    //connectionDatabase();
     global $dbh;
     $sql = $dbh->prepare('SELECT * FROM '.$tablename.' where '.$rowname.' = ?');
     $sql->execute(array($value));

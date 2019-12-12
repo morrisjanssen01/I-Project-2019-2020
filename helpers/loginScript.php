@@ -19,7 +19,7 @@
             exit();
         }
         else {
-            connectionDatabase();
+            //connectionDatabase();
             global $dbh;
             $sql = $dbh->prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
             $sql->execute(array($username));
