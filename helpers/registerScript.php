@@ -51,8 +51,6 @@ else{
                         redirect("register");
                     }
                     if ($password == $repeatpassword) {
-                        if (checkUsername($username) == true) {
-                            if (checkMail($email) == true) {
                                 $data->execute(
                                     array(':username' => $username, ':firstname' => $firstname, ':surname' => $surname, ':adres1' => $address, ':adres2' => $adres2, ':postalcode' => $postalcode, 
                                            ':city' => $city, ':country' => $country, ':birthdate' => $birthdate, ':email' => $email, ':question' => $question, ':answer' => $answer));
