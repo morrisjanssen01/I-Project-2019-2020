@@ -10,8 +10,7 @@
     <body>
         <div class="wrapper">
             <div class="box header">    
-                <?php include 'includes/header.php'; 
-                print_r($_SESSION);?> 
+                <?php include 'includes/header.php';?> 
             </div>
             <div class="box content">
                 <!-- Registreer stuk van de site --> 

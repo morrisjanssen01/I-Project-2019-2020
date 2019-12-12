@@ -12,23 +12,24 @@ for($i=0; $i<6; $i++){
 	$verificationcode = $verificationcode . $randomNumber;
 }
 $_SESSION["verificationcode"]=$verificationcode;
-$_SESSION["e-mail"]=$_POST['mailaddress'];
-$subject = 'Welkom op EenmaalAndermaal'; 
-$email = 'Dank U voor uw aanmelding op EenmaalAndermaal.' . '<br> <br>' .
+$_SESSION["e-mail"]=$_POST['mailaddress']; 
+$email = 'Dank U voor uw aanmelding op EenmaalAndermaal,<br>' . $_SESSION["e-mail"] . '.<br> <br>' .
 'hier is uw verificatiecode: ' . $_SESSION['verificationcode'] .'<br> <br>' .
 'M.V.G.<br>Team EenmaalAndermaal'; 
 
 $to = $_SESSION['e-mail']; 
 //'coen.klabbers@gmail.com';
-$from = 'EenmaalAndermaal@noreply.com'; 
-$headers   = array(); 
-$headers[] = "MIME-Version: 1.0"; 
-$headers[] = "Content-type: text/plain; charset=iso-8859-1"; 
-$headers[] = "From: EenmaalAndermaal Servicedesk <{$from}>"; 
-$headers[] = "Reply-To: Realhosting Servicedesk <{$from}>"; 
-//$headers[] = "Subject: {$subject}"; 
-$headers[] = "X-Mailer: PHP/".phpversion(); 
-mail($to, $subject, $email, implode("\r\n", $headers), "-f".$from );
+//'desktopmorris@outlook.com';
+$subject = "Activeer uw Eenmaal Andermaal account";
+$headers = "From: noreply@EenmaalAndermaal.com\r\n"; 
+$headers .= "MIME-Version: 1.0\r\n"; 
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+$headers .= "Reply-To: The Sender <info@icasites.nl>\r\n";
+$headers .= "Return-Path: The Sender <info@icasites.nl>\r\n";
+$headers .= "Organization: icasites\r\n";
+$headers .= "X-Priority: 3\r\n";
+$headers .= "X-Mailer: PHP" . phpversion() . "\r\n";
+mail($to, $subject, $email, $headers);
 
 redirect(register);
 ?> 

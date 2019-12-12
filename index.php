@@ -18,13 +18,14 @@
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/icaButtplugg.jpg" alt="ICA ButtPlugg"></a>
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
-                <div class="card">
+                <div class="container">
+                <div class="card" style="margin-bottom:0;">
                     <p style="font-size:200%;">Laatste Kans!</p>
                     <div class="row">
                         <div class="col s2 offset-s2" style="height:30%;">
                             <figure style='background-image: url("images/rickAstley.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
-                                    <h5>title</h3>
+                                    <a href="details.php?detail=">title</a>
                                     <h5>prijs</h5>
                                     <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
                                 </figcaption>
@@ -78,7 +79,9 @@
                             </figure>
                         </div>
                     </div>
-                </div>                        
+                </div>
+            </div>   
+            <div class="container">                
                 <div class="card">
                     <p style="font-size:200%;">Koopjes</p>
                     <div class="row">
@@ -140,6 +143,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
                 <div id="modal1" class="modal" style="width:30%; height:30%">
                     <form action="biedScript.php?$_POST" style="margin-top:10%;">
                         <div class="modal-header">
