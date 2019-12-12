@@ -7,7 +7,7 @@ require("antiSQLinjectionscript.php");
 require("redirect.php");
 session_start();
 
-if(!isset($_SESSION["e-mail"])){
+if(empty($_SESSION["e-mail"])){
 	redirect("register email");
 	exit();
 }
@@ -28,10 +28,11 @@ else{
                     $question = $_POST['control'];
                     $answer = $_POST['answer'];
 					
-				if(!(isset($_POST["username"]) || isset($_POST["password"]) || isset($_POST["repeatpassword"]) || isset($_POST["firstname"]) || isset($_POST["lastname"]) || isset($_POST["address"]) || isset($_POST["control"]) || isset($_POST["postcode"]) || isset($_POST["country"]) || isset($_POST["birthdate"]) || isset($_POST["control"]) || isset($_POST["answer"]))){
+				if(empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["repeatpassword"]) || empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["address"]) || empty($_POST["control"]) || empty($_POST["postcode"]) || empty($_POST["country"]) || isset($_POST["birthdate"]) || empty($_POST["control"]) || empty($_POST["answer"]))){
                     redirect("register");
                     exit();
                 }
+                if(specialCharacters($_POST))
 				else{
                     connectionDatabase();
                     $data = $dbh->prepare("INSERT INTO Gebruikers (gebruikersnaam, voornaam, achternaam, adresregel1, adresregel2, postcode, plaatsnaam, landnaam, geboortedag, Emailadres, wachtwoord, vraagnummer, antwoordtext)
