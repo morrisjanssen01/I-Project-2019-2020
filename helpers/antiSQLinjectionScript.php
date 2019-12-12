@@ -2,11 +2,11 @@
 
 
 // deze functie aan roepen als er input wordt gegeven die naar de database wordt gestuurd! indien er meerder waarden worden gecheckt geef je $_POST of $_GET mee als parameter
-function specialCharacters($value){
+function specialCharacters($values){
     $hasSpecialCharacters = false;
 
     foreach($values as $value){
-        if (!preg_match("/\w/", $value)) {
+        if (preg_match("/\Wx/", $value)) {
             $hasSpecialCharacters = true;
         }
     }

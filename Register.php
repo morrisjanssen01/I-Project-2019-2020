@@ -10,7 +10,8 @@
     <body>
         <div class="wrapper">
             <div class="box header">    
-                <?php include 'includes/header.php';?> 
+                <?php include 'includes/header.php'; 
+                print_r($_SESSION);?> 
             </div>
             <div class="box content">
                 <!-- Registreer stuk van de site --> 
@@ -36,7 +37,7 @@
                                             </div>
                                             <div class="col 6 form-field">
                                                 <label for="repeat password">Bevestig Wachtwoord</label>
-                                                <input type="password" name="repeat password" id="repeat password">
+                                                <input type="password" name="repeatpassword" id="repeatpassword">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -75,11 +76,11 @@
                                         </div>
                                         <div class="form-field">
                                             <label for="birthDate">Geboortedag</label>
-                                            <input type="text" id="birthDate" class="datepicker"> 
+                                            <input type="text" name="birthdate" id="birthDate" class="datepicker"> 
                                         </div>
                                         <div class="form-field">
                                             <label for="questionList">Vragen</label>
-                                            <select>
+                                            <select name="questionList" id="questionList">
                                                 <option value="" disabled selected>Kies uw beveiligingsvraag</option>
                                                 <option value="1">Hoe heet uw huisdier?</option>
                                                 <option value="2">Wat is uw geboorteplaats</option>
@@ -151,7 +152,7 @@
                  });  */
                  $(document).ready(function() {
                     $('.datepicker').datepicker({
-                        format: 'yyyy mm dd',
+                        format: 'yyyymmdd',
                     });
                 });
                 //multiselect
