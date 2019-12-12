@@ -30,7 +30,7 @@
                                             <input type="password" name="password" id="password">
                                             <?php
                                                 if(isset($_GET["error"])){
-                                                  echo"<p class='red-text'>de inloggevens matchen niet met de gevens in de database</p>";
+                                                  echo"<p class='red-text'>verkeerde gebruikersnaam en/of wachtwoord</p>";
                                                 }
                                             ?>
                                         </div><br>
