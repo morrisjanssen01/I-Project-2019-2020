@@ -6,7 +6,7 @@
 
     function generateRubrics(){
         try{
-            //connectionDatabase();
+            connectionDatabase();
             global $dbh;
             $sql = $dbh->prepare('SELECT rubrieknummer, rubrieknaam, subrubriek, volgnr FROM rubrieken ORDER BY subrubriek ASC, rubrieknaam');
             $sql->execute();
