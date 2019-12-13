@@ -1,3 +1,6 @@
+<head>
+<link rel='shortcut icon' type='image/x-icon' href='http://iproject5.icasites.nl/favicon.ico'/>
+</head>
 <?php session_start();?>
 <div class="header">
 <header style="margin:0; padding:0;">

@@ -34,4 +34,5 @@ $password = 'SA'; */
         echo "Er ging iets mis met de database. <br>";
         echo "De melding is {$exception->getMessage()}<br><br>";
     }
+    redirect(index);
 //}
