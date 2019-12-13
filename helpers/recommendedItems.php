@@ -3,6 +3,7 @@
    /*deze pagina is voorlopig voor test purposes en testen. Ik ga nog met jullie implementeren op de website maar daarvoor moet iedereen er zijn! ~dylan 26-11 */
    /*deze functie moet worden aangeroepen binnen de container en de row van de aanbevolen veilingen */
     function getDecayingItems(){
+        
         $sql= $dbh->prepare("Select * from Voorwerp ORDER BY RAND() LIMIT 4");
         $query = $sql->execute;
          while($result = $query->fetch(PDO::FETCH_ASSOC)){
