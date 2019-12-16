@@ -1,3 +1,6 @@
+<?php
+    require("includes/cardScript.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -143,7 +146,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container">                
+                <div class="card">
+                    <?php  loadCardBatch(3 , 'pumps', 'Pumps'); ?>
+                </div>
             </div>  
+            <div class="container">
+                <div class="card">
+                    <?php loadCardBatch(3, 'overige kleding', 'Overige Kleding') ?>
+                </div>
+            </div>
                 <div id="modal1" class="modal coconutMilk" style="width:30%; height:30%">
                     <form action="biedScript.php?$_POST" style="margin-bottom:10%;">
                         <div class="modal-header" style="margin-top:3%; margin-bottom:5%;">
