@@ -1,3 +1,6 @@
+<?php
+    require("includes/cardScript.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -142,6 +145,11 @@
                             </figure>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="container">                
+                <div class="card">
+                <?php  loadCardBatch(3 , 'pumps', 'Pumps'); ?>
                 </div>
             </div>
                 <div id="modal1" class="modal" style="width:30%; height:30%">
