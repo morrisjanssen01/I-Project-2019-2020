@@ -127,14 +127,19 @@ figure:hover figcaption {
   @media only screen and (min-width: 1024px){
   .column1 {
       padding-top: 30px;
-      grid-column: 1;
-      grid-row: 1;
+      grid-column: col 1;
+      grid-row: row 1;
   }
   
   .column2 {
      padding-top: 30px;
-     grid-column: 2;
-     grid-row: 1;
-     
+     grid-column: col 2;
+     grid-row: row 1;
   }
+  .column3 {
+    padding-top:30px;
+    grid-column: col 3;
+    grid-row: row 1
+  }
+  
   }

@@ -24,7 +24,7 @@
                     <h3>beschrijving product</h3>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac aliquam nisl, quis faucibus leo. Aliquam erat volutpat. Morbi non mi molestie, condimentum turpis dictum, dignissim elit. Morbi porttitor egestas sodales. Maecenas sollicitudin aliquet dictum. Phasellus tellus tellus, gravida ut hendrerit a, convallis vel risus. Cras vitae elementum sem. Pellentesque vitae malesuada ex. Maecenas odio leo, suscipit nec quam quis, condimentum facilisis augue. Suspendisse potenti. Quisque non lectus sit amet est porttitor aliquet sit amet et lacus. Duis semper at metus id accumsan. Proin neque metus, ultricies ut leo quis, semper porttitor magna. Nulla vehicula lorem ante.</h5>
                 </div>
-                <div class="column2 left" style="float:left; display:float;">
+                <div class="column2 left" style="width:30%;">
                     <h1>Naam Verkoper</h1>
                     <h5>Plaatsnaam, Postcode, Land</h5>
                     <h5>E-mailadres</h5>
@@ -42,6 +42,9 @@
                             </div>
                         </form>
                     </div>
+                </div>
+                <div class="column3">
+                    what's a yeet?
                 </div>
             </div>
             <div class="box footer">
