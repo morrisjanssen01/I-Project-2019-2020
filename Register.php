@@ -11,7 +11,7 @@
         <div class="wrapper">
             <div class="box header">    
                 <?php include 'includes/header.php'; 
-                print_r($_SESSION);?> 
+                //print_r($_SESSION);?> 
             </div>
             <div class="box content">
                 <!-- Registreer stuk van de site --> 
