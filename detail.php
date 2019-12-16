@@ -18,13 +18,14 @@
                 <?php include 'includes/header.php';?>
             </div>
             <div class="box content">
-                <div class="column1" style="border-right-style:solid; padding:0; width:40%;">
+              <div class="row">
+                <div class="col s4" style="border-right-style:solid; padding:0; width:40%;">
                     <h1>Title</h1>
                     <img src="images/rickastley.jpg" style="max-width:100%">
                     <h3>beschrijving product</h3>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac aliquam nisl, quis faucibus leo. Aliquam erat volutpat. Morbi non mi molestie, condimentum turpis dictum, dignissim elit. Morbi porttitor egestas sodales. Maecenas sollicitudin aliquet dictum. Phasellus tellus tellus, gravida ut hendrerit a, convallis vel risus. Cras vitae elementum sem. Pellentesque vitae malesuada ex. Maecenas odio leo, suscipit nec quam quis, condimentum facilisis augue. Suspendisse potenti. Quisque non lectus sit amet est porttitor aliquet sit amet et lacus. Duis semper at metus id accumsan. Proin neque metus, ultricies ut leo quis, semper porttitor magna. Nulla vehicula lorem ante.</h5>
                 </div>
-                <div class="column2 left" style="float:left; display:float;">
+                <div class="col s4">
                     <h1>Naam Verkoper</h1>
                     <h5>Plaatsnaam, Postcode, Land</h5>
                     <h5>E-mailadres</h5>
@@ -43,6 +44,7 @@
                         </form>
                     </div>
                 </div>
+              </div>
             </div>
             <div class="box footer">
                 <?php include 'includes/footer.php';?>
