@@ -5,8 +5,8 @@ html, body {
 }
 
 figure {
-  width: 20%;
-  height: 200px;
+  width: 50%;
+  height: 300px;
   background-size: 100% 100%;
 }
 
@@ -135,5 +135,6 @@ figure:hover figcaption {
      padding-top: 30px;
      grid-column: 2;
      grid-row: 1;
+     
   }
   }

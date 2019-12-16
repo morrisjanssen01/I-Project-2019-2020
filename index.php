@@ -22,10 +22,10 @@
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
                 <div class="container">
-                <div class="card" style="margin-bottom:0;">
-                    <p style="font-size:200%;">Laatste Kans!</p>
+                <div class="card" style="margin-bottom:0; margin-top:0%;">
+                    <p style="font-size:200%; margin-left:3%;">Laatste Kans!</p>
                     <div class="row">
-                        <div class="col s2 offset-s2" style="height:30%;">
+                        <div class="col s4" style="height:40%;">
                             <figure style='background-image: url("images/rickAstley.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <a href="details.php?detail="><h5>title</h5></a>
@@ -34,7 +34,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1" style="height:30%;">
+                        <div class="col s4" style="height:30%;">
                             <figure style='background-image: url("images/icaButtplugg.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -43,7 +43,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1">
+                        <div class="col s4">
                             <figure style='background-image: url("images/vaseline.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s2 offset-s2">
+                        <div class="col s4">
                             <figure style='background-image: url("images/wasmachine.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -63,7 +63,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1">
+                        <div class="col s4">
                             <figure style='background-image: url("images/Sans.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -72,7 +72,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1">
+                        <div class="col s4">
                             <figure style='background-image: url("images/tonk.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -84,20 +84,20 @@
                     </div>
                 </div>
             </div>   
-            <div class="container">                
-                <div class="card">
-                    <p style="font-size:200%;">Koopjes</p>
+            <div class="container">
+                <div class="card" style="margin-bottom:0; margin-top:0%;">
+                    <p style="font-size:200%; margin-left:3%;">Koopjes</p>
                     <div class="row">
-                        <div class="col s2 offset-s2" style="height:30%;">
+                        <div class="col s4" style="height:40%;">
                             <figure style='background-image: url("images/rickAstley.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
-                                    <h5>title</h3>
+                                    <a href="details.php?detail="><h5>title</h5></a>
                                     <h5>prijs</h5>
                                     <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1" style="height:30%;">
+                        <div class="col s4" style="height:30%;">
                             <figure style='background-image: url("images/icaButtplugg.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -106,7 +106,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1">
+                        <div class="col s4">
                             <figure style='background-image: url("images/vaseline.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s2 offset-s2">
+                        <div class="col s4">
                             <figure style='background-image: url("images/wasmachine.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -126,7 +126,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1">
+                        <div class="col s4">
                             <figure style='background-image: url("images/Sans.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -135,7 +135,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col s2 offset-s1">
+                        <div class="col s4">
                             <figure style='background-image: url("images/tonk.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
@@ -151,20 +151,27 @@
                 <div class="card">
                 <?php  loadCardBatch(3 , 'pumps', 'Pumps'); ?>
                 </div>
-            </div>
-                <div id="modal1" class="modal" style="width:30%; height:30%">
-                    <form action="biedScript.php?$_POST" style="margin-top:10%;">
-                        <div class="modal-header">
+            </div>  
+                <div id="modal1" class="modal coconutMilk" style="width:30%; height:30%">
+                    <form action="biedScript.php?$_POST" style="margin-bottom:10%;">
+                        <div class="modal-header" style="margin-top:3%; margin-bottom:5%;">
                             <h4 class="center">Bieden op "title"</h4>
                         </div>
-                        <div class="modal-content">
+                        <div class="modal-content" style="padding-top:0;">
                             <div class="input-field">
-                                <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="1">
-                                <label>Bedrag:</label>
+                                <label>Bedrag:</label><br><br>
+                                <div class="row">
+                                    <div class="col s1" style="padding:0;">
+                                        <p>€</p>
+                                    </div>
+                                    <div class="col s11" style="padding:0;">
+                                        <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="1">
+                                    </div>
+                                </div>                            
                             </div>
-                            <div class="right">
-                                <a class="modal-close waves-effect waves-green btn-flat">terug</a>
-                                <button type="submit" class="waves-effect waves-green btn-flat">akkoord</a></button>
+                            <div class="right" style="margin-top:10%;">
+                                <a class="modal-close waves-effect waves-green btn-flat">Terug</a>
+                                <button type="submit" class="waves-effect  btn-flat warmSand darken-2">Bieden</a></button>
                             </div>
                         </div>
                     </form>
