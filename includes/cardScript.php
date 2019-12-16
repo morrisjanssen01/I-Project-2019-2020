@@ -16,7 +16,7 @@ function loadCardBatch($nCards, $category, $title = ''){
                     from voorwerpen
                     where voorwerpnummer IN (select voorwerpnummer 
                                             from voorwerpenInRubrieken 
-                                             where RubriekOpLaagsteNiveau = (select rubrieknummer from rubrieken where rubrieknaam = '$category' ) )";
+                                             where RubriekOpLaagsteNiveau IN (select rubrieknummer from rubrieken where rubrieknaam = '$category' ) )";
 
     $sql = '';
 
