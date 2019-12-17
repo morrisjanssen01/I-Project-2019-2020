@@ -52,7 +52,7 @@ function loadCardBatch($nCards, $category, $title = ''){
           echo'<div class="col s2 " style="height:30%; width: 33%;">
                 <figure style="background-image: url('.$notFound.'); background-repeat: no-repeat; margin:0; width:100%;">
                     <figcaption>
-                        <a style="width: 30%; heigth: 100%;" href="details.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
+                        <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
                         <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
                     </figcaption>
@@ -63,7 +63,7 @@ function loadCardBatch($nCards, $category, $title = ''){
             echo'<div class="col s2" style="height:30%; width: 33%;">
                 <figure style="background-image: url('.$notFound.'); background-repeat: no-repeat; margin:0; width:100%;">
                     <figcaption>
-                        <a style="width: 30%; heigth: 100%;" href="details.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
+                        <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
                         <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
                     </figcaption>

@@ -6,10 +6,12 @@ function specialCharacters($values){
     $hasSpecialCharacters = false;
 
     foreach($values as $value){
-        if (preg_match("/\Wx/", $value)) {
+        if (preg_match("/\W/", $value)) {
             $hasSpecialCharacters = true;
         }
     }
     return $hasSpecialCharacters;
 }
+
 ?>
+
