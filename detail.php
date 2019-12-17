@@ -1,7 +1,7 @@
 <?php
 
     require("helpers/antiSQLinjectionScript.php");
-    require("connectionDatabaseScript.php");
+    require("helpers/connectionDatabaseScript.php");
 
     if(!isset($_GET["detail"]) || empty($_GET["detail"])){
         header('location:  404.php');
@@ -13,8 +13,13 @@
     else{
         $voorwerpnummer = $_GET["detail"];
         
-        $stmt = $dbh->prepare("SELECT * FROM Veiling WHERE voorwerpnummer = :voorwerpnummer");
+        $stmt = $dbh->prepare("SELECT * FROM voorwerpen WHERE voorwerpnummer = :voorwerpnummer");
         $stmt2 = $dbh->prepare("SELECT MAX(bod) FROM boden WHERE voorwerpnummer = :voorwerpnummer group by bod");
+        $stmt3 = $dbh->prepare("select emailadres
+                                from gebruikers
+                                where gebruikersnaam IN (select gebruikersnaam from voorwerpen
+                                where voorwerpnummer = voorwerpnummer)");
+
         $stmt->execute(array($voorwerpnummer));
         $voorwerp = $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -38,16 +43,16 @@
             </div>
             <div class="box content">
                 <div class="row">
-                    <div class="col s3" style="padding:0;">
-                        <h1>Title</h1>
-                        <img src="images/rickastley.jpg" style="max-width:100%">
+                    <div class="col s4" style="padding:0;">
+                     <?php  echo" <h4>".$voorwerp["titel"]."</h4>" ?>
+                        <img src="images/404.jpg" alt="voorwerp" style="max-width:100%">
                         <h3>beschrijving product</h3>
-                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac aliquam nisl, quis faucibus leo. Aliquam erat volutpat. Morbi non mi molestie, condimentum turpis dictum, dignissim elit. Morbi porttitor egestas sodales. Maecenas sollicitudin aliquet dictum. Phasellus tellus tellus, gravida ut hendrerit a, convallis vel risus. Cras vitae elementum sem. Pellentesque vitae malesuada ex. Maecenas odio leo, suscipit nec quam quis, condimentum facilisis augue. Suspendisse potenti. Quisque non lectus sit amet est porttitor aliquet sit amet et lacus. Duis semper at metus id accumsan. Proin neque metus, ultricies ut leo quis, semper porttitor magna. Nulla vehicula lorem ante.</h5>
+                        <?php  echo" <p>".$voorwerp["beschrijving"]."</p>" ?>   
                     </div>
-                    <div class="col s4 offset-s1" style="border-right-style:solid; border-left-style:solid; height:100%;">
-                        <h1>Naam Verkoper</h1>
-                        <h5>Plaatsnaam, Postcode, Land</h5>
-                        <h5>E-mailadres</h5>
+                    <div class="col s4" style="border-right-style:solid; border-left-style:solid; height:100%;">
+                        <?php  echo" <h1>".$voorwerp["verkoper"]."</h1>"; ?>
+                        <?php  echo" <h5>".$voorwerp["plaatsnaam"].", ". $voorwerp["land"]."</h5>"; ?>
+                        <?php  echo" <h5>".$gebruiker['Emailadres']."</h5>"; ?>
                         <div style="margin-top:30%;">
                             <h5>looptijd</h5>
                         </div>
@@ -63,7 +68,7 @@
                             </form><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
-                    <div class="col s3 offset-s1 ">
+                    <div class="col s4">
                         <div style="border-style:solid;">
                             <h5>Bod Geschiedenis</h5>
                             <div class="white" style="border-top-style:solid; border-bottom-style:solid">
