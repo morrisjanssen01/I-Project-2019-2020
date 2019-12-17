@@ -1,7 +1,7 @@
 <?php
 
     require("helpers/antiSQLinjectionScript.php");
-    require("connectionDatabaseScript.php");
+    require("helpers/connectionDatabaseScript.php");
 
     if(!isset($_GET["detail"]) || empty($_GET["detail"])){
         header('location:  404.php');
@@ -13,7 +13,7 @@
     else{
         $voorwerpnummer = $_GET["detail"];
         
-        $stmt = $dbh->prepare("SELECT * FROM Veiling WHERE voorwerpnummer = :voorwerpnummer");
+        $stmt = $dbh->prepare("SELECT * FROM voorwerpen WHERE voorwerpnummer = :voorwerpnummer");
         $stmt2 = $dbh->prepare("SELECT MAX(bod) FROM boden WHERE voorwerpnummer = :voorwerpnummer group by bod");
         $stmt->execute(array($voorwerpnummer));
         $voorwerp = $stmt->fetch(PDO::FETCH_ASSOC);
