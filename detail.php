@@ -47,7 +47,7 @@
                      <?php  echo" <h4>".$voorwerp["titel"]."</h4>" ?>
                         <img src="images/404.jpg" alt="voorwerp" style="max-width:100%">
                         <h3>beschrijving product</h3>
-                        <?php  echo" <p>".$voorwerp["beschrijving"]."</p>" ?>   
+                        <?php  echo" <iframe srcdoc='".htmlspecialchars($voorwerp["beschrijving"]) ."' style='height:400px; width:90%;'>".$voorwerp["verkoper"]."</iframe>" ?>   
                     </div>
                     <div class="col s4" style="border-right-style:solid; border-left-style:solid; height:100%;">
                         <?php  echo" <h1>".$voorwerp["verkoper"]."</h1>"; ?>
