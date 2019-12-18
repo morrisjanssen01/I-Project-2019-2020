@@ -9,7 +9,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © 2019 Beun en Ondersteun
+            © 2019 EenmaalAndermaal
         </div>
     </div>
 </footer>
