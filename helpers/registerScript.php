@@ -32,17 +32,20 @@ else{
 					
 			if(empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["repeatpassword"]) || empty($_POST["firstName"]) || empty($_POST["lastName"]) || empty($_POST["adress1"]) || empty($_POST["postalCode"]) || empty($_POST["land"]) || empty($_POST["birthdate"]) || empty($_POST["questionList"]) || empty($_POST["answer"])){
                 //var_dump($_POST);
-                header("location: ../register.php?empty");
+                redirect('register', 'emptyFields');
+                //header("location: ../register.php?empty");
                 exit();
             }
             else if($_SESSION['verificationcode'] !== $_POST['verificationcode']){
-                header("location: ../register.php?code");
+                redirect('register', 'noVerification');
+                //header("location: ../register.php?code");
                 exit();
             }
             else{
                 if(specialCharacters($_POST)){
-                    header("location: ../register.php?karakters");
+                    redirect('register', 'specialChars');
                     exit();
+                    //var_dump($_POST);
                 }
 				else{
                     if(empty($adres2)){
@@ -53,13 +56,13 @@ else{
                                            Values (:username, :firstname, :surname, :adres1, :adres2, :postalcode, :city, :country, :birthdate, :email, :wachtwoord, :question, :answer, 0)");
                 
                     if ($password !== $repeatpassword) {
-                        //redirect("register");
-                        header("location: ../register.php?password");
+                        redirect('register', 'noRepeatPass');
+                        //header("location: ../register.php?password");
                         exit();
                     }
                     else if(fieldExist($username, 'gebruikersnaam', 'gebruikers')){
-                        //redirect("register");
-                        header("location: ../register.php?mijnding");
+                        redirect('register', 'redundantUsername');
+                        //header("location: ../register.php?");
                         exit();
                     }
                     else if($password == $repeatpassword) {
@@ -68,7 +71,7 @@ else{
                         $data->execute(
                             array(':username' => $username, ':firstname' => $firstname, ':surname' => $surname, ':adres1' => $adres1, ':adres2' => $adres2, ':postalcode' => $postalcode, 
                                     ':city' => $city, ':country' => $country, ':birthdate' => $birthdate, ':email' => $email, ':wachtwoord' => $hashedpassword, ':question' => $question, ':answer' => $answer));
-                             redirect("index");
+                             redirect('index', 'successAccount');
                             }
                         }
                     }

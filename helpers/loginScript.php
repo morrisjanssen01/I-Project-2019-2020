@@ -10,16 +10,14 @@
         $password = $_POST["password"];
         /* stuur de gebruiker naar de homepage als ze een vak niet invullen */
         if(empty($username) || empty($password)){
-            echo "Er is iets misgegaan tijdens het invullen";
-            redirect('login');
+            redirect('login', 'emptyUidPass');
             exit;
         }
         else if(specialCharacters($_POST)){
-            redirect('login');
+            redirect('login', 'specialchars');
             exit();
         }
         else {
-            //connectionDatabase();
             global $dbh;
             $sql = $dbh->prepare('SELECT * FROM gebruikers where gebruikersnaam = ?');
             $sql->execute(array($username));
@@ -31,17 +29,15 @@
                     if(password_verify($password, $result['wachtwoord'])){
                         session_start();
                         $_SESSION["username"] = $result['gebruikersnaam'];
-                        header("Location: ../index.php");
+                        redirect('index', 'success');
                         exit();
                     }
                     else{
-                    
-                    header("Location: ../login.php?error=wachtwoord");
+                    redirect('login', 'wrongPass');
                     }
                 }
                 else {
-                    header("Location: ../login.php?error=gebruiker");
-                    echo'gebruiker niet gevonden';
+                    redirect('login', 'nonExisting');
                     exit();
                 }
             } 

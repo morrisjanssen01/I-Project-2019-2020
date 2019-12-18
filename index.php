@@ -203,5 +203,10 @@
                 $('.modal').modal();
             });
         </script>
+        <?php if($_GET['msg'] == 'successAccount'){
+            echo"   <script>
+                        $(document).ready(function(){
+                            M.toast({html: 'Account aangemaakt!', classes: 'rounded'});});
+                    </script>";}?>
     </body>
 </html>

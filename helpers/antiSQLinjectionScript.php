@@ -6,7 +6,7 @@ function specialCharacters($values){
     $hasSpecialCharacters = false;
 
     foreach($values as $value){
-        if (preg_match("/\W/", $value)) {
+        if (preg_match("/\W /", $value)) {
             $hasSpecialCharacters = true;
         }
     }
