@@ -14,16 +14,27 @@
         $voorwerpnummer = $_GET["detail"];
         
         $stmt = $dbh->prepare("SELECT * FROM voorwerpen WHERE voorwerpnummer = :voorwerpnummer");
-        $stmt2 = $dbh->prepare("SELECT MAX(bod) FROM boden WHERE voorwerpnummer = :voorwerpnummer group by bod");
+       
         $stmt3 = $dbh->prepare("select emailadres
                                 from gebruikers
                                 where gebruikersnaam IN (select gebruikersnaam from voorwerpen
-                                where voorwerpnummer = voorwerpnummer)");
+                                where voorwerpnummer = :voorwerpnummer)");
 
         $stmt->execute(array($voorwerpnummer));
         $voorwerp = $stmt->fetch(PDO::FETCH_ASSOC);
+       
+        
     }
     
+
+    function loadBidding(){
+        global $dbh;
+        $stmt2 = $dbh->prepare("SELECT bod FROM boden WHERE voorwerpnummer = :voorwerpnummer group by bod order by bod desc");
+        $stmt2->execute(array($voorwerpnummer));
+        $boden = $stmt2->fetch(PDO::FETCH_ASSOC);
+
+        print_r($boden);
+    }
 
 ?>
 
@@ -47,7 +58,7 @@
                      <?php  echo" <h4>".$voorwerp["titel"]."</h4>" ?>
                         <img src="images/404.jpg" alt="voorwerp" style="max-width:100%">
                         <h3>beschrijving product</h3>
-                        <?php  echo" <iframe srcdoc='".htmlspecialchars($voorwerp["beschrijving"]) ."' style='height:400px; width:90%;'>".$voorwerp["verkoper"]."</iframe>" ?>   
+                        <?php  echo" <iframe width='375' height='375' srcdoc='". htmlspecialchars($voorwerp["beschrijving"]) ."'></iframe>"; ?>   
                     </div>
                     <div class="col s4" style="border-right-style:solid; border-left-style:solid; height:100%;">
                         <?php  echo" <h1>".$voorwerp["verkoper"]."</h1>"; ?>
@@ -72,12 +83,12 @@
                         <div style="border-style:solid;">
                             <h5>Bod Geschiedenis</h5>
                             <div class="white" style="border-top-style:solid; border-bottom-style:solid">
-                                <h5>TheEdgyDylan</h5><p>5.00</p>
 
                             </div>
                         </div>
                         <div style="border-style:solid; margin-top:5%">
                             <h5>Huidige Bod</h5>
+                            <?php // loadBidding()?>
                         </div>
                     </div>
                 </div>
