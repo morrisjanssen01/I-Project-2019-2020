@@ -16,17 +16,17 @@
             </div>
             <div class="box content">
                 <div class="carousel" style="height:500px;">
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/rickAstley.jpg" alt="Rickrolled!!!"></a>
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Sans.jpg" alt="Der TEUFEL!!!"></a>
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/icaButtplugg.jpg" alt="ICA ButtPlugg"></a>
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/vaseline.jpg" alt="Vaseline voor de ButtPlugg"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="Rickrolled!!!"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="Der TEUFEL!!!"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="ICA ButtPlugg"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="Vaseline voor de ButtPlugg"></a>
                 </div>
                 <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
                     <p style="font-size:200%; margin-left:3%;">Laatste Kans!</p>
                     <div class="row">
                         <div class="col s4" style="height:40%;">
-                            <figure style='background-image: url("images/rickAstley.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <a href="details.php?detail="><h5>title</h5></a>
                                     <h5>prijs</h5>
@@ -35,7 +35,7 @@
                             </figure>
                         </div>
                         <div class="col s4" style="height:30%;">
-                            <figure style='background-image: url("images/icaButtplugg.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -44,7 +44,7 @@
                             </figure>
                         </div>
                         <div class="col s4">
-                            <figure style='background-image: url("images/vaseline.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="row">
                         <div class="col s4">
-                            <figure style='background-image: url("images/wasmachine.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -64,7 +64,7 @@
                             </figure>
                         </div>
                         <div class="col s4">
-                            <figure style='background-image: url("images/Sans.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -73,7 +73,7 @@
                             </figure>
                         </div>
                         <div class="col s4">
-                            <figure style='background-image: url("images/tonk.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -89,7 +89,7 @@
                     <p style="font-size:200%; margin-left:3%;">Koopjes</p>
                     <div class="row">
                         <div class="col s4" style="height:40%;">
-                            <figure style='background-image: url("images/rickAstley.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <a href="details.php?detail="><h5>title</h5></a>
                                     <h5>prijs</h5>
@@ -98,7 +98,7 @@
                             </figure>
                         </div>
                         <div class="col s4" style="height:30%;">
-                            <figure style='background-image: url("images/icaButtplugg.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -107,7 +107,7 @@
                             </figure>
                         </div>
                         <div class="col s4">
-                            <figure style='background-image: url("images/vaseline.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -118,7 +118,7 @@
                     </div>
                     <div class="row">
                         <div class="col s4">
-                            <figure style='background-image: url("images/wasmachine.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -127,7 +127,7 @@
                             </figure>
                         </div>
                         <div class="col s4">
-                            <figure style='background-image: url("images/Sans.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
@@ -136,7 +136,7 @@
                             </figure>
                         </div>
                         <div class="col s4">
-                            <figure style='background-image: url("images/tonk.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
+                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
                                 <figcaption>
                                     <h5>title</h3>
                                     <h5>prijs</h5>
