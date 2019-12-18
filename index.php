@@ -1,5 +1,6 @@
 <?php
     require("includes/cardScript.php");
+    require("helpers/redirect.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -203,10 +204,12 @@
                 $('.modal').modal();
             });
         </script>
-        <?php if($_GET['msg'] == 'successAccount'){
-            echo"   <script>
-                        $(document).ready(function(){
-                            M.toast({html: 'Account aangemaakt!', classes: 'rounded'});});
-                    </script>";}?>
+        <?php 
+
+        if($_GET['msg'] == 'successAccount'){
+            popupMessage('Account aangemaakt!');
+        }
+        
+        ?>
     </body>
 </html>

@@ -6,3 +6,11 @@ function redirect($page, $error = ''){
     header('location: ../'.$page.'.php');
     }
 }
+
+
+function popupMessage($msg){
+
+            echo"<script>
+                        $(document).ready(function(){
+                            M.toast({html: '.$msg.', classes: 'rounded'});});
+                    </script>";}?>
