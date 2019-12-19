@@ -66,7 +66,7 @@ include 'helpers/redirect.php';
                                         <div class="row">
                                         <div class="col s6 form-field">
                                             <label for="postalCode">Postcode*</label>
-                                            <input type="text" name="postalCode" id="postalCode" pattern="[0-9A-Za-z]{7,7}" title="vul een geldige postcode in" required>
+                                            <input type="text" name="postalCode" id="postalCode" pattern="[0-9A-Za-z]{6,7}" title="vul een geldige postcode in" required>
                                         </div>
                                         <div class="col s6 form-field">
                                             <label for="city">Plaatsnaam*</label>
