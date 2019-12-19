@@ -15,7 +15,7 @@
 * Webpaden voorzien van kebab-casing.
 * De curly bracket komt direct achter de functie.
 * We voorzien functies van commentaar (Nederlands of Engels).
-* Frustratie niet uiten in de code.
+* Frustratie niet uiten in de code.(Op git is het toegestaan)
 * Er wordt op een zakelijke manier gecommit en code geschreven.
 
 #### Nieuwe feature
