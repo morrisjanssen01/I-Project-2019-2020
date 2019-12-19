@@ -182,12 +182,26 @@
                         </div>
                     </form>
                 </div>      
-            </div>     
+                <div id="cookieConsent">
+                    <div id="closeCookieConsent">x</div>
+                    Deze website maakt gebruik van cookies. <a href="#" target="_blank">Meer info</a>. <a class="cookieConsentOK">Akkoord</a>
+                </div>
+            </div> 
             <div class="box footer">
                 <?php include 'includes/footer.php';?>
             </div>
         </div>        
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){   
+                setTimeout(function () {
+                    $("#cookieConsent").fadeIn(0);
+                }, 500);
+                $("#closeCookieConsent, .cookieConsentOK").click(function() {
+                $("#cookieConsent").fadeOut(200);
+                }); 
+            });
+        </script>
         <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
         <script>
             $(document).ready(function(){
@@ -204,12 +218,10 @@
                 $('.modal').modal();
             });
         </script>
-        <?php 
-
+        <?php
         if($_GET['msg'] == 'successAccount'){
             popupMessage('Account aangemaakt!');
         }
-        
         ?>
     </body>
 </html>
