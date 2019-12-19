@@ -28,32 +28,32 @@
                                     <form action="helpers/registerScript.php" method="post">       
                                         <div class="form-field">
                                             <label for="username">Gebruikersnaam</label>
-                                            <input type="text" name="username" id="username">
+                                            <input type="text" name="username" id="username" required>
                                         </div>
                                         <div class="row"> 
                                             <div class="col 6 form-field">
                                                 <label for="password">Wachtwoord</label>
-                                                <input type="password" name ="password" id="password">
+                                                <input type="password" name ="password" id="password" required>
                                             </div>
                                             <div class="col 6 form-field">
                                                 <label for="repeat password">Bevestig Wachtwoord</label>
-                                                <input type="password" name="repeatpassword" id="repeatpassword">
+                                                <input type="password" name="repeatpassword" id="repeatpassword" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col 6 form-field">
                                                 <label for="firstName">Voornaam</label>
-                                                <input type="text" name="firstName" id="firstName">
+                                                <input type="text" name="firstName" id="firstName" required>
                                             </div>
                                             <div class="col 6 form-field">
                                                 <label for="lastName">Achternaam</label>
-                                                <input type="text" name="lastName" id="lastName">
+                                                <input type="text" name="lastName" id="lastName" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col 6 form-field">
                                                 <label for="adress1">Adres 1</label>
-                                                <input type="text" name="adress1" id="adress1">
+                                                <input type="text" name="adress1" id="adress1" required>
                                             </div>
                                             <div class="col 6 form-field">
                                                 <label for="adress2">Adres 2</label>
@@ -63,24 +63,24 @@
                                         <div class="row">
                                         <div class="col 6 form-field">
                                             <label for="postalCode">Postcode</label>
-                                            <input type="text" name="postalCode" id="postalCode">
+                                            <input type="text" name="postalCode" id="postalCode" required>
                                         </div>
                                         <div class="col 6 form-field">
                                             <label for="city">Plaatsnaam</label>
-                                            <input type="text" name="city" id="city">
+                                            <input type="text" name="city" id="city" required>
                                         </div>
                                         </div>
                                         <div class="form-field">
                                             <label for="land">Land</label>
-                                            <input type="text" name="land" id="land">
+                                            <input type="text" name="land" id="land" required>
                                         </div>
                                         <div class="form-field">
                                             <label for="birthDate">Geboortedag</label>
-                                            <input type="text" name="birthdate" id="birthDate" class="datepicker"> 
+                                            <input type="text" name="birthdate" id="birthDate" class="datepicker" required> 
                                         </div>
                                         <div class="form-field">
                                             <label for="questionList">Vragen</label>
-                                            <select name="questionList" id="questionList">
+                                            <select name="questionList" id="questionList" required>
                                                 <option value="" disabled selected>Kies uw beveiligingsvraag</option>
                                                 <option value="1">Hoe heet uw huisdier?</option>
                                                 <option value="2">Wat is uw geboorteplaats</option>
@@ -89,15 +89,15 @@
                                         </div>
                                         <div class="form-field">
                                             <label for="answer">Antwoord</label>
-                                            <input type="text" name="answer" id="answer">
+                                            <input type="text" name="answer" id="answer" required>
                                         </div>
                                         <div class="form-field">
                                             <label for="verification">verificatiecode</label>
-                                            <input type="text" name="verificationcode" id="verificationcode">
+                                            <input type="text" name="verificationcode" id="verificationcode" required>
                                         </div>
                                         <div class="form-field">
                                             <label>
-                                                <input type="checkbox" id="remember"/>
+                                                <input type="checkbox" id="remember" required>
                                                 <span>Akkoord met Voorwaarden</span>
                                             </label>
                                         </div>

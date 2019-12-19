@@ -33,7 +33,7 @@
         $stmt2->execute(array($voorwerpnummer));
         $boden = $stmt2->fetch(PDO::FETCH_ASSOC);
 
-        print_r($boden);
+       var_dump($boden);
     }
 
 ?>
@@ -66,6 +66,7 @@
                         <?php  echo" <h5>".$gebruiker['Emailadres']."</h5>"; ?>
                         <div style="margin-top:30%;">
                             <h5>looptijd</h5>
+                        <?php  echo' <h5>'.$voorwerp["looptijd"].'</h5>'?>
                         </div>
                         <div style="margin-top:40%;">
                             <form action="biedScript.php?" method="POST">
@@ -88,7 +89,7 @@
                         </div>
                         <div style="border-style:solid; margin-top:5%">
                             <h5>Huidige Bod</h5>
-                            <?php // loadBidding()?>
+                            <?php loadBidding()?>
                         </div>
                     </div>
                 </div>
