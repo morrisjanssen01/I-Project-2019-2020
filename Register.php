@@ -30,59 +30,59 @@ include 'helpers/redirect.php';
                                 <div class="card-content">
                                     <form action="helpers/registerScript.php" method="post">       
                                         <div class="form-field">
-                                            <label for="username">Gebruikersnaam</label>
+                                            <label for="username">Gebruikersnaam*</label>
                                             <input type="text" name="username" id="username" pattern="[a-zA-Z0-9_]{1,50}" title="je kunt alleen letter cijfers en de underscore gebruiken in uw gebruikersnaam" required>
                                         </div>
                                         <div class="row"> 
-                                            <div class="col 6 form-field">
-                                                <label for="password">Wachtwoord</label>
+                                            <div class="col s6 form-field">
+                                                <label for="password">Wachtwoord*</label>
                                                 <input type="password" name ="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="het wachtwoord moet een hoofdletter, een kleine letter, een cijfer en minmaal 8 karakters bevatten" required>
                                             </div>
-                                            <div class="col 6 form-field">
-                                                <label for="repeat password">Bevestig Wachtwoord</label>
+                                            <div class="col s6 form-field">
+                                                <label for="repeat password">Bevestig Wachtwoord*</label>
                                                 <input type="password" name="repeatpassword" id="repeatpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="het wachtwoord moet een hoofdletter, een kleine letter, een cijfer en minmaal 8 karakters bevatten" required>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col 6 form-field">
-                                                <label for="firstName">Voornaam</label>
+                                            <div class="col s6 form-field">
+                                                <label for="firstName">Voornaam*</label>
                                                 <input type="text" name="firstName" id="firstName" required>
                                             </div>
-                                            <div class="col 6 form-field">
-                                                <label for="lastName">Achternaam</label>
+                                            <div class="col s6 form-field">
+                                                <label for="lastName">Achternaam*</label>
                                                 <input type="text" name="lastName" id="lastName" required>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col 6 form-field">
-                                                <label for="adress1">Adres 1</label>
+                                            <div class="col s6 form-field">
+                                                <label for="adress1">Adres 1*</label>
                                                 <input type="text" name="adress1" id="adress1" required>
                                             </div>
-                                            <div class="col 6 form-field">
+                                            <div class="col s6 form-field">
                                                 <label for="adress2">Adres 2</label>
                                                 <input type="text" name="adress2" id="adress2">
                                             </div>
                                         </div>
                                         <div class="row">
-                                        <div class="col 6 form-field">
-                                            <label for="postalCode">Postcode</label>
+                                        <div class="col s6 form-field">
+                                            <label for="postalCode">Postcode*</label>
                                             <input type="text" name="postalCode" id="postalCode" pattern="[0-9A-Za-z]{7,7}" title="vul een geldige postcode in" required>
                                         </div>
-                                        <div class="col 6 form-field">
-                                            <label for="city">Plaatsnaam</label>
+                                        <div class="col s6 form-field">
+                                            <label for="city">Plaatsnaam*</label>
                                             <input type="text" name="city" id="city" required>
                                         </div>
                                         </div>
                                         <div class="form-field">
-                                            <label for="land">Land</label>
+                                            <label for="land">Land*</label>
                                             <input type="text" name="land" id="land" required>
                                         </div>
                                         <div class="form-field">
-                                            <label for="birthDate">Geboortedag</label>
+                                            <label for="birthDate">Geboortedag*</label>
                                             <input type="text" name="birthdate" id="birthDate" class="datepicker" pattern="[0-9]{8,8}" title="Vul uw geboorte datum in als: JaarMaandDatum" required> 
                                         </div>
                                         <div class="form-field">
-                                            <label for="questionList">Vragen</label>
+                                            <label for="questionList">Vragen*</label>
                                             <select name="questionList" id="questionList" required>
                                                 <option value="" disabled selected>Kies uw beveiligingsvraag</option>
                                                 <option value="1">Hoe heet uw huisdier?</option>
@@ -91,18 +91,19 @@ include 'helpers/redirect.php';
                                             </select>    
                                         </div>
                                         <div class="form-field">
-                                            <label for="answer">Antwoord</label>
+                                            <label for="answer">Antwoord*</label>
                                             <input type="text" name="answer" id="answer" required>
                                         </div>
                                         <div class="form-field">
-                                            <label for="verification">verificatiecode</label>
+                                            <label for="verification">verificatiecode*</label>
                                             <input type="text" name="verificationcode" pattern="[0-9]{6,6}" title="De verificatie code is altijd 6 cijfers lang" id="verificationcode" required>
                                         </div>
                                         <div class="form-field">
                                             <label>
                                                 <input type="checkbox" id="remember" required>
-                                                <span>Akkoord met Voorwaarden</span>
-                                            </label>
+                                                <span>Akkoord met Voorwaarden*</span>
+                                            </label><br>
+                                            <label><span>Velden met * zijn verplicht</span></label>
                                         </div>
                                         <div class="form-field">
                                             <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
