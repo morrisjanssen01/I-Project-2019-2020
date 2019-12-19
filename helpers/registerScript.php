@@ -33,17 +33,20 @@ else{
 			if(empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["repeatpassword"]) || empty($_POST["firstName"]) || empty($_POST["lastName"]) || empty($_POST["adress1"]) || empty($_POST["postalCode"]) || empty($_POST["land"]) || empty($_POST["birthdate"]) || empty($_POST["questionList"]) || empty($_POST["answer"])){
                 //var_dump($_POST);
                 redirect('register', 'emptyFields');
+                $_SESSION["prevPost"] = $_POST;
                 //header("location: ../register.php?empty");
                 exit();
             }
             else if($_SESSION['verificationcode'] !== $_POST['verificationcode']){
                 redirect('register', 'noVerification');
+                $_SESSION["prevPost"] = $_POST;
                 //header("location: ../register.php?code");
                 exit();
             }
             else{
                 if(specialCharacters($_POST)){
                     redirect('register', 'specialChars');
+                    $_SESSION["prevPost"] = $_POST;
                     exit();
                     //var_dump($_POST);
                 }
@@ -57,11 +60,13 @@ else{
                 
                     if ($password !== $repeatpassword) {
                         redirect('register', 'noRepeatPass');
+                        $_SESSION["prevPost"] = $_POST;
                         //header("location: ../register.php?password");
                         exit();
                     }
                     else if(fieldExist($username, 'gebruikersnaam', 'gebruikers')){
                         redirect('register', 'redundantUsername');
+                        $_SESSION["prevPost"] = $_POST;
                         //header("location: ../register.php?");
                         exit();
                     }
