@@ -2,6 +2,7 @@
 
     require("helpers/antiSQLinjectionScript.php");
     require("helpers/connectionDatabaseScript.php");
+    require("helpers/redirect.php");
 
     if(!isset($_GET["detail"]) || empty($_GET["detail"])){
         header('location:  404.php');
@@ -36,6 +37,8 @@
        var_dump($boden);
     }
 
+    $img = loadImages($voorwerp['voorwerpnummer']);
+
 ?>
 
 
@@ -56,7 +59,7 @@
                 <div class="row" style="margin:0;">
                     <div class="col s4" style="padding:0;">
                      <?php  echo" <h4>".$voorwerp["titel"]."</h4>" ?>
-                        <img src="images/404.jpg" alt="voorwerp" style="max-width:100%">
+                        <img src="<?php echo $img?>" alt="voorwerp" style="max-width:100%">
                         <h3>beschrijving product</h3>
                         <?php  echo" <iframe style='width:100%; height:340px;' srcdoc='". htmlspecialchars($voorwerp["beschrijving"]) ."'></iframe>"; ?>   
                     </div>
