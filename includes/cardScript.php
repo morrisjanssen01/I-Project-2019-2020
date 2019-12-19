@@ -52,6 +52,9 @@ function loadCardBatch($nCards, $category, $title = ''){
 
     for($i = 0; $i < $nCards; $i++){
         $img = loadImages($results[$i]['voorwerpnummer']);
+        if(empty($img)){
+            $img = '404.jpg';
+        }
         if($i == 0){
         echo ' <p style="font-size:200%;">'.$title.'</p>
                <div class="row">';
