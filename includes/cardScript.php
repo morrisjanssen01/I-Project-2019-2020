@@ -49,7 +49,7 @@ function loadCardBatch($nCards, $category, $title = ''){
             $img = '404.jpg';
         }
         if($i == 0){
-        echo ' <h2>'.$title.'</h2>
+        echo ' <p style="font-size:200%; margin-left:3%;">'.$title.'</p>
                <div class="row">';
         }
         else if($i == 3){
