@@ -1,6 +1,6 @@
 <?php
     require("includes/cardScript.php");
-    require("helpers/redirect.php");
+    //require("helpers/redirect.php");
 ?>
 <!DOCTYPE html>
 <html>

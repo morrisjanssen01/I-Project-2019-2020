@@ -1,15 +1,8 @@
 <?php
 require("helpers/connectionDatabaseScript.php");
+require("helpers/redirect.php");
 
-function loadImages($itemId){
-    global $dbh;
-    $img = '';
-    $sql = "SELECT filenaam FROM Bestanden WHERE voorwerp = $itemId";
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $img = $query->fetch(PDO::FETCH_ASSOC);
-    return $img['filenaam'];
-}
+
 
 
 // n=aantal kaartjes
@@ -65,7 +58,7 @@ function loadCardBatch($nCards, $category, $title = ''){
         }
         if($i == 0 || $i == 3){
           echo'<div class="col s2 " style="height:30%; width: 33%;">
-                <figure style="background-image: url(images/'.$img.'); background-repeat: no-repeat; margin:0; width:100%;">
+                <figure style="background-image: url('.$img.'); background-repeat: no-repeat; margin:0; width:100%;">
                     <figcaption>
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
@@ -76,7 +69,7 @@ function loadCardBatch($nCards, $category, $title = ''){
         }
         else{
             echo'<div class="col s2" style="height:30%; width: 33%;">
-                <figure style="background-image: url(images/'.$img.'); background-repeat: no-repeat; margin:0; width:100%;">
+                <figure style="background-image: url('.$img.'); background-repeat: no-repeat; margin:0; width:100%;">
                     <figcaption>
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>

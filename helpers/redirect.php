@@ -13,4 +13,14 @@ function popupMessage($msg){
             echo"<script>
                         $(document).ready(function(){
                             M.toast({html: '$msg', classes: 'rounded'});});
-                    </script>";}?>
+                    </script>";}
+
+function loadImages($itemId){
+    global $dbh;
+    $img = '';
+    $sql = "SELECT filenaam FROM Bestanden WHERE voorwerp = $itemId";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $img = $query->fetch(PDO::FETCH_ASSOC);
+    return 'http://iproject5.icasites.nl/pics/'.$img['filenaam'];
+}?>
