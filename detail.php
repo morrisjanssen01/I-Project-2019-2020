@@ -53,22 +53,25 @@
                 <?php include 'includes/header.php';?>
             </div>
             <div class="box content">
-                <div class="row">
+                <div class="row" style="margin:0;">
                     <div class="col s4" style="padding:0;">
                      <?php  echo" <h4>".$voorwerp["titel"]."</h4>" ?>
                         <img src="images/404.jpg" alt="voorwerp" style="max-width:100%">
                         <h3>beschrijving product</h3>
-                        <?php  echo" <iframe width='375' height='375' srcdoc='". htmlspecialchars($voorwerp["beschrijving"]) ."'></iframe>"; ?>   
+                        <?php  echo" <iframe style='width:100%; height:340px;' srcdoc='". htmlspecialchars($voorwerp["beschrijving"]) ."'></iframe>"; ?>   
                     </div>
                     <div class="col s4" style="border-right-style:solid; border-left-style:solid; height:100%;">
-                        <?php  echo" <h1>".$voorwerp["verkoper"]."</h1>"; ?>
-                        <?php  echo" <h5>".$voorwerp["plaatsnaam"].", ". $voorwerp["land"]."</h5>"; ?>
+                        <h3>Verkoper:</h3>
+                        <?php  echo" <h3>".$voorwerp["verkoper"]."</h3>"; ?>
+                        <h5>Plaats:</h5>
+                        <?php  echo" <h5>".$voorwerp["plaatsnaam"].", ". $voorwerp["land"]."</h5>";?>
+                        <h5>Email Verkoper:</h5>
                         <?php  echo" <h5>".$gebruiker['Emailadres']."</h5>"; ?>
-                        <div style="margin-top:30%;">
-                            <h5>looptijd</h5>
-                        <?php  echo' <h5>'.$voorwerp["looptijd"].'</h5>'?>
+                        <div style="margin-top:10%;">
+                            <h5>looptijd:</h5>
+                        <?php  echo' <h5>'.$voorwerp["looptijd"].' Dagen</h5>'?>
                         </div>
-                        <div style="margin-top:40%;">
+                        <div style="">
                             <form action="biedScript.php?" method="POST">
                                 <div class="form-field">
                                     <label for="bod">Bod</label>
