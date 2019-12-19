@@ -62,7 +62,7 @@ function loadCardBatch($nCards, $category, $title = ''){
                     <figcaption>
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
-                        <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                        <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="'.$results[$i]["voorwerpnummer"].'" style="margin: 5px;" target>bied</button>
                     </figcaption>
                 </figure>
             </div>';
@@ -73,14 +73,40 @@ function loadCardBatch($nCards, $category, $title = ''){
                     <figcaption>
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
-                        <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
+                        <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="'.$results[$i]["voorwerpnummer"].'" style="margin: 5px;" target>bied</button>
                     </figcaption>
                 </figure>
             </div>';
 
         }
     }
-        echo'</div>';
+        echo'</div></div>';
+        for($i = 0; $i < $nCards; $i++){
+            echo '<div id="'.$results[$i]["voorwerpnummer"].'" class="modal coconutMilk" style="width:30%; height:40%">
+                    <form action="biedScript.php?"  method="post">
+                        <div class="modal-header" style="margin-top:3%; margin-bottom:10%;">
+                            <h4 class="center">Bieden op '.$results[$i]["titel"].'</h4>
+                        </div>
+                        <div class="modal-content" style="padding-top:0;">
+                            <div class="input-field">
+                                <label>Bedrag:</label><br><br>
+                                <div class="row">
+                                    <div class="col s1" style="padding:0;">
+                                        <p>€</p>
+                                    </div>
+                                    <div class="col s11" style="padding:0;">
+                                        <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="1">
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="right" style="margin-top:10%;">
+                                <a class="modal-close waves-effect waves-green btn-flat">Terug</a>
+                                <button type="submit" class="waves-effect  btn-flat warmSand darken-2">Bieden</a></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>';      
+        }
     }
 //loadImages();
 //loadCardBatch(3 , 'pumps', 'Pumps');
