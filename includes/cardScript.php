@@ -8,7 +8,7 @@ function loadImages($itemId){
     $query = $dbh->prepare($sql);
     $query->execute();
     $img = $query->fetch(PDO::FETCH_ASSOC);
-    return $img;
+    return $img['filenaam'];
 }
 
 
