@@ -31,16 +31,16 @@ include 'helpers/redirect.php';
                                     <form action="helpers/registerScript.php" method="post">       
                                         <div class="form-field">
                                             <label for="username">Gebruikersnaam</label>
-                                            <input type="text" name="username" id="username" required>
+                                            <input type="text" name="username" id="username" pattern="[a-zA-Z0-9_]{1,50}" title="je kunt alleen letter cijfers en de underscore gebruiken in uw gebruikersnaam" required>
                                         </div>
                                         <div class="row"> 
                                             <div class="col 6 form-field">
                                                 <label for="password">Wachtwoord</label>
-                                                <input type="password" name ="password" id="password" required>
+                                                <input type="password" name ="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="het wachtwoord moet een hoofdletter, een kleine letter, een cijfer en minmaal 8 karakters bevatten" required>
                                             </div>
                                             <div class="col 6 form-field">
                                                 <label for="repeat password">Bevestig Wachtwoord</label>
-                                                <input type="password" name="repeatpassword" id="repeatpassword" required>
+                                                <input type="password" name="repeatpassword" id="repeatpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="het wachtwoord moet een hoofdletter, een kleine letter, een cijfer en minmaal 8 karakters bevatten" required>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -66,7 +66,7 @@ include 'helpers/redirect.php';
                                         <div class="row">
                                         <div class="col 6 form-field">
                                             <label for="postalCode">Postcode</label>
-                                            <input type="text" name="postalCode" id="postalCode" required>
+                                            <input type="text" name="postalCode" id="postalCode" pattern="[0-9A-Za-z]{7,7}" title="vul een geldige postcode in" required>
                                         </div>
                                         <div class="col 6 form-field">
                                             <label for="city">Plaatsnaam</label>
@@ -79,7 +79,7 @@ include 'helpers/redirect.php';
                                         </div>
                                         <div class="form-field">
                                             <label for="birthDate">Geboortedag</label>
-                                            <input type="text" name="birthdate" id="birthDate" class="datepicker" required> 
+                                            <input type="text" name="birthdate" id="birthDate" class="datepicker" pattern="[0-9]{8,8}" title="Vul uw geboorte datum in als: JaarMaandDatum" required> 
                                         </div>
                                         <div class="form-field">
                                             <label for="questionList">Vragen</label>
@@ -96,7 +96,7 @@ include 'helpers/redirect.php';
                                         </div>
                                         <div class="form-field">
                                             <label for="verification">verificatiecode</label>
-                                            <input type="text" name="verificationcode" id="verificationcode" required>
+                                            <input type="text" name="verificationcode" pattern="[0-9]{6,6}" title="De verificatie code is altijd 6 cijfers lang" id="verificationcode" required>
                                         </div>
                                         <div class="form-field">
                                             <label>
