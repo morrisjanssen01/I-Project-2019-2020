@@ -90,7 +90,7 @@ $headers .= "Return-Path: The Sender <info@icasites.nl>\r\n";
 $headers .= "Organization: icasites\r\n";
 $headers .= "X-Priority: 3\r\n";
 $headers .= "X-Mailer: PHP" . phpversion() . "\r\n";
-//mail($to, $subject, $email, $headers);
+mail($to, $subject, $email, $headers);
 
 redirect('register');
 ?> 
