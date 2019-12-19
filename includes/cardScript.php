@@ -15,11 +15,11 @@ function loadImages($itemId){
 // n=aantal kaartjes
 function loadCardBatch($nCards, $category, $title = ''){
 
+    $sqlLaastekans ='select top '.$nCards.' *
+                    from voorwerpen 
+                    where veilingGesloten = 0
+                    order by looptijdEindTijd';
 
-    $sqlLaastekans ='select top '.$nCards.'titel, startprijs
-        from voorwerpen 
-        where veilingEinddag = day(getdate()) and veilinggesloten = 0
-        order by newid()';
     $sqlKoopjes = '';
 
     $sqlrubrieken = "select top $nCards *
@@ -53,7 +53,7 @@ function loadCardBatch($nCards, $category, $title = ''){
     for($i = 0; $i < $nCards; $i++){
         $img = loadImages($results[$i]['voorwerpnummer']);
         if($i == 0){
-        echo ' <p style="font-size:200%;">'.$title.'</p>
+        echo ' <h2>'.$title.'</h2>
                <div class="row">';
         }
         else if($i == 3){
