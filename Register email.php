@@ -25,7 +25,7 @@
                                     <form action="helpers/mailingScript.php" method="post">
                                     <div class="form-field">
                                         <label for="mailaddress">E-mail</label>
-                                        <input type="text" name= "mailaddress" id="mailaddress"> 
+                                        <input type="email" name= "mailaddress" id="mailaddress"> 
                                     </div><br>
                                     <div class="form-field">
                                         <button class="btn-large warmSand darken-2" type="submit">Stuur verificatie mail</button>

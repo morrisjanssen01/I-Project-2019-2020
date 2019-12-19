@@ -48,7 +48,7 @@ function loadCardBatch($nCards, $category, $title = ''){
             echo '</div>
                   <div class="row">';
         }
-        if($i == 0 || i == 3){
+        if($i == 0 || $i == 3){
           echo'<div class="col s2 " style="height:30%; width: 33%;">
                 <figure style="background-image: url('.$notFound.'); background-repeat: no-repeat; margin:0; width:100%;">
                     <figcaption>
