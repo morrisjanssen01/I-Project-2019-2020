@@ -24,8 +24,10 @@
                 </div>
                 <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
-                    <?php  loadCardBatch(6 , 'laatse kans', 'laatse kans'); ?>
-                </div>
+                    <?php  loadCardBatch(6 , 'laatse kans', 'laatse kans');
+                    
+                    //ja het klopt hier mist een div! niet toevoegen! anders breekt het! danku!?>
+                
             </div>   
             <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
@@ -92,38 +94,16 @@
             </div>
             <div class="container">                
                 <div class="card">
-                    <?php  loadCardBatch(3 , 'pumps', 'Pumps'); ?>
-                </div>
+                    <?php  loadCardBatch(3 , 'pumps', 'Overige Kleding');
+
+                    //ja het klopt hier mist een div! niet toevoegen! anders breekt het! danku! ?>
             </div>  
             <div class="container">
                 <div class="card">
-                    <?php loadCardBatch(3, 'overige kleding', 'Overige Kleding') ?>
-                </div>
+                    <?php loadCardBatch(3, 'overige kleding', 'Pumps') 
+                    
+                    //ja het klopt hier mist een div! niet toevoegen! anders breekt het! danku!?>
             </div>
-                <div id="modal1" class="modal coconutMilk" style="width:30%; height:30%">
-                    <form action="biedScript.php?$_POST" style="margin-bottom:10%;">
-                        <div class="modal-header" style="margin-top:3%; margin-bottom:5%;">
-                            <h4 class="center">Bieden op "title"</h4>
-                        </div>
-                        <div class="modal-content" style="padding-top:0;">
-                            <div class="input-field">
-                                <label>Bedrag:</label><br><br>
-                                <div class="row">
-                                    <div class="col s1" style="padding:0;">
-                                        <p>€</p>
-                                    </div>
-                                    <div class="col s11" style="padding:0;">
-                                        <input placeholder="0,00" id="firstname" type="number" min="5" value="5.00" step="1">
-                                    </div>
-                                </div>                            
-                            </div>
-                            <div class="right" style="margin-top:10%;">
-                                <a class="modal-close waves-effect waves-green btn-flat">Terug</a>
-                                <button type="submit" class="waves-effect  btn-flat warmSand darken-2">Bieden</a></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>      
                 <div id="cookieConsent">
                     <div id="closeCookieConsent">x</div>
                     Deze website maakt gebruik van cookies. <a href="#" target="_blank">Meer info</a>. <a class="cookieConsentOK">Akkoord</a>
