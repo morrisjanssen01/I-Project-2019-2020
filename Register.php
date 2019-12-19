@@ -1,3 +1,6 @@
+<?php
+include 'helpers/redirect.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -160,6 +163,23 @@
                     $('select').formSelect();
                 });
             </script>
+            <?php
+            if($_GET['msg'] == 'emptyFields'){
+                popupMessage('Vul alle velden in A.U.B.');
+            }
+            else if($_GET['msg'] == 'noVerification'){
+                popupMessage('Vul de verificatiecode correct in');
+            }
+            else if($_GET['msg'] == 'specialChars'){
+                popupMessage('Onrechtmatig gebruik van speciale tekens');
+            }
+            else if($_GET['msg'] == 'noRepeatPass'){
+                popupMessage('Herhalend wachtwoord klopt niet');
+            }
+            else if($_GET['msg'] == 'redundantUsername'){
+                popupMessage('Deze gebruikersnaam is al in gebruik');
+            }
+            ?>
         </div>
     </body>
 </html>

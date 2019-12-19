@@ -1,3 +1,6 @@
+<?php
+include 'helpers/redirect.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,20 +31,7 @@
                                         <div class="form-field">
                                             <label for="password">Wachtwoord</label>
                                             <input type="password" name="password" id="password">
-                                            <?php
-                                                if($_GET['msg'] == 'emptyUidPass'){
-                                                    echo"<p class='red-text'>Gebruikersnaam en/of wachtwoord niet ingevuld</p>";
-                                                }
-                                                else if($_GET['msg'] == 'specialChars'){
-                                                    echo"<p class='red-text'>Onrechtmatig gebruik van speciale tekens</p>";
-                                                }
-                                                else if($_GET['msg'] == 'nonExisting'){
-                                                    echo"<p class='red-text'>Gebruiker bestaat niet</p>";
-                                                }
-                                                else if($_GET['msg'] == 'wrongPass'){
-                                                    echo"<p class='red-text'>Verkeerd wachtwoord. Probeer het opnieuw</p>";
-                                                }
-                                            ?>
+                                            
                                         </div><br>
                                         <div class="form-field">
                                             <label>
@@ -69,6 +59,20 @@
                 $('.sidenav').sidenav();
                 });
             </script>
+            <?php
+                if($_GET['msg'] == 'emptyUidPass'){
+                    popupMessage('Gebruikersnaam en/of wachtwoord niet ingevuld');
+                }
+                else if($_GET['msg'] == 'specialChars'){
+                    popupMessage('Onrechtmatig gebruik van speciale tekens');
+                }
+                else if($_GET['msg'] == 'nonExisting'){
+                    popupMessage('Gebruiker bestaat niet');
+                }
+                else if($_GET['msg'] == 'wrongPass'){
+                    popupMessage('Verkeerd wachtwoord. Probeer het opnieuw');
+                }
+            ?>
         </div>
     </body>
 </html>
