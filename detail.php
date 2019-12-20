@@ -16,13 +16,16 @@
         
         $stmt = $dbh->prepare("SELECT * FROM voorwerpen WHERE voorwerpnummer = :voorwerpnummer");
        
-        $stmt3 = $dbh->prepare("select emailadres
+        $stmt3 = $dbh->prepare("select Emailadres
                                 from gebruikers
                                 where gebruikersnaam IN (select gebruikersnaam from voorwerpen
                                 where voorwerpnummer = :voorwerpnummer)");
 
         $stmt->execute(array($voorwerpnummer));
         $voorwerp = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $stmt3->execute(array($voorwerpnummer));
+        $gebruiker = $stmt3->fetch(PDO::FETCH_ASSOC);
        
         
     }
@@ -56,7 +59,7 @@
                 <?php include 'includes/header.php';?>
             </div>
             <div class="box content">
-                <div class="row" style="margin:0;">
+                <div class="row" style="margin:0; height: 100%">
                     <div class="col s4" style="padding:0;">
                      <?php  echo" <h4>".$voorwerp["titel"]."</h4>" ?>
                         <img src="<?php echo $img?>" alt="voorwerp" style="max-width:100%">
@@ -65,10 +68,10 @@
                     </div>
                     <div class="col s4" style="border-right-style:solid; border-left-style:solid; height:100%;">
                         <h3>Verkoper:</h3>
-                        <?php  echo" <h3>".$voorwerp["verkoper"]."</h3>"; ?>
-                        <h5>Plaats:</h5>
+                        <?php  echo" <h5>".$voorwerp["verkoper"]."</h5>"; ?>
+                        <h4>Plaats:</h4>
                         <?php  echo" <h5>".$voorwerp["plaatsnaam"].", ". $voorwerp["land"]."</h5>";?>
-                        <h5>Email Verkoper:</h5>
+                        <h4>Email Verkoper:</h4>
                         <?php  echo" <h5>".$gebruiker['Emailadres']."</h5>"; ?>
                         <div style="margin-top:10%;">
                             <h5>looptijd:</h5>
