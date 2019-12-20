@@ -8,18 +8,27 @@ require("helpers/redirect.php");
 // n=aantal kaartjes
 function loadCardBatch($nCards, $category, $title = ''){
 
+
+    //STARTprijs in deze functie moet huidigebod worden
+
     $sqlLaastekans ='select top '.$nCards.' *
                     from voorwerpen 
                     where veilingGesloten = 0
                     order by looptijdEindTijd';
 
-    $sqlKoopjes = '';
+    $sqlKoopjes = 'select * from voorwerpen
+    where voorwerpnummer in(
+            select top 6 V.voorwerpnummer
+            from voorwerpen V
+            left join boden B on V.voorwerpnummer = B.voorwerpnummer
+            group by V.voorwerpnummer
+            having max(B.bod) BETWEEN 5 AND 10) AND veilinGesloten = 0';
 
     $sqlrubrieken = "select top $nCards *
                     from voorwerpen
                     where voorwerpnummer IN (select voorwerpnummer 
                                             from voorwerpenInRubrieken 
-                                             where RubriekOpLaagsteNiveau IN (select rubrieknummer from rubrieken where rubrieknaam = '$category' ) )";
+                                             where RubriekOpLaagsteNiveau IN (select rubrieknummer from rubrieken where rubrieknaam = '$category')) AND veilingGesloten = 0";
 
     $sql = '';
 

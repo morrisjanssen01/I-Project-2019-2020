@@ -31,66 +31,7 @@
             </div>   
             <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
-                    <p style="font-size:200%; margin-left:3%;">Koopjes</p>
-                    <div class="row">
-                        <div class="col s4" style="height:40%;">
-                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
-                                <figcaption>
-                                    <a href="details.php?detail="><h5>title</h5></a>
-                                    <h5>prijs</h5>
-                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col s4" style="height:30%;">
-                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
-                                <figcaption>
-                                    <h5>title</h3>
-                                    <h5>prijs</h5>
-                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col s4">
-                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
-                                <figcaption>
-                                    <h5>title</h3>
-                                    <h5>prijs</h5>
-                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s4">
-                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
-                                <figcaption>
-                                    <h5>title</h3>
-                                    <h5>prijs</h5>
-                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col s4">
-                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
-                                <figcaption>
-                                    <h5>title</h3>
-                                    <h5>prijs</h5>
-                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col s4">
-                            <figure style='background-image: url("images/404.jpg"); background-repeat: no-repeat; margin:0; width:100%;'>
-                                <figcaption>
-                                    <h5>title</h3>
-                                    <h5>prijs</h5>
-                                    <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="modal1" style="margin: 5px;" target>bied</button>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
+                    <?php loadCardBatch(6, 'koopjes', 'Koopjes!'); ?>
             </div>
             <div class="container">                
                 <div class="card">
