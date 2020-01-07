@@ -69,7 +69,7 @@
                         <?php  echo' <h5>'.$voorwerp["looptijd"].' Dagen</h5>'?>
                         </div>
                         <div style="">
-                            <form action="biedScript.php?" method="POST">
+                            <?php echo '<form action="helpers/biddingScript.php?detail='.$voorwerpnummer.'" method="POST">' ?>
                                 <div class="form-field">
                                     <label for="bod">Bod</label>
                                     <input type="text" name="bod" id="bod" placeholder="5.00">
@@ -84,12 +84,21 @@
                         <div style="border-style:solid;">
                             <h5>Bod Geschiedenis</h5>
                             <div class="white" style="border-top-style:solid; border-bottom-style:solid">
-
+                                <?php $bod = loadBidding($voorwerpnummer);
+                                      for($i = 1; $i < 10; $i++){
+                                        if(!empty($bod[$i]['bod'])){
+                                            echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
+                                        }
+                                        else if($i = 1 || !empty($bod[0]['bod'] )){
+                                            echo '<h1>Er is nog niet geboden op dit item. Wees de eerste!</h1><br><br>';
+                                        }
+                                       }   ?>
                             </div>
                         </div>
                         <div style="border-style:solid; margin-top:5%">
                             <h5>Huidige Bod</h5>
-                            <?php loadBidding($voorwerpnummer);?>
+                            <?php $bod = loadBidding($voorwerpnummer);
+                                  echo $bod['bod'].' door '.$bod['gebruikersnaam']?>
                         </div>
                     </div>
                 </div>

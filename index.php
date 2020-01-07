@@ -31,7 +31,9 @@
             </div>   
             <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
-                    <?php loadCardBatch(6, 'koopjes', 'Koopjes!'); ?>
+                    <?php loadCardBatch(6, 'koopjes', 'Koopjes!');
+
+                    //ja het klopt hier mist een div! niet toevoegen! anders breekt het! danku! ?>
             </div>
             <div class="container">                
                 <div class="card">
@@ -84,6 +86,9 @@
         <?php
         if($_GET['msg'] == 'successAccount'){
             popupMessage('Account aangemaakt!');
+        }
+        else if($_GET['msg'] == 'bodGeplaatst'){
+            popupMessage('Uw bod is geplaatst!');
         }
         ?>
     </body>
