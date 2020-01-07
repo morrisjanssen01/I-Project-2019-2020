@@ -18,7 +18,7 @@ function popupMessage($msg){
 function loadImages($itemId){
     global $dbh;
     $img = '';
-    $sql = "SELECT filenaam FROM Bestanden WHERE voorwerp = $itemId";
+    $sql = "SELECT filenaam FROM Bestanden WHERE voorwerp = '".$itemId."'";
     $query = $dbh->prepare($sql);
     $query->execute();
     $img = $query->fetch(PDO::FETCH_ASSOC);

@@ -22,7 +22,7 @@ function loadCardBatch($nCards, $category, $title = ''){
             from voorwerpen V
             left join boden B on V.voorwerpnummer = B.voorwerpnummer
             group by V.voorwerpnummer
-            having max(B.bod) BETWEEN 5 AND 10) AND veilinGesloten = 0';
+            having max(B.bod) BETWEEN 5 AND 10) AND veilingGesloten = 0';
 
     $sqlrubrieken = "select top $nCards *
                     from voorwerpen
