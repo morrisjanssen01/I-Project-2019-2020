@@ -41,7 +41,7 @@
             </div>  
             <div class="container">
                 <div class="card">
-                    <?php loadCardBatch(3, 'overige kleding', 'Pumps') 
+                    <?php loadCardBatch(3, 'overige kleding', 'sokken') 
                     
                     //ja het klopt hier mist een div! niet toevoegen! anders breekt het! danku!?>
             </div>

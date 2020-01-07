@@ -29,16 +29,7 @@
        
         
     }
-    
 
-    function loadBidding(){
-        global $dbh;
-        $stmt2 = $dbh->prepare("SELECT bod FROM boden WHERE voorwerpnummer = :voorwerpnummer group by bod order by bod desc");
-        $stmt2->execute(array($voorwerpnummer));
-        $boden = $stmt2->fetch(PDO::FETCH_ASSOC);
-
-       var_dump($boden);
-    }
 
     $img = loadImages($voorwerp['voorwerpnummer']);
 
@@ -98,7 +89,7 @@
                         </div>
                         <div style="border-style:solid; margin-top:5%">
                             <h5>Huidige Bod</h5>
-                            <?php loadBidding()?>
+                            <?php loadBidding($voorwerpnummer);?>
                         </div>
                     </div>
                 </div>
