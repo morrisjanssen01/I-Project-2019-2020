@@ -7,6 +7,7 @@ function redirect($page, $error = ''){
     }
 }
 
+//dit moet een eigen pagina krijgen
 
 function popupMessage($msg){
 
