@@ -7,13 +7,15 @@ function redirect($page, $error = ''){
     }
 }
 
+//dit moet een eigen pagina krijgen
 
 function popupMessage($msg){
 
             echo"<script>
                         $(document).ready(function(){
                             M.toast({html: '$msg', classes: 'rounded'});});
-                    </script>";}
+                    </script>";
+                }
 
 function loadImages($itemId){
     global $dbh;
@@ -23,4 +25,14 @@ function loadImages($itemId){
     $query->execute();
     $img = $query->fetch(PDO::FETCH_ASSOC);
     return 'http://iproject5.icasites.nl/pics/'.$img['filenaam'];
-}?>
+}
+
+ function loadBidding($voorwerpnummer){
+    global $dbh;
+    $stmt2 = $dbh->prepare("SELECT bod FROM boden WHERE voorwerpnummer = :voorwerpnummer group by bod order by bod desc");
+    $stmt2->execute(array($voorwerpnummer));
+    $boden = $stmt2->fetch(PDO::FETCH_ASSOC);
+
+    var_dump($boden);
+    }
+?>
