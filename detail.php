@@ -72,7 +72,7 @@
                             <?php echo '<form action="helpers/biddingScript.php?detail='.$voorwerpnummer.'" method="POST">' ?>
                                 <div class="form-field">
                                     <label for="bod">Bod</label>
-                                    <input type="text" name="bod" id="bod" placeholder="5.00">
+                                    <input type="number" name="bod" id="bod" placeholder="5.00">
                                 </div>
                                 <div class="form-field">
                                     <button class="btn-large warmSand darken-2 right" name="submit" id="submit">Bieden</button>
@@ -90,7 +90,7 @@
                                             echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
                                         }
                                         else if($i = 1 || !empty($bod[0]['bod'] )){
-                                            echo '<h1>Er is nog niet geboden op dit item. Wees de eerste!</h1><br><br>';
+                                            echo '<h5>Er is nog geen geschiedenis voor  dit item!</h5><br><br>';
                                         }
                                        }   ?>
                             </div>
