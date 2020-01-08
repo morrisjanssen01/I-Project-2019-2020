@@ -105,5 +105,10 @@
             $('.sidenav').sidenav();
             });
         </script>
+        <?php
+        if($_GET['msg'] == 'invalid'){
+            popupMessage('Je bod is niet geldig. Check of je alles juist hebt ingevuld en probeer het opnieuw.');
+        }
+        ?>
     </body>
 </html>
