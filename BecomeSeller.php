@@ -41,8 +41,8 @@ include 'helpers/redirect.php';
                                             </div><br>
                                         </div>
                                         <div class="group" id="option2">
-                                            <h6>Via deze wijze zult u uw verificatiecode ontvangen in de post.</h6><br>
-                                            <button class="btn-large warmSand darken-2" name="submitPost" id="submitCredit">Stuur code</button>
+                                            <br><h6>Via deze wijze zult u uw verificatiecode ontvangen in de post.</h6><br>
+                                            <button class="btn-large warmSand darken-2" name="submitPost" id="submitCredit">Stuur code</button><br><br>
                                             <p>Al een verificatiecode ontvangen in de post?<p>
                                             <p>Klik dan <a class="modal-trigger" href="#modal1" target>hier</a>
                                         </div>
@@ -101,8 +101,20 @@ include 'helpers/redirect.php';
                 });
             </script>
             <?php
-                if($_GET['msg'] == 'emptyUidPass'){
-                    popupMessage('Gebruikersnaam en/of wachtwoord niet ingevuld');
+                if($_GET['msg'] == 'emptyCredit'){
+                    popupMessage('Voer een creditkaartnummer in!');
+                }
+                if($_GET['msg'] == 'invalidCredit'){
+                    popupMessage('Voer een geldig creditkaartnummer in!');
+                }
+                if($_GET['msg'] == 'emptyCode'){
+                    popupMessage('Voer een verificatiecode in!');
+                }
+                if($_GET['msg'] == 'invalidCode'){
+                    popupMessage('Voer een geldige verificatiecode in!');
+                }
+                if($_GET['msg'] == 'wrongCode'){
+                    popupMessage('Verkeerde verificatiecode. Controleer uw code en probeer het opnieuw!');
                 }
             ?>
         </div>
