@@ -24,7 +24,7 @@ if(isset($_POST["submit"]) && isset($_SESSION["username"])){
     else{
         global $dbh;
         $stmt = 'INSERT INTO boden (voorwerpnummer, bod, gebruikersnaam)
-                  Values('.$_GET["detail"].', '.$_POST["bod"].', '.$_SESSION["username"].')';
+                  Values('.$_GET["detail"].', '. $bod.', '.$_SESSION["username"].')';
 
             //echo $_GET["detail"].$_POST["bod"].$_SESSION["username"];
         redirect('index', 'bodGeplaatst');
