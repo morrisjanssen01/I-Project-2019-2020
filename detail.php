@@ -69,10 +69,10 @@
                         <?php  echo' <h5>'.$voorwerp["looptijd"].' Dagen</h5>'?>
                         </div>
                         <div style="">
-                            <form action="biedScript.php?" method="POST">
+                            <?php echo '<form action="helpers/biddingScript.php?detail='.$voorwerpnummer.'" method="POST">' ?>
                                 <div class="form-field">
                                     <label for="bod">Bod</label>
-                                    <input type="text" name="bod" id="bod" placeholder="5.00">
+                                    <input type="number" name="bod" id="bod" placeholder="5.00">
                                 </div>
                                 <div class="form-field">
                                     <button class="btn-large warmSand darken-2 right" name="submit" id="submit">Bieden</button>
@@ -84,12 +84,21 @@
                         <div style="border-style:solid;">
                             <h5>Bod Geschiedenis</h5>
                             <div class="white" style="border-top-style:solid; border-bottom-style:solid">
-
+                                <?php $bod = loadBidding($voorwerpnummer);
+                                      for($i = 1; $i < 10; $i++){
+                                        if(!empty($bod[$i]['bod'])){
+                                            echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
+                                        }
+                                        else if($i = 1 || !empty($bod[0]['bod'] )){
+                                            echo '<h5>Er is nog geen geschiedenis voor  dit item!</h5><br><br>';
+                                        }
+                                       }   ?>
                             </div>
                         </div>
                         <div style="border-style:solid; margin-top:5%">
                             <h5>Huidige Bod</h5>
-                            <?php loadBidding($voorwerpnummer);?>
+                            <?php $bod = loadBidding($voorwerpnummer);
+                                  echo $bod['bod'].' door '.$bod['gebruikersnaam']?>
                         </div>
                     </div>
                 </div>

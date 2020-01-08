@@ -29,10 +29,11 @@ function loadImages($itemId){
 
  function loadBidding($voorwerpnummer){
     global $dbh;
-    $stmt2 = $dbh->prepare("SELECT bod FROM boden WHERE voorwerpnummer = :voorwerpnummer group by bod order by bod desc");
-    $stmt2->execute(array($voorwerpnummer));
+    $sql = "SELECT bod, gebruikersnaam FROM boden WHERE voorwerpnummer = :voorwerpnummer order by bod desc";
+    $stmt2 = $dbh->prepare($sql);
+    $stmt2->execute(array(':voorwerpnummer' => $voorwerpnummer));
     $boden = $stmt2->fetch(PDO::FETCH_ASSOC);
 
-    var_dump($boden);
+   return $boden;
     }
 ?>

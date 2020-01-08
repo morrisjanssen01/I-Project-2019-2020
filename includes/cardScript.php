@@ -92,7 +92,7 @@ function loadCardBatch($nCards, $category, $title = ''){
         echo'</div></div>';
         for($i = 0; $i < $nCards; $i++){
             echo '<div id="'.$results[$i]["voorwerpnummer"].'" class="modal coconutMilk" style="width:30%; height:40%">
-                    <form action="biddingScript.php?detail='.$results[$i]["voorwerpnummer"].'"  method="post">
+                    <form action="helpers/biddingScript.php?detail='.$results[$i]["voorwerpnummer"].'"  method="post">
                         <div class="modal-header" style="margin-top:3%; margin-bottom:10%;">
                             <h4 class="center">Bieden op '.$results[$i]["titel"].'</h4>
                         </div>
@@ -104,13 +104,13 @@ function loadCardBatch($nCards, $category, $title = ''){
                                         <p>€</p>
                                     </div>
                                     <div class="col s11" style="padding:0;">
-                                        <input placeholder="0,00" id="bod" type="number" min="5" value="5.00" step="1">
+                                        <input type="number" name="bod" id="bod" placeholder="5.00">
                                     </div>
                                 </div>                            
                             </div>
                             <div class="right" style="margin-top:10%;">
                                 <a class="modal-close waves-effect waves-green btn-flat">Terug</a>
-                                <button type="submit" class="waves-effect  btn-flat warmSand darken-2">Bieden</a></button>
+                                <button type="submit" name="submit" class="waves-effect  btn-flat warmSand darken-2">Bieden</a></button>
                             </div>
                         </div>
                     </form>
