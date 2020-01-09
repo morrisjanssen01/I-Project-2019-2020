@@ -87,10 +87,12 @@
                                 <?php $bod = loadBidding($voorwerpnummer);
                                       for($i = 1; $i < 10; $i++){
                                         if(!empty($bod[$i]['bod'])){
-                                            echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
+                                            var_dump($bod);
+                                            //echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
                                         }
                                         else if($i = 1 || !empty($bod[0]['bod'] )){
-                                            echo '<h5>Er is nog geen bod geschiedenis voor  dit item!</h5><br><br>';
+                                            var_dump($bod);
+                                            //echo '<h5>Er is nog geen bod geschiedenis voor  dit item!</h5><br><br>';
                                         }
                                        }   ?>
                             </div>
