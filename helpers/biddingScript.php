@@ -20,7 +20,7 @@ else{
         exit();
 
     }
-    else if((floatval($latestbid[0]['bod']) >= floatval($bod) || floatval($latestbid['bod']) >= floatval($bod)) && $latestbid[0]['bod'] == null && $latestbid['bod'] == null){
+    else if(floatval($latestbid[0]['bod']) >= floatval($bod) && $latestbid[0]['bod'] !== null){
         //var_dump($latestbid);
         header("location: ../detail.php?detail=".$_GET["detail"]."&msg=invalid");
     }
