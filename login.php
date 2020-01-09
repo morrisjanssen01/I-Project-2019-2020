@@ -72,6 +72,9 @@ include 'helpers/redirect.php';
                 else if($_GET['msg'] == 'wrongPass'){
                     popupMessage('Verkeerd wachtwoord. Probeer het opnieuw');
                 }
+                else if($_GET['msg'] == 'loggedOut'){
+                    popupMessage('Log in om deze actie voort te zetten');
+                }
             ?>
         </div>
     </body>

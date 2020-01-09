@@ -13,8 +13,9 @@
             redirect('login', 'emptyUidPass');
             exit;
         }
-        else if(specialCharacters($_POST)){
-            redirect('login', 'specialchars');
+        if(specialCharacters($_POST) == true){
+            // redirect('login', 'specialchars');
+            rickRoll();
             exit();
         }
         else {
