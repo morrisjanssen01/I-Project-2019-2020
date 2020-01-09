@@ -1,7 +1,6 @@
 <?php
 include 'helpers/redirect.php';
-
-session_start();
+require ('helpers/connectionDatabaseScript.php');
 
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){
@@ -14,7 +13,7 @@ function loadForm(){
                 <div class="row"> 
                     <div class="col s6 form-field">
                         <label for="description">beschrijving*</label>
-                        <input type="text" name ="beschrijving" id="beschrijving" required>
+                        <input type="text" name ="description" id="discription" required>
                     </div>
                     <div class="col s6 form-field">
                         <label for="starting_price">startprijs*</label><br>
@@ -60,7 +59,7 @@ function loadForm(){
                     </div> <br>
                 <div class="col s6 form-field">
                     <label for="image">afbeelding*</label>
-                    <input type="file" name="image" id="image" required>
+                    <input type="file" enctype="multipart/form-data" name="image" id="image" required>
             </div> <br>
                 </div>
                 <label><span>Velden met * zijn verplicht</span></label>

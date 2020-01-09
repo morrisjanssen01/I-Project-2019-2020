@@ -1,5 +1,5 @@
-
 <?php
+require '../helpers/connectiondatabasescript.php';
 session_start();
 
 $target_dir = "http://iproject5.icasites.nl/pics/";
@@ -40,11 +40,8 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
-
-
-
-
 // vanaf hier gaan we de data in de database zetten.
+global $dbh;
 $title=$_POST['title'];
 $description=$_POST['description'];
 $startprijs=$_POST['starting_price'];
