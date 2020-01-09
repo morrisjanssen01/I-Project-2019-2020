@@ -75,7 +75,7 @@
                                     <input type="number" name="bod" id="bod" placeholder="5.00">
                                 </div>
                                 <div class="form-field">
-                                    <button class="btn-large warmSand darken-2 right" name="submit" id="submit">Bieden</button>
+                                    <button class="btn-large warmSand waves-effect waves-warmSand darken-2 right" name="submit" id="submit">Bieden</button>
                                 </div>
                             </form>';};?><br><br><br><br><br><br><br><br><br><br>
                         </div>

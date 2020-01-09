@@ -28,10 +28,10 @@
                                         <input type="email" name= "mailaddress" id="mailaddress"> 
                                     </div><br>
                                     <div class="form-field">
-                                        <button class="btn-large warmSand darken-2" type="submit">Stuur verificatie mail</button>
+                                        <button class="btn-large waves-effect waves-warmSand warmSand darken-2" type="submit">Stuur verificatie mail</button>
                                     </div><br> 
                                     <div class="form-field">
-                                        <button class="btn-large warmSand darken-2">e-mail niet ontvangen</button>                   
+                                        <button class="btn-large waves-effect waves-warmSand warmSand darken-2">e-mail niet ontvangen</button>                   
                                     </div><br>
                                     </form> 
                                 </div>
@@ -52,7 +52,7 @@
                         </p>
                     </div>
                     <div class="modal-footer"> 
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar de Registratiepagina</a>
+                        <a href="#!" class="modal-close waves-effect waves-warmSand btn-flat">Terug naar de Registratiepagina</a>
                     </div>
                 </div>
             </div>

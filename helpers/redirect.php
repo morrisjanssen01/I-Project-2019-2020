@@ -31,7 +31,7 @@ function loadImages($itemId){
     $sql = "SELECT bod, gebruikersnaam FROM boden WHERE voorwerpnummer = :voorwerpnummer order by bod desc";
     $stmt2 = $dbh->prepare($sql);
     $stmt2->execute(array(':voorwerpnummer' => $voorwerpnummer));
-    $boden = $stmt2->fetch(PDO::FETCH_ASSOC);
+    $boden = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
    return $boden;
     }
