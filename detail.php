@@ -69,7 +69,7 @@
                         <?php  echo' <h5>'.$voorwerp["looptijd"].' Dagen</h5>'?>
                         </div>
                         <div style="">
-                            <?php echo '<form action="helpers/biddingScript.php?detail='.$voorwerpnummer.'" method="POST">' ?>
+                            <?php if(isset($_SESSION['username'])){echo '<form action="helpers/biddingScript.php?detail='.$voorwerpnummer.'" method="POST">
                                 <div class="form-field">
                                     <label for="bod">Bod</label>
                                     <input type="number" name="bod" id="bod" placeholder="5.00">
@@ -77,7 +77,7 @@
                                 <div class="form-field">
                                     <button class="btn-large warmSand darken-2 right" name="submit" id="submit">Bieden</button>
                                 </div>
-                            </form><br><br><br><br><br><br><br><br><br><br>
+                            </form>';};?><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
                     <div class="col s4">
