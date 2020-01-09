@@ -83,7 +83,7 @@ function loadForm(){
                     <label><span>Velden met * zijn verplicht</span></label>
                 </div>
                 <div class="form-field">
-                    <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
+                    <button class="btn-large warmSand waves-effect waves-warmSand darken-2" name="submit" id="submit">Registreer</button>
                 </div>
             </form>';
             
@@ -171,7 +171,7 @@ function loadForm(){
                     <label><span>Velden met * zijn verplicht</span></label>
                 </div>
                 <div class="form-field">
-                    <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
+                    <button class="btn-large warmSand waves-effect waves-warmSand darken-2" name="submit" id="submit">Registreer</button>
                 </div>
             </form>';
 
@@ -230,7 +230,7 @@ function loadForm(){
                         </p>
                     </div>
                     <div class="modal-footer"> 
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar de Registreer-pagina</a>
+                        <a href="#!" class="modal-close waves-effect waves-warmSand btn-flat">Terug naar de Registreer-pagina</a>
                     </div>
                 </div>
             </div>

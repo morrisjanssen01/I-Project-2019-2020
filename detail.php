@@ -75,7 +75,7 @@
                                     <input type="number" name="bod" id="bod" placeholder="5.00">
                                 </div>
                                 <div class="form-field">
-                                    <button class="btn-large warmSand darken-2 right" name="submit" id="submit">Bieden</button>
+                                    <button class="btn-large warmSand waves-effect waves-warmSand darken-2 right" name="submit" id="submit">Bieden</button>
                                 </div>
                             </form>';};?><br><br><br><br><br><br><br><br><br><br>
                         </div>
@@ -87,12 +87,9 @@
                                 <?php $bod = loadBidding($voorwerpnummer);
                                       for($i = 1; $i < 10; $i++){
                                         if(!empty($bod[$i]['bod'])){
-                                            var_dump($bod);
-                                            //echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
+                                            echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
                                         }
-                                        else if($i = 1 || !empty($bod[0]['bod'] )){
-                                            var_dump($bod);
-                                            //echo '<h5>Er is nog geen bod geschiedenis voor  dit item!</h5><br><br>';
+                                        else if(empty($bod[1]['bod'] )){
                                         }
                                        }   ?>
                             </div>
@@ -104,7 +101,7 @@
                                 echo '<h4>'.$voorwerp["startprijs"].' is de startprijs</h4>';
                             }
                             else{
-                                echo'<h4>'.$bod['bod'].' door '.$bod['gebruikersnaam'].'</h4>';
+                                echo'<h4>'.$bod[0]['bod'].' door '.$bod[0]['gebruikersnaam'].'</h4>';
                             }
                             ?>
                         </div>

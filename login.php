@@ -40,7 +40,7 @@ include 'helpers/redirect.php';
                                             </label>
                                         </div><br>
                                         <div class="form-field">
-                                            <button class="btn-large warmSand darken-2" name="submit" id="submit">Inloggen</button>
+                                            <button class="btn-large waves-effect waves-warmSand warmSand darken-2" name="submit" id="submit">Inloggen</button>
                                         </div><br>
                                     </form>
                                 </div>

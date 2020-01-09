@@ -75,7 +75,7 @@ function loadCardBatch($nCards, $category, $title = ''){
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€';
                         if(!empty($hightestBid)){
-                            echo $hightestBid['bod'];
+                            echo $hightestBid[0]['bod'];
                         }
                         else {
                             echo $results[$i]["startprijs"];
