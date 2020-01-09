@@ -1,5 +1,7 @@
-
 <?php
+require '../helpers/connectiondatabasescript.php';
+session_start();
+
 $target_dir = "http://iproject5.icasites.nl/pics/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $uploadOk = 1;
@@ -38,14 +40,21 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
-
-
-
-
 // vanaf hier gaan we de data in de database zetten.
+global $dbh;
+$title=$_POST['title'];
+$description=$_POST['description'];
+$startprijs=$_POST['starting_price'];
+$payment_method=$_POST['payment_method'];
+$payment_instruction =$_POST['payment_instruction'];
+$city=$_POST['place'];
+$country=$_POST['country'];
+$runtime=$_POST['runtime'];
+$sending_price=$_POST['sending_cost'];
+$sending_instruction=$_POST['sending_instruction'];
 
-$query = "INSERT INTO bezoekers (gebruikersnaam, wachtwoord)
-		VALUES( '" .  $gebruikersnaam . "', '" . $hashedpassword . "')";
+$query = "INSERT INTO voorwerpen (titel, beschrijving, startprijs, betalingswijze, betalingsinstructie, plaatsnaam, land, looptijd,verzendkosten, verzendinstructie, verkoper)
+		VALUES( '" .  $title . "', '" . $description . "', '" . $startprijs . "', '" . $payment_method . "', '" . $payment_instruction. "', '" .  $city. "', '" . $country. "', '" .$runtime . "', '" . $sending_price . "', '" . $sending_instruction . "', '" . $_session['username'] . "')";
 		$sql = $dbh->prepare ( $query );
 		$sql->execute();
 		redirect('../html/index');
