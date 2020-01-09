@@ -51,9 +51,12 @@ function loadCardBatch($nCards, $category, $title = ''){
 
     $results = $query->fetchall(PDO::FETCH_ASSOC);
 
+    
+
 
     for($i = 0; $i < $nCards; $i++){
         $img = loadImages($results[$i]['voorwerpnummer']);
+        $hightestBid = loadBidding($results[$i]['voorwerpnummer']);
         if(empty($img)){
             $img = '404.jpg';
         }
@@ -70,8 +73,15 @@ function loadCardBatch($nCards, $category, $title = ''){
                 <figure style="background-image: url('.$img.'); background-repeat: no-repeat; margin:0; width:100%;">
                     <figcaption>
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
-                        <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
-                        <button class="btn-large coconutMilk black-text waves-effect waves-warmSand modal-trigger" data-target="'.$results[$i]["voorwerpnummer"].'" style="margin: 5px;" target>bied</button>
+                        <h5 style="margin-left: 5px">€';
+                        if(!empty($hightestBid)){
+                            echo $hightestBid['bod'];
+                        }
+                        else {
+                            echo $results[$i]["startprijs"];
+                        }
+                        echo'</h5>
+                        <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="'.$results[$i]["voorwerpnummer"].'" style="margin: 5px;" target>bied</button>
                     </figcaption>
                 </figure>
             </div>';
@@ -82,7 +92,7 @@ function loadCardBatch($nCards, $category, $title = ''){
                     <figcaption>
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
                         <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
-                        <button class="btn-large coconutMilk black-text waves-effect waves-warmSand modal-trigger" data-target="'.$results[$i]["voorwerpnummer"].'" style="margin: 5px;" target>bied</button>
+                        <button class="btn-large coconutMilk black-text waves-effect waves-green modal-trigger" data-target="'.$results[$i]["voorwerpnummer"].'" style="margin: 5px;" target>bied</button>
                     </figcaption>
                 </figure>
             </div>';
@@ -109,8 +119,8 @@ function loadCardBatch($nCards, $category, $title = ''){
                                 </div>                            
                             </div>
                             <div class="right" style="margin-top:10%;">
-                                <a class="modal-close waves-effect waves-warmSand btn-flat">Terug</a>
-                                <button type="submit" name="submit" class="waves-effect waves-warmSand btn-flat warmSand darken-2">Bieden</button>
+                                <a class="modal-close waves-effect waves-green btn-flat">Terug</a>
+                                <button type="submit" name="submit" class="waves-effect  btn-flat warmSand darken-2">Bieden</a></button>
                             </div>
                         </div>
                     </form>
