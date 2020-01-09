@@ -17,10 +17,10 @@
             </div>
             <div class="box content">
                 <div class="carousel" style="height:500px;">
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="Rickrolled!!!"></a>
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="Der TEUFEL!!!"></a>
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="ICA ButtPlugg"></a>
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/404.jpg" alt="Vaseline voor de ButtPlugg"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Tech banner.jpg" alt="Technologie"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Mode banner.jpg" alt="Mode"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Interieur banner.jpg" alt="Interieur"></a>
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Auto's banner.jpg" alt="Auto's"></a>
                 </div>
                 <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
