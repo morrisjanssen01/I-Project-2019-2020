@@ -56,6 +56,9 @@ function loadForm(){
                 <div class="form-field">
                     <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
                 </div>
+                <div class="form-field">
+                    <button class="btn-large" name="back" id="back">Terug</button>
+                </div>
             </form>';
             
             }
@@ -84,8 +87,6 @@ function loadForm(){
                             <div class="card">
                                 <div class="card-action warmSand darken-2 white-text">
                                     <h3 class="center">Veiling maken</h3>
-                                    <!-- maakt de vragenknop aan (verander brown om de kleur te veranderen)-->   
-                                    <a class="waves-effect waves-light brown btn modal-trigger"  href="#modal1" > Vragen?</a> 
                                 </div>
                                 <div class="card-content">
                             <?php loadForm(); ?>
@@ -94,28 +95,6 @@ function loadForm(){
                         </div>
                     </div>
                 </section>    
-                <!-- structuur vraag knop --> 
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h4>Hoe registreert u zich?</h4> 
-                        <p> 
-                            <ol>
-                                <li>Kies een unieke gebruikersnaam.</li>
-                                <li>Kies een goed wachtwoord.</li>
-                                <li>Onthoud het wachtwoord en herhaal het wachtwoord dat u gekozen heeft.</li>
-                                <li>Vul up personalia in.</li>
-                                <li>Kies een beveiligingsvraag.</li> 
-                                <li>Vul een antwoord in op de beveiligingsvraag</li>
-                                <li>Lees de voorwaarden die verbonden zijn aan het registreren.</li> 
-                                <li>Wanneer u met de voorwaarden akkoord gaat, vink de akkoordknop onder aan het scherm aan.</li> 
-                                <li>Druk op de Registreer-knop. </li>
-                            </ol> 
-                        </p>
-                    </div>
-                    <div class="modal-footer"> 
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Terug naar de Registreer-pagina</a>
-                    </div>
-                </div>
             </div>
             <div class="box footer">
                 <?php include 'includes/footer.php'; ?>
@@ -130,15 +109,6 @@ function loadForm(){
                 $(document).ready(function(){
                    $('.modal').modal();
                 });
-                //datepicker
-                /* $(document).ready(function(){
-                   $('.datepicker').datepicker();
-                 });  */
-                 $(document).ready(function() {
-                    $('.datepicker').datepicker({
-                        format: 'yyyymmdd',
-                    });
-                });
                 //multiselect
                 $(document).ready(function(){
                     $('select').formSelect();
@@ -147,18 +117,6 @@ function loadForm(){
             <?php
             if($_GET['msg'] == 'emptyFields'){
                 popupMessage('Vul alle velden in A.U.B.');
-            }
-            else if($_GET['msg'] == 'noVerification'){
-                popupMessage('Vul de verificatiecode correct in');
-            }
-            else if($_GET['msg'] == 'specialChars'){
-                popupMessage('Onrechtmatig gebruik van speciale tekens');
-            }
-            else if($_GET['msg'] == 'noRepeatPass'){
-                popupMessage('Herhalend wachtwoord klopt niet');
-            }
-            else if($_GET['msg'] == 'redundantUsername'){
-                popupMessage('Deze gebruikersnaam is al in gebruik');
             }
             ?>
         </div>
