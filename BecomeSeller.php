@@ -14,7 +14,7 @@ include 'helpers/redirect.php';
             <div class="box header">
                 <?php include 'includes/header.php'; ?>
             </div>
-            <div class="box content">
+            <div class="box content" style="width:100%">
                 <section class="section container center" id="loginForm">
                     <div class="row">
                         <div class="col s12 l4 offset-l4">
@@ -24,6 +24,14 @@ include 'helpers/redirect.php';
                                 </div>
                                 <div class="card-content">
                                     <form action="helpers/becomeSellerScript.php" method="post">
+                                        <div class="form-field">
+                                            <label for="bank">Bank</label>
+                                            <input type="text" name="bank" id="bank" pattern="[a-z,A-Z]>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="bankNr">Rekening Nummer</label>
+                                            <input type="text" name="bankNr" id="bankNr" pattern="NL[0-9]{2,2}[A-Z]{4,4}[0-9]{10,10}">
+                                        </div>
                                         <div class="form-field">
                                             <label for="questionList">Verificatiemethode</label>
                                             <select name="questionList" id="questionList" required>
