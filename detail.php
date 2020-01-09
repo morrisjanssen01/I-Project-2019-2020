@@ -85,9 +85,9 @@
                             <h5>Bod Geschiedenis</h5>
                             <div class="white" style="border-top-style:solid; border-bottom-style:solid">
                                 <?php $bod = loadBidding($voorwerpnummer);
-                                      for($i = 1; $i < 10; $i++){
+                                      for($i = 10; $i >= 1; $i--){
                                         if(!empty($bod[$i]['bod'])){
-                                            echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
+                                            echo '<p style="border-bottom: 1px solid black">'.$bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
                                         }
                                         else if(empty($bod[1]['bod'] )){
                                         }

@@ -1,3 +1,10 @@
+<?php 
+require ("helpers/redirect.php");
+if(isset($_SESSION["username"])){
+    rickRoll();
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
