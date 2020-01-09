@@ -16,8 +16,10 @@ function loadForm(){
                         <input type="text" name ="beschrijving" id="beschrijving" required>
                     </div>
                     <div class="col s6 form-field">
-                        <label for="starting_price">startprijs*</label>
-                        <input type="number" name="starting_price" id="starting_price" required>
+                        <label for="starting_price">startprijs*</label><br>
+                        <div class="dollar">
+                            <input type="number" name="starting_price" id="starting_price" required>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -45,8 +47,12 @@ function loadForm(){
                     <label for="runtime">looptijd*</label>
                     <input type="text" name="runtime" id="runtime" title="vul een geldige postcode in" required>
                 </div> <br>
-                    <label><span>Velden met * zijn verplicht</span></label>
+                <div class="col s6 form-field">
+                <label for="image">afbeelding*</label>
+                <input type="file" name="image" id="image" required>
+            </div> <br>
                 </div>
+                <label><span>Velden met * zijn verplicht</span></label>
                 <div class="form-field">
                     <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
                 </div>
