@@ -131,9 +131,6 @@ function loadForm(){
                    $('.modal').modal();
                 });
                 //datepicker
-                /* $(document).ready(function(){
-                   $('.datepicker').datepicker();
-                 });  */
                  $(document).ready(function() {
                     $('.datepicker').datepicker({
                         format: 'yyyymmdd',
@@ -156,9 +153,6 @@ function loadForm(){
             }
             else if($_GET['msg'] == 'noRepeatPass'){
                 popupMessage('Herhalend wachtwoord klopt niet');
-            }
-            else if($_GET['msg'] == 'redundantUsername'){
-                popupMessage('Deze gebruikersnaam is al in gebruik');
             }
             ?>
         </div>
