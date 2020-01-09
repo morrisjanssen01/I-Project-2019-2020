@@ -20,7 +20,7 @@ include 'helpers/redirect.php';
                         <div class="col s12 l4 offset-l4">
                             <div class="card">
                                 <div class="card-action warmSand darken-2 white-text">
-                                    <h3 class="center">Inloggen</h3>
+                                    <h3 class="center">Wordt Verkoper</h3>
                                 </div>
                                 <div class="card-content">
                                     <form action="helpers/becomeSellerScript.php" method="post">
