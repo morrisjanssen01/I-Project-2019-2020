@@ -87,9 +87,6 @@
         if($_GET['msg'] == 'successAccount'){
             popupMessage('Account aangemaakt!');
         }
-        else if($_GET['msg'] == 'bodGeplaatst'){
-            popupMessage('Uw bod is geplaatst!');
-        }
         ?>
     </body>
 </html>
