@@ -1,11 +1,12 @@
 <?php
 include 'helpers/redirect.php';
 
+session_start();
 
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){
         echo'
-            <form action="helpers/offerItemScript.php" method="post">       
+            <form action="includes/offerItemScript.php" method="post">       
                 <div class="form-field">
                     <label for="title">titel*</label>
                     <input type="text" name="title" id="title" required>
@@ -43,13 +44,23 @@ function loadForm(){
                     </div>
                 </div>
                 <div class="row">
-                <div class="col s6 form-field">
+                    <div class="col s6 form-field">
+                        <label for="sending_cost">verzendkosten</label>
+                        <input type="number" name="sending_cost" id="sending_cost">
+                    </div>
+                    <div class="col s6 form-field">
+                        <label for="sending_instruction">verzendinstructies</label>
+                        <input type="text" name="sending_instruction" id="sending cost">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 form-field">
                     <label for="runtime">looptijd*</label>
                     <input type="text" name="runtime" id="runtime" title="vul een geldige postcode in" required>
-                </div> <br>
+                    </div> <br>
                 <div class="col s6 form-field">
-                <label for="image">afbeelding*</label>
-                <input type="file" name="image" id="image" required>
+                    <label for="image">afbeelding*</label>
+                    <input type="file" name="image" id="image" required>
             </div> <br>
                 </div>
                 <label><span>Velden met * zijn verplicht</span></label>
