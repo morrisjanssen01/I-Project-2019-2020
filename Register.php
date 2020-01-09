@@ -1,6 +1,8 @@
 <?php
-include 'helpers/redirect.php';
-
+require ("helpers/redirect.php");
+if(isset($_SESSION["username"])){
+    rickRoll();
+}
 
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){

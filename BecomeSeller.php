@@ -14,7 +14,7 @@ include 'helpers/redirect.php';
             <div class="box header">
                 <?php include 'includes/header.php'; ?>
             </div>
-            <div class="box content">
+            <div class="box content" style="width: 100%;">
                 <section class="section container center" id="loginForm">
                     <div class="row">
                         <div class="col s12 l4 offset-l4">

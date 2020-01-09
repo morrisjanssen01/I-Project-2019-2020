@@ -48,4 +48,9 @@ function loadImages($itemId){
         return $resultsArray;
     
     }
+
+    function rickRoll(){
+        header("Location: https://youtu.be/dQw4w9WgXcQ?t=22");
+    }
+    session_start();
 ?>
