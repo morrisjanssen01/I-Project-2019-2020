@@ -38,4 +38,15 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
+
+
+
+// vanaf hier gaan we de data in de database zetten.
+
+$query = "INSERT INTO bezoekers (gebruikersnaam, wachtwoord)
+		VALUES( '" .  $gebruikersnaam . "', '" . $hashedpassword . "')";
+		$sql = $dbh->prepare ( $query );
+		$sql->execute();
+		redirect('../html/index');
 ?>
