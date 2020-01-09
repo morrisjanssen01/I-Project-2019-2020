@@ -42,8 +42,10 @@ function loadImages($itemId){
         $stmt = "SELECT startprijs From voorwerpen WHERE voorwerpnummer = $detail ";
         $query = $dbh->prepare($stmt);
         $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-        return $result;
+        while($result = $query->fetch(PDO::FETCH_ASSOC)){
+            $resultsArray = $result;
+        }
+        return $resultsArray;
     
     }
 ?>
