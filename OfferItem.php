@@ -54,10 +54,10 @@ function loadForm(){
                 </div>
                 <label><span>Velden met * zijn verplicht</span></label>
                 <div class="form-field">
-                    <button class="btn-large warmSand darken-2" name="submit" id="submit">Registreer</button>
+                    <button class="btn-large waves-effect waves-warmSand warmSand darken-2" name="submit" id="submit">Registreer</button>
                 </div>
                 <div class="form-field">
-                    <button class="btn-large" name="back" id="back">Terug</button>
+                    <a class="waves-effect waves-warmSand btn-flat">Terug</a>
                 </div>
             </form>';
             
