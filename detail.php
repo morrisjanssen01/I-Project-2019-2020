@@ -90,7 +90,7 @@
                                             echo $bod[$i]['bod'].' door '.$bod[$i]['gebruikersnaam'].'<br><br>';
                                         }
                                         else if($i = 1 || !empty($bod[0]['bod'] )){
-                                            echo '<h5>Er is nog geen geschiedenis voor  dit item!</h5><br><br>';
+                                            echo '<h5>Er is nog geen bod geschiedenis voor  dit item!</h5><br><br>';
                                         }
                                        }   ?>
                             </div>
@@ -98,7 +98,13 @@
                         <div style="border-style:solid; margin-top:5%">
                             <h5>Huidige Bod</h5>
                             <?php $bod = loadBidding($voorwerpnummer);
-                                  echo $bod['bod'].' door '.$bod['gebruikersnaam']?>
+                            if(empty($bod)){
+                                echo '<h4>'.$voorwerp["startprijs"].' is de startprijs</h4>';
+                            }
+                            else{
+                                echo'<h4>'.$bod['bod'].' door '.$bod['gebruikersnaam'].'</h4>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -117,6 +123,9 @@
         <?php
         if($_GET['msg'] == 'invalid'){
             popupMessage('Je bod is niet geldig. Check of je alles juist hebt ingevuld en probeer het opnieuw.');
+        }
+        if($_GET['msg'] == 'bodGeplaatst'){
+            popupMessage('Uw bod is geplaatst!');
         }
         ?>
     </body>
