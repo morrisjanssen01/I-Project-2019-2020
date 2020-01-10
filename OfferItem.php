@@ -4,12 +4,12 @@ require ('helpers/connectionDatabaseScript.php');
 if(isset($_SESSION['username'])){
     global $dbh;
     $user = "'".$_SESSION['username']."'";
-    $sql = $dbh->prepare("SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = ".$user);
+    $sql = $dbh->prepare("SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '".$_SESSION['username']."'");
     $sql->execute();
     try{
         $result = $sql->fetch(PDO::FETCH_ASSOC);
-        var_dump($result);
-        if($result == 0){
+        if($result = 0){
+            var_dump($result);
             header("Location: BecomeSeller.php?msg=noSeller");
         }
     }
@@ -25,7 +25,7 @@ else if(!isset($_SESSION['username'])){
 
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){
-        //var_dump($result);
+        var_dump($result);
         echo'
             <form action="includes/offerItemScript.php" enctype="multipart/form-data" method="post">       
                 <div class="form-field">

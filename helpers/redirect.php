@@ -1,4 +1,5 @@
 <?php
+session_start();
 function redirect($page, $error = ''){
     if(!empty($error)){
         header('location: ../'.$page.'.php?msg='.$error);
@@ -52,5 +53,4 @@ function loadImages($itemId){
     function rickRoll(){
         header("Location: https://youtu.be/dQw4w9WgXcQ?t=22");
     }
-    session_start();
 ?>
