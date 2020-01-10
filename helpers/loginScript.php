@@ -3,7 +3,7 @@
     require("connectionDatabaseScript.php");
     require("antiSQLinjectionScript.php");
     require("redirect.php");
-    require("rickRoll.php");
+    //require("rickRoll.php");
 
     if(isset($_POST["submit"])){
         $username = $_POST["username"];

@@ -5,7 +5,7 @@ require ('helpers/connectionDatabaseScript.php');
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){
         echo'
-            <form action="includes/offerItemScript.php" method="post">       
+            <form action="includes/offerItemScript.php" enctype="multipart/form-data" method="post">       
                 <div class="form-field">
                     <label for="title">titel*</label>
                     <input type="text" name="title" id="title" required>
@@ -59,7 +59,7 @@ function loadForm(){
                     </div> <br>
                 <div class="col s6 form-field">
                     <label for="image">afbeelding*</label>
-                    <input type="file" enctype="multipart/form-data" name="image" id="image" required>
+                    <input type="file" name="image" id="image" required>
             </div> <br>
                 </div>
                 <label><span>Velden met * zijn verplicht</span></label>
