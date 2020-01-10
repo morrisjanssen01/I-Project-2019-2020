@@ -28,6 +28,7 @@ else{
         header("location: ../detail.php?detail=".$_GET["detail"]."&msg=invalid");
     }
     else{
+        try{
         global $dbh;
         $stmt = "INSERT INTO boden (voorwerpnummer, bod, gebruikersnaam)
                   Values(".$_GET["detail"].", ".$_POST["bod"].", '".$_SESSION["username"]."')";
@@ -37,6 +38,11 @@ else{
         echo $_GET["detail"].$_POST["bod"].$_SESSION["username"];
         header("location: ../detail.php?detail=".$_GET["detail"]."&msg=bodGeplaatst");
     }
+    catch (PDOException $e) {
+        echo $e;
+        echo "Error: Er is een fout opgetreden probeer opnieuw!";
+    }
+}
 }
 }
 else if(!isset($_GET["detail"]) || empty($_GET["detail"])){
