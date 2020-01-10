@@ -1,9 +1,31 @@
 <?php
 include 'helpers/redirect.php';
 require ('helpers/connectionDatabaseScript.php');
+if(isset($_SESSION['username'])){
+    global $dbh;
+    $user = "'".$_SESSION['username']."'";
+    $sql = $dbh->prepare("SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = ".$user);
+    $sql->execute();
+    try{
+        $result = $sql->fetch(PDO::FETCH_ASSOC);
+        var_dump($result);
+        if($result == 0){
+            header("Location: BecomeSeller.php?msg=noSeller");
+        }
+    }
+    catch(PDOException $Exception){
+        echo "Er ging iets mis met de database. <br>";
+        echo "De melding is {$Exception->getMessage()}<br><br>";
+    }
+}
+else if(!isset($_SESSION['username'])){
+    header("Location: login.php?msg=loggedOut");
+}
+
 
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){
+        //var_dump($result);
         echo'
             <form action="includes/offerItemScript.php" enctype="multipart/form-data" method="post">       
                 <div class="form-field">

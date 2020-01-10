@@ -1,5 +1,6 @@
 <?php
 require '../helpers/connectiondatabasescript.php';
+require '../helpers/redirect.php';
 session_start();
 
 $target_dir = "../pics/";
@@ -42,21 +43,28 @@ if ($uploadOk == 0) {
 }
 // vanaf hier gaan we de data in de database zetten.
 global $dbh;
-$title=$_POST['title'];
-$description=$_POST['description'];
+$title="'".$_POST['title']."'";
+$description="'".$_POST['description']."'";
 $startprijs=floatval($_POST['starting_price']);
-$payment_method=$_POST['payment_method'];
-$payment_instruction =$_POST['payment_instruction'];
-$city=$_POST['place'];
-$country=$_POST['country'];
+$payment_method="'".$_POST['payment_method']."'";
+$payment_instruction ="'".$_POST['payment_instruction']."'";
+$city="'".$_POST['place']."'";
+$country="'".$_POST['country']."'";
 $runtime=$_POST['runtime'];
 $sending_price=$_POST['sending_cost'];
-$sending_instruction=$_POST['sending_instruction'];
+$sending_instruction="'".$_POST['sending_instruction']."'";
+$user="'".$_SESSION['username']."'";
 
+if(!isset($sending_price)){
+    $sending_price = 0;
+}
+if(!isset($sending_instruction)){
+    $sending_instruction = 'n.v.t';
+}
 
-$query = "INSERT INTO voorwerpen (titel, beschrijving, startprijs, betalingswijze, betalingsinstructie, plaatsnaam, land, looptijd, verzendkosten, verzendinstructie, verkoper)
-		VALUES( '" .  $title . "', '" . $description . "', " . $startprijs . ", '" . $payment_method . "', '" . $payment_instruction. "', '" .  $city. "', '" . $country. "', " .$runtime . ", " . $sending_price . ", '" . $sending_instruction . "', '" . $_SESSION['username'] . "')";
+$query = "INSERT INTO voorwerpen(titel, beschrijving, startprijs, betalingswijze, betalingsinstructie, plaatsnaam, land, looptijd, verzendkosten, verzendinstructie, verkoper)
+            VALUES(".$title.", ".$description.", ".$startprijs.", ".$payment_method.", ".$payment_instruction.", ".$city.", ".$country.", ".$runtime.", ".$sending_price.", ".$sending_instruction.", ".$user.")";
 		$sql = $dbh->prepare ( $query );
 		$sql->execute();
-		redirect('../html/index');
+		redirect('index', 'offerSuccess');
 ?>
