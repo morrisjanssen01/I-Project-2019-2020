@@ -18,6 +18,7 @@ function popupMessage($msg){
                 }
 
 function loadImages($itemId){
+    try{
     global $dbh;
     $img = '';
     $sql = "SELECT filenaam FROM Bestanden WHERE voorwerp = '".$itemId."'";
@@ -25,9 +26,15 @@ function loadImages($itemId){
     $query->execute();
     $img = $query->fetch(PDO::FETCH_ASSOC);
     return 'http://iproject5.icasites.nl/pics/'.$img['filenaam'];
+    }
+    catch (PDOException $e) {
+        echo $e;
+        echo "Error: Er is een fout opgetreden probeer opnieuw!";
+    }
 }
 
  function loadBidding($voorwerpnummer){
+     try{
     global $dbh;
     $sql = "SELECT bod, gebruikersnaam FROM boden WHERE voorwerpnummer = :voorwerpnummer order by bod desc";
     $stmt2 = $dbh->prepare($sql);
@@ -35,10 +42,15 @@ function loadImages($itemId){
     $boden = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
    return $boden;
+     }
+     catch (PDOException $e) {
+        echo $e;
+        echo "Error: Er is een fout opgetreden probeer opnieuw!";
+    }
     }
 
     Function getStartPrijs($detail){
-
+    try{
         global $dbh;
         $stmt = "SELECT startprijs From voorwerpen WHERE voorwerpnummer = $detail ";
         $query = $dbh->prepare($stmt);
@@ -47,7 +59,11 @@ function loadImages($itemId){
             $resultsArray = $result;
         }
         return $resultsArray;
-    
+    }
+    catch (PDOException $e) {
+        echo $e;
+        echo "Error: Er is een fout opgetreden probeer opnieuw!";
+    }
     }
 
     function rickRoll(){
