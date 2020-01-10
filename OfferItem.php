@@ -3,8 +3,10 @@ include 'helpers/redirect.php';
 require ('helpers/connectionDatabaseScript.php');
 if(isset($_SESSION['username'])){
     global $dbh;
+    $querystring = "SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '" . $_SESSION['username'] . "'";
     $user = "'".$_SESSION['username']."'";
-    $sql = $dbh->prepare("SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '".$_SESSION['username']."'");
+    $sql = $dbh->prepare($querystring);
+    var_dump($querystring);
     $sql->execute();
     try{
         $result = $sql->fetch(PDO::FETCH_ASSOC);
