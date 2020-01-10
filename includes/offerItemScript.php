@@ -53,8 +53,9 @@ $runtime=$_POST['runtime'];
 $sending_price=$_POST['sending_cost'];
 $sending_instruction=$_POST['sending_instruction'];
 
+
 $query = "INSERT INTO voorwerpen (titel, beschrijving, startprijs, betalingswijze, betalingsinstructie, plaatsnaam, land, looptijd,verzendkosten, verzendinstructie, verkoper)
-		VALUES( '" .  $title . "', '" . $description . "', '" . $startprijs . "', '" . $payment_method . "', '" . $payment_instruction. "', '" .  $city. "', '" . $country. "', '" .$runtime . "', '" . $sending_price . "', '" . $sending_instruction . "', '" . $_session['username'] . "')";
+		VALUES( '" .  $title . "', '" . $description . "', " . $startprijs . ", '" . $payment_method . "', '" . $payment_instruction. "', '" .  $city. "', '" . $country. "', " .$runtime . ", " . $sending_price . ", '" . $sending_instruction . "', '" . $_session['username'] . "')";
 		$sql = $dbh->prepare ( $query );
 		$sql->execute();
 		redirect('../html/index');

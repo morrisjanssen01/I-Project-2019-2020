@@ -55,7 +55,7 @@ function loadForm(){
                 <div class="row">
                     <div class="col s6 form-field">
                     <label for="runtime">looptijd*</label>
-                    <input type="text" name="runtime" id="runtime" title="vul een geldige postcode in" required>
+                    <input type="number" name="runtime" id="runtime" required>
                     </div> <br>
                 <div class="col s6 form-field">
                     <label for="image">afbeelding*</label>
