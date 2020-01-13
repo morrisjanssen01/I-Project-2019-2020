@@ -25,7 +25,7 @@ function loadImages($itemId){
     $query = $dbh->prepare($sql);
     $query->execute();
     $img = $query->fetch(PDO::FETCH_ASSOC);
-    return 'http://iproject5.icasites.nl/'.$img['filenaam'];
+    return 'http://iproject5.icasites.nl/pics/'.$img['filenaam'];
     }
     catch (PDOException $e) {
         echo $e;
