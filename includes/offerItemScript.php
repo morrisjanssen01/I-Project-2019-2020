@@ -51,7 +51,7 @@ $payment_instruction ="'".$_POST['payment_instruction']."'";
 $city="'".$_POST['place']."'";
 $country="'".$_POST['country']."'";
 $runtime=$_POST['runtime'];
-$sending_price=$_POST['sending_cost'];
+$sending_price=floatval($_POST['sending_cost']);
 $sending_instruction="'".$_POST['sending_instruction']."'";
 $user="'".$_SESSION['username']."'";
 
