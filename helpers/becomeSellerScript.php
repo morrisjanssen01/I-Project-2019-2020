@@ -10,7 +10,7 @@
             $query -> execute();
 
             $stmt =  "INSERT INTO verkopers (gebruikersnaam, bank, bankrekening, controleoptie, creditcardnumber)
-                       Values($_SESSION['username'], :bank, :bankrekening, :optie, :creditcard)";
+                       VALUES(".$_SESSION['username'].", :bank, :bankrekening, :optie, :creditcard)";
             $query = $dbh->prepare($stmt);
             $query = execute(array(':bank'=> $_POST['bank'], ':bankrekening' => $_POST['bankNr'], ':optie' => $_POST['questionList'], ':creditcard' => $_POST['creditcard']));
             redirect('index', 'seller');
@@ -21,7 +21,7 @@
             }
 
         }
-        else if($_POST['questionList'] == 'option2' && $_GET['sentcode'] == true)){
+        else if($_POST['questionList'] == 'option2' && $_GET['sentcode'] == true){
             try{
             global $dbh;
             $stmt = 'update gebruikers set verkoper = 1 where gebruikers = '.$_SESSION["username"];
@@ -29,7 +29,7 @@
             $query -> execute();
 
             $stmt =  "INSERT INTO verkopers (gebruikersnaam, bank, bankrekening, controleoptie, verificatiecode)
-                       Values($_SESSION["username"], :bank, :bankrekening, :optie, :code";           
+                       Values(".$_SESSION["username"].", :bank, :bankrekening, :optie, :code)";           
             $query = $dbh->prepare($stmt);
             $query = execute(array(':bank'=> $_POST['bank'], ':bankrekening' => $_POST['bankNr'], ':optie' => $_POST['questionList'], ':code' => $_POST['verificationCode']));
             redirect('index', 'seller');
@@ -43,4 +43,4 @@
     else{
       rickRoll();
     }
-    }
+    
