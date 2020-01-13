@@ -123,7 +123,7 @@
         </script>
         <?php
         if($_GET['msg'] == 'invalid'){
-            popupMessage('Je bod is niet geldig. Check of je alles juist hebt ingevuld en probeer het opnieuw.');
+            popupMessage('Uw bod is niet geldig. Check of U alles juist heeft ingevuld en probeer het opnieuw!');
         }
         if($_GET['msg'] == 'bodGeplaatst'){
             popupMessage('Uw bod is geplaatst!');

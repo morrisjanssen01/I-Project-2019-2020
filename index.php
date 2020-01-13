@@ -87,6 +87,12 @@
         if($_GET['msg'] == 'successAccount'){
             popupMessage('Account aangemaakt!');
         }
+        else if($_GET['msg'] == 'logInSuccess'){
+            popupMessage('U bent succesvol ingelogd!');
+        }
+        else if($_GET['msg'] == 'logOutSuccess'){
+            popupMessage('U bent succesvol uitgelogd!');
+        }
         ?>
     </body>
 </html>

@@ -120,7 +120,7 @@ else if (!isset($_SESSION['username'])){
                 });
             </script>
             <?php
-                if($_GET['msg'] == 'emptyCredit'){
+                if($_GET['msg'] == 'noCredit'){
                     popupMessage('Voer een creditkaartnummer in!');
                 }
                 if($_GET['msg'] == 'invalidCredit'){
@@ -134,6 +134,9 @@ else if (!isset($_SESSION['username'])){
                 }
                 if($_GET['msg'] == 'wrongCode'){
                     popupMessage('Verkeerde verificatiecode. Controleer uw code en probeer het opnieuw!');
+                }
+                if($_GET['msg'] == 'noSeller'){
+                    popupMessage('Registreer als verkoper om uw actie voort te kunnen zetten!');
                 }
             ?>
         </div>

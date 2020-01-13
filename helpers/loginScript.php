@@ -33,7 +33,7 @@
                         if($result['verkoper'] == 1){
                             $_SESSION["verkoper"] = true;
                         }
-                        redirect('index', 'success');
+                        redirect('index', 'logInSuccess');
                         exit();
                     }
                     else{
