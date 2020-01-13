@@ -79,8 +79,6 @@ $email = '<!DOCTYPE html>
 </html>'; 
 
 $to = $_SESSION['e-mail']; 
-//'coen.klabbers@gmail.com';
-//'desktopmorris@outlook.com';
 $subject = "Activeer uw Eenmaal Andermaal account";
 $headers = "From: noreply@EenmaalAndermaal.com\r\n"; 
 $headers .= "MIME-Version: 1.0\r\n"; 
