@@ -1,6 +1,5 @@
 <?php
  require("connectionDatabaseScript.php");
- include("rickroll.php");
  function fieldExist($value, $rowname, $tablename){
     //connectionDatabase();
     global $dbh;
@@ -15,4 +14,3 @@
         return false;
     }
  }
- rickRoll();
