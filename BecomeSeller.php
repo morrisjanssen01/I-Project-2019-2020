@@ -1,7 +1,10 @@
 <?php
 include 'helpers/redirect.php';
 if(isset($_SESSION['verkoper'])){
-    header('location: https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=22')
+    header('location: https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=22');
+}
+else if (!isset($_SESSION['username'])){
+    header('location: login.php');
 }
 ?>
 <!DOCTYPE html>
