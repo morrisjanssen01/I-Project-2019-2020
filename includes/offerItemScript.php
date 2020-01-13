@@ -67,10 +67,10 @@ $query = "INSERT INTO voorwerpen(titel, beschrijving, startprijs, betalingswijze
 		$sql = $dbh->prepare ( $query );
         $sql->execute();
         
-$query = "INSERT INTO bestanden(filenaam)
+$querystring = "INSERT INTO bestanden(filenaam)
             VALUES(" . $target_file . ")";
-            $sql = $dbh->prepare ( $query );
-            $sql->execute();
+            $sql2 = $dbh->prepare ( $querystring );
+            $sql2->execute();
             
 		redirect('index', 'offerSuccess');
 ?>

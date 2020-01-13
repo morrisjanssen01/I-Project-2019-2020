@@ -79,7 +79,7 @@
                                 <div class="form-field">
                                     <button class="btn-large warmSand waves-effect waves-warmSand darken-2 right" name="submit" id="submit">Bieden</button>
                                 </div>
-                            </form>';};?><br><br><br><br><br><br><br><br><br><br>
+                            </form>';} else{echo '<p>U moet ingelogd zijn om te kunnen bieden op deze veiling</p>';};?><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
                     <div class="col s4">
