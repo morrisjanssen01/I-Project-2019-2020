@@ -65,6 +65,12 @@ if(!isset($sending_instruction)){
 $query = "INSERT INTO voorwerpen(titel, beschrijving, startprijs, betalingswijze, betalingsinstructie, plaatsnaam, land, looptijd, verzendkosten, verzendinstructie, verkoper)
             VALUES(".$title.", ".$description.", ".$startprijs.", ".$payment_method.", ".$payment_instruction.", ".$city.", ".$country.", ".$runtime.", ".$sending_price.", ".$sending_instruction.", ".$user.")";
 		$sql = $dbh->prepare ( $query );
-		$sql->execute();
+        $sql->execute();
+        
+$querystring = "INSERT INTO bestanden(filenaam)
+            VALUES(" . $target_file . ")";
+            $sql2 = $dbh->prepare ( $querystring );
+            $sql2->execute();
+            
 		redirect('index', 'offerSuccess');
 ?>

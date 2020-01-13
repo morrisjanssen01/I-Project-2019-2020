@@ -4,8 +4,10 @@ include 'helpers/connectionDatabaseScript.php';
 if(isset($_SESSION['username'])){
     global $dbh;
     global $seller;
+    $querystring = "SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '" . $_SESSION['username'] . "'";
     $user = "'".$_SESSION['username']."'";
-    $sql = $dbh->prepare("SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '".$_SESSION['username']."'");
+    $sql = $dbh->prepare($querystring);
+    var_dump($querystring);
     $sql->execute();
     $result = $sql->fetch(PDO::FETCH_ASSOC);
     if($result == 0){
