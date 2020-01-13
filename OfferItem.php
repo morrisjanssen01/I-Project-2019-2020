@@ -1,7 +1,7 @@
 <?php
 include 'helpers/redirect.php';
 include 'helpers/connectionDatabaseScript.php';
-if(isset($_SESSION['username'])){
+/*if(isset($_SESSION['username'])){
     global $dbh;
     global $seller;
     $querystring = "SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '" . $_SESSION['username'] . "'";
@@ -18,13 +18,13 @@ if(isset($_SESSION['username'])){
     if($result == 0){
         header("Location: BecomeSeller.php?msg=noSeller");
     }
-}
+} */
 
-else if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['username'])){
     header("Location: login.php?msg=loggedOut");
 }
-else if(!isset($_SESSION['verkoper'])){
-    header("location: BecomeSeller.php?msg=noVerkoper");
+else if{
+    header("Location: BecomeSeller.php?msg=noSeller");
 }
 
 function loadForm(){
