@@ -1,6 +1,6 @@
 <?php
     require('redirect.php');
-    require('antiSQLinjectionScript');
+    require('antiSQLinjectionScript.php');
     if($_POST['questionList'] == 'option1' && isset($_POST['submitCredit'])){
         if(!SpecialCharacters($_POST['creditcard'])){
             try{
