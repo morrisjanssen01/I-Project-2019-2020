@@ -10,7 +10,7 @@ if(isset($_SESSION['username'])){
     $sql->execute();
     try{
         $result = $sql->fetch(PDO::FETCH_ASSOC);
-        if($result = 0){
+        if($result == false){
             var_dump($result);
             header("Location: BecomeSeller.php?msg=noSeller");
         }
