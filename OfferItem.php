@@ -23,7 +23,7 @@ include 'helpers/connectionDatabaseScript.php';
 if(!isset($_SESSION['username'])){
     header("Location: login.php?msg=loggedOut");
 }
-else if{
+else if(!isset($_SESSION['verkoper'])){
     header("Location: BecomeSeller.php?msg=noSeller");
 }
 
@@ -38,20 +38,19 @@ function loadForm(){
                 <div class="row"> 
                     <div class="col s6 form-field">
                         <label for="description">beschrijving*</label>
-                        <input type="text" name ="description" id="discription" required>
+                        <input type="text" name ="description" id="description" required>
                     </div>
                     <div class="col s6 form-field">
                         <label for="starting_price">startprijs*</label><br>
-                        
-                            <input type="number" name="starting_price" id="starting_price" placeholder="€5.00" required>
-                        
+                        <input type="number" name="starting_price" id="starting_price" placeholder="€5.00" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s6 form-field">
                         <label for="payment_method">betalingswijze*</label>
                         <select name="payment_method" id="payment_method" required>
-                            <option value="Contant" selected>Contant</option>
+                            <option value="NULL" disabled selected>Kies een optie</options>
+                            <option value="Contant">Contant</option>
                             <option value="IDeal">IDeal</option>
                         </select>
                     </div>
@@ -86,7 +85,7 @@ function loadForm(){
                     <select name="runtime" id="runtime" required>
                             <option value="3" selected>3 Dagen</option>
                             <option value="5">5 Dagen</option>
-                            <option value="7">7 Dagen</option>
+                            <option value="7" selected>7 Dagen</option>
                             <option value="10">10 Dagen</option>
                             <option value="12">12 Dagen</option>
                         </select>
@@ -98,7 +97,7 @@ function loadForm(){
                 </div>
                 <label><span>Velden met * zijn verplicht</span></label>
                 <div class="form-field">
-                    <button class="btn-large waves-effect waves-warmSand warmSand darken-2" name="submit" id="submit">Registreer</button>
+                    <button class="btn-large waves-effect waves-warmSand warmSand darken-2" name="submit" id="submit">Plaats Veiling</button>
                 </div>
                 <div class="form-field">
                     <a class="waves-effect waves-warmSand btn-flat">Terug</a>
