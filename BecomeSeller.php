@@ -26,11 +26,11 @@ include 'helpers/redirect.php';
                                     <form action="helpers/becomeSellerScript.php" method="post">
                                         <div class="form-field">
                                             <label for="bank">Bank</label>
-                                            <input type="text" name="bank" id="bank" pattern="[a-z,A-Z]>
+                                            <input type="text" name="bank" id="bank" pattern="[a-z,A-Z\s]{1,50}" required>
                                         </div>
                                         <div class="form-field">
                                             <label for="bankNr">Rekening Nummer</label>
-                                            <input type="text" name="bankNr" id="bankNr" pattern="NL[0-9]{2,2}[A-Z]{4,4}[0-9]{10,10}">
+                                            <input type="text" name="bankNr" id="bankNr" pattern="NL[0-9]{2,2}[A-Z]{4,4}[0-9]{10,10}" required>
                                         </div>
                                         <div class="form-field">
                                             <label for="questionList">Verificatiemethode</label>
@@ -42,7 +42,7 @@ include 'helpers/redirect.php';
                                         <div class="group" id="option1">
                                             <div class="form-field">
                                                 <label for="creditcard">Creditkaart</label>
-                                                <input type="text" name="creditcard" id="creditcard" pattern="[0-9]{13,16}">
+                                                <input type="text" name="creditcard" id="creditcard" pattern="[0-9]{13,16}" >
                                             </div><br>
                                             <div class="form-field">
                                                 <button class="btn-large warmSand darken-2" name="submitCredit" id="submitCredit">Verifieer</button>

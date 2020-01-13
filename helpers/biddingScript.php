@@ -54,6 +54,6 @@ else if(specialCharacters($_GET)){
     exit();
     }
 else{
-    header('location:  ../404.php?');
+    rickRoll();
     exit();
 }
