@@ -12,6 +12,6 @@ function specialCharacters($values){
     }
     return $hasSpecialCharacters;
 }
-rickRoll();
+//rickRoll();
 ?>
 

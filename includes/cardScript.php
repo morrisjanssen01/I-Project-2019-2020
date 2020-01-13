@@ -91,7 +91,14 @@ function loadCardBatch($nCards, $category, $title = ''){
                 <figure style="background-image: url('.$img.'); background-repeat: no-repeat; margin:0; width:100%;">
                     <figcaption>
                         <a style="width: 30%; heigth: 100%;" href="detail.php?detail='.$results[$i]["voorwerpnummer"].'"><p style="font-size: 65%;">'.$results[$i]["titel"].'</p></a>
-                        <h5 style="margin-left: 5px">€'.$results[$i]['startprijs'].'</h5>
+                        <h5 style="margin-left: 5px">€';
+                        if(!empty($hightestBid)){
+                            echo $hightestBid[0]['bod'];
+                        }
+                        else {
+                            echo $results[$i]["startprijs"];
+                        }
+                        echo '</h5>
                         <button class="btn-large coconutMilk black-text waves-effect waves-warmSand modal-trigger" data-target="'.$results[$i]["voorwerpnummer"].'" style="margin: 5px;" target>bied</button>
                     </figcaption>
                 </figure>

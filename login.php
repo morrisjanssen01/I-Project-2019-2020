@@ -18,14 +18,6 @@ if(isset($_SESSION["username"])){
         <div class="wrappper" style="height:100%;">
             <div class="box header">
                 <?php include 'includes/header.php';
-                
-                      if(isset($_SESSION["username"])){
-                        header("Location: https://youtu.be/dQw4w9WgXcQ?t=22");
-                        exit();
-                      }
-                      else{
-                          var_dump($_SESSION["username"]);
-                      } 
                 ?>
             </div>
             <div class="box content">

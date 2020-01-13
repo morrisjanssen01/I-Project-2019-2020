@@ -10,6 +10,11 @@ include 'helpers/redirect.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
+    <?php  if(isset($_GET['msg'])){
+                if($_GET['msg'] == 'true'){
+                    echo '<p>'.$_SESSION['codePost'].'</p>';
+                    }
+            } ?>
         <div class="wrappper" style="height:100%;">
             <div class="box header">
                 <?php include 'includes/header.php'; ?>
