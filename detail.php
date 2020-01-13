@@ -15,19 +15,21 @@
         $voorwerpnummer = $_GET["detail"];
         
         $stmt = $dbh->prepare("SELECT * FROM voorwerpen WHERE voorwerpnummer = :voorwerpnummer");
-       
-        $stmt3 = $dbh->prepare("select Emailadres
-                                from gebruikers
-                                where gebruikersnaam IN (select gebruikersnaam from voorwerpen
-                                where voorwerpnummer = :voorwerpnummer)");
 
         $stmt->execute(array($voorwerpnummer));
         $voorwerp = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(empty($voorwerp)){
+            header('location:  404.php');
+        }
+        else{
+        $stmt3 = $dbh->prepare("select emailadres from gebruikers 
+        inner join voorwerpen on
+        voorwerpen.verkoper=gebruikersnaam
+        where voorwerpnummer = :voorwerpnummer");
 
         $stmt3->execute(array($voorwerpnummer));
         $gebruiker = $stmt3->fetch(PDO::FETCH_ASSOC);
-       
-        
+        }
     }
 
 
@@ -77,7 +79,7 @@
                                 <div class="form-field">
                                     <button class="btn-large warmSand waves-effect waves-warmSand darken-2 right" name="submit" id="submit">Bieden</button>
                                 </div>
-                            </form>';};?><br><br><br><br><br><br><br><br><br><br>
+                            </form>';} else{echo '<p>U moet ingelogd zijn om te kunnen bieden op deze veiling</p>';};?><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
                     <div class="col s4">

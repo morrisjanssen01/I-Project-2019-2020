@@ -32,6 +32,5 @@ $password = 'SA'; */
     }
     catch (PDOException $exception){
         echo "Er ging iets mis met de database. <br>";
-        echo "De melding is {$exception->getMessage()}<br><br>";
     }
 //}

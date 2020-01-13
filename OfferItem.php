@@ -1,25 +1,25 @@
 <?php
 include 'helpers/redirect.php';
-require ('helpers/connectionDatabaseScript.php');
+include 'helpers/connectionDatabaseScript.php';
 if(isset($_SESSION['username'])){
     global $dbh;
+    global $seller;
     $querystring = "SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '" . $_SESSION['username'] . "'";
     $user = "'".$_SESSION['username']."'";
     $sql = $dbh->prepare($querystring);
     var_dump($querystring);
     $sql->execute();
-    try{
-        $result = $sql->fetch(PDO::FETCH_ASSOC);
-        if($result == false){
-            var_dump($result);
-            header("Location: BecomeSeller.php?msg=noSeller");
-        }
+    $result = $sql->fetch(PDO::FETCH_ASSOC);
+    if($result == 0){
+        $seller = false;
+    }else if($result == 1){
+        $seller = true;
     }
-    catch(PDOException $Exception){
-        echo "Er ging iets mis met de database. <br>";
-        echo "De melding is {$Exception->getMessage()}<br><br>";
+    if($result == 0){
+        header("Location: BecomeSeller.php?msg=noSeller");
     }
 }
+
 else if(!isset($_SESSION['username'])){
     header("Location: login.php?msg=loggedOut");
 }
@@ -27,7 +27,6 @@ else if(!isset($_SESSION['username'])){
 
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){
-        var_dump($result);
         echo'
             <form action="includes/offerItemScript.php" enctype="multipart/form-data" method="post">       
                 <div class="form-field">
@@ -41,15 +40,18 @@ function loadForm(){
                     </div>
                     <div class="col s6 form-field">
                         <label for="starting_price">startprijs*</label><br>
-                        <div class="dollar">
-                            <input type="number" name="starting_price" id="starting_price" required>
-                        </div>
+                        
+                            <input type="number" name="starting_price" id="starting_price" placeholder="€5.00" required>
+                        
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s6 form-field">
                         <label for="payment_method">betalingswijze*</label>
-                        <input type="text" name="payment_method" id="payment_method" required>
+                        <select name="payment_method" id="payment_method" required>
+                            <option value="Contant" selected>Contant</option>
+                            <option value="IDeal">IDeal</option>
+                        </select>
                     </div>
                     <div class="col s6 form-field">
                         <label for="payment_instruction">betalingsinstructie*</label>
@@ -79,7 +81,13 @@ function loadForm(){
                 <div class="row">
                     <div class="col s6 form-field">
                     <label for="runtime">looptijd*</label>
-                    <input type="number" name="runtime" id="runtime" required>
+                    <select name="runtime" id="runtime" required>
+                            <option value="3" selected>3 Dagen</option>
+                            <option value="5">5 Dagen</option>
+                            <option value="7">7 Dagen</option>
+                            <option value="10">10 Dagen</option>
+                            <option value="12">12 Dagen</option>
+                        </select>
                     </div> <br>
                 <div class="col s6 form-field">
                     <label for="image">afbeelding*</label>
@@ -110,8 +118,7 @@ function loadForm(){
     <body>
         <div class="wrapper">
             <div class="box header">    
-                <?php include 'includes/header.php'; 
-                //print_r($_SESSION);?> 
+                <?php include 'includes/header.php';?> 
             </div>
             <div class="box content">
                 <!-- Registreer stuk van de site --> 
@@ -138,6 +145,9 @@ function loadForm(){
             <script>
                 $(document).ready(function(){
                     $('.sidenav').sidenav();
+                });
+                $(document).ready(function(){
+                    $('select').formSelect();
                 });
                 // Vragen knop
                 $(document).ready(function(){
