@@ -48,7 +48,10 @@ function loadForm(){
                 <div class="row">
                     <div class="col s6 form-field">
                         <label for="payment_method">betalingswijze*</label>
-                        <input type="text" name="payment_method" id="payment_method" required>
+                        <select name="payment_method" id="payment_method" required>
+                            <option value="Contant" selected>Contant</option>
+                            <option value="IDeal">IDeal</option>
+                        </select>
                     </div>
                     <div class="col s6 form-field">
                         <label for="payment_instruction">betalingsinstructie*</label>
@@ -78,7 +81,13 @@ function loadForm(){
                 <div class="row">
                     <div class="col s6 form-field">
                     <label for="runtime">looptijd*</label>
-                    <input type="number" name="runtime" id="runtime" required>
+                    <select name="runtime" id="runtime" required>
+                            <option value="3" selected>3 Dagen</option>
+                            <option value="5">5 Dagen</option>
+                            <option value="7">7 Dagen</option>
+                            <option value="10">10 Dagen</option>
+                            <option value="12">12 Dagen</option>
+                        </select>
                     </div> <br>
                 <div class="col s6 form-field">
                     <label for="image">afbeelding*</label>
@@ -136,6 +145,9 @@ function loadForm(){
             <script>
                 $(document).ready(function(){
                     $('.sidenav').sidenav();
+                });
+                $(document).ready(function(){
+                    $('select').formSelect();
                 });
                 // Vragen knop
                 $(document).ready(function(){

@@ -51,3 +51,6 @@ git push origin <branch>
 
 #### Git workflow
 ![Image of workflow](http://www.sebastianthoss.de/assets/img/git-workflows-and-best-practices/bs-14-slides-005.jpg)
+
+#### Verkoper
+* Bij het worden van een verkoper wordt bij het versturen van de post op dit moment een variabele in een sessie gedumpt voor de verificatiecode.

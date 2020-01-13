@@ -1,7 +1,6 @@
 <?php
 require '../helpers/connectiondatabasescript.php';
 require '../helpers/redirect.php';
-session_start();
 
 $target_dir = "../pics/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -67,8 +66,9 @@ $query = "INSERT INTO voorwerpen(titel, beschrijving, startprijs, betalingswijze
 		$sql = $dbh->prepare ( $query );
         $sql->execute();
         
+        $bestand = "'".$target_file."'";
 $querystring = "INSERT INTO bestanden(filenaam)
-            VALUES(" . $target_file . ")";
+            VALUES(" . $bestand . ")";
             $sql2 = $dbh->prepare ( $querystring );
             $sql2->execute();
             

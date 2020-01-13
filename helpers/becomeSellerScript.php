@@ -1,6 +1,7 @@
 <?php
     require('redirect.php');
     require('antiSQLinjectionScript.php');
+    if(isset($_POST['submitPost']) || isset($_POST['submitCredit'])){
     if($_POST['questionList'] == 'option1' && isset($_POST['submitCredit'])){
         if(!SpecialCharacters($_POST['creditcard'])){
             try{
@@ -40,6 +41,7 @@
             }
         }
     }
+}
     else{
       rickRoll();
     }
