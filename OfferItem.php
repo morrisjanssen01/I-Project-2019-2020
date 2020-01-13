@@ -1,23 +1,23 @@
 <?php
 include 'helpers/redirect.php';
-require ('helpers/connectionDatabaseScript.php');
+include 'helpers/connectionDatabaseScript.php';
 if(isset($_SESSION['username'])){
     global $dbh;
+    global $seller;
     $user = "'".$_SESSION['username']."'";
     $sql = $dbh->prepare("SELECT verkoper FROM Gebruikers WHERE gebruikersnaam = '".$_SESSION['username']."'");
     $sql->execute();
-    try{
-        $result = $sql->fetch(PDO::FETCH_ASSOC);
-        if($result = 0){
-            var_dump($result);
-            header("Location: BecomeSeller.php?msg=noSeller");
-        }
+    $result = $sql->fetch(PDO::FETCH_ASSOC);
+    if($result == 0){
+        $seller = false;
+    }else if($result == 1){
+        $seller = true;
     }
-    catch(PDOException $Exception){
-        echo "Er ging iets mis met de database. <br>";
-        echo "De melding is {$Exception->getMessage()}<br><br>";
+    if($result == 0){
+        header("Location: BecomeSeller.php?msg=noSeller");
     }
 }
+
 else if(!isset($_SESSION['username'])){
     header("Location: login.php?msg=loggedOut");
 }
@@ -25,7 +25,6 @@ else if(!isset($_SESSION['username'])){
 
 function loadForm(){
     if(!isset($_SESSION["prevPost"])){
-        var_dump($result);
         echo'
             <form action="includes/offerItemScript.php" enctype="multipart/form-data" method="post">       
                 <div class="form-field">
@@ -39,9 +38,9 @@ function loadForm(){
                     </div>
                     <div class="col s6 form-field">
                         <label for="starting_price">startprijs*</label><br>
-                        <div class="dollar">
-                            <input type="number" name="starting_price" id="starting_price" required>
-                        </div>
+                        
+                            <input type="number" name="starting_price" id="starting_price" placeholder="€5.00" required>
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -108,8 +107,7 @@ function loadForm(){
     <body>
         <div class="wrapper">
             <div class="box header">    
-                <?php include 'includes/header.php'; 
-                //print_r($_SESSION);?> 
+                <?php include 'includes/header.php';?> 
             </div>
             <div class="box content">
                 <!-- Registreer stuk van de site --> 
