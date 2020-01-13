@@ -81,6 +81,9 @@ else{
                         }
                     }
                 }
+                else{
+                    rickRoll();
+                }
             }
             catch (PDOException $e) {
                 echo $e;

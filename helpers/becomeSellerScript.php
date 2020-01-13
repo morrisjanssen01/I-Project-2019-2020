@@ -2,8 +2,11 @@
     require('redirect.php');
     require('antiSQLinjectionScript.php');
     require('connectionDatabaseScript.php');
-    if(isset($_POST['questionList']) && $_POST['questionList'] == 'option1' && isset($_POST['submitCredit'])){
-        if(empty($_POST['creditcar]d'])){
+    if(!isset($_POST['submitCredit']) || !isset($_POST['submitPost'])){
+        rickRoll();
+    }
+    else if(isset($_POST['questionList']) && $_POST['questionList'] == 'option1' && isset($_POST['submitCredit'])){
+        if(empty($_POST['creditcard'])){
             redirect('becomeSeller', 'credit');
         }
         else if(!SpecialCharacters($_POST['creditcard'])){
@@ -26,7 +29,7 @@
 
         }
     }
-    else if($_SESSION['questionList'] == 'option2' && $_GET['codeSent'] == true && !isset($_POST['questionList'])){
+    else if(isset($_GET['codeSent']) && $_SESSION['questionList'] == 'option2' && $_GET['codeSent'] == true && !isset($_POST['questionList'])){
         try{
         var_dump($_SESSION);
         global $dbh;
