@@ -23,7 +23,7 @@ include 'helpers/connectionDatabaseScript.php';
 if(!isset($_SESSION['username'])){
     header("Location: login.php?msg=loggedOut");
 }
-else if{
+else {
     header("Location: BecomeSeller.php?msg=noSeller");
 }
 
