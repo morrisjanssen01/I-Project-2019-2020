@@ -66,7 +66,7 @@ $query = "INSERT INTO voorwerpen(titel, beschrijving, startprijs, betalingswijze
 		$sql = $dbh->prepare ( $query );
         $sql->execute();
         
-        $bestand = "'".$target_file."'";
+        $bestand = basename($_FILES["image"]["name"]);
 $querystring = "INSERT INTO bestanden(filenaam)
             VALUES(" . $bestand . ")";
             $sql2 = $dbh->prepare ( $querystring );
