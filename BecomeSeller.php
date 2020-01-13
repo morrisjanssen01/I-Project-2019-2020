@@ -1,5 +1,8 @@
 <?php
 include 'helpers/redirect.php';
+if(isset($_SESSION['verkoper'])){
+    header('location: https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=22');
+}
 ?>
 <!DOCTYPE html>
 <html>

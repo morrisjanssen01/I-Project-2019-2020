@@ -23,7 +23,7 @@ if(isset($_SESSION['username'])){
 else if(!isset($_SESSION['username'])){
     header("Location: login.php?msg=loggedOut");
 }
-else if(isset($_SESSION['verkoper'])){
+else if(!isset($_SESSION['verkoper'])){
     header("location: BecomeSeller.php?msg=noVerkoper");
 }
 
