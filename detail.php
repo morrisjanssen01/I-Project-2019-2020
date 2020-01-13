@@ -15,19 +15,21 @@
         $voorwerpnummer = $_GET["detail"];
         
         $stmt = $dbh->prepare("SELECT * FROM voorwerpen WHERE voorwerpnummer = :voorwerpnummer");
-       
-        $stmt3 = $dbh->prepare("select Emailadres
-                                from gebruikers
-                                where gebruikersnaam IN (select gebruikersnaam from voorwerpen
-                                where voorwerpnummer = :voorwerpnummer)");
 
         $stmt->execute(array($voorwerpnummer));
         $voorwerp = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(empty($voorwerp)){
+            header('location:  404.php');
+        }
+        else{
+        $stmt3 = $dbh->prepare("select emailadres from gebruikers 
+        inner join voorwerpen on
+        voorwerpen.verkoper=gebruikersnaam
+        where voorwerpnummer = :voorwerpnummer");
 
         $stmt3->execute(array($voorwerpnummer));
         $gebruiker = $stmt3->fetch(PDO::FETCH_ASSOC);
-       
-        
+        }
     }
 
 
