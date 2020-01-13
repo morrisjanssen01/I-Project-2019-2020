@@ -32,12 +32,13 @@ if($imageFileType != "jpg" && $imageFileType != "jpeg" ) {
 } 
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
+    redirect('index', 'notUploaded');
 // if everything is ok, try to upload file
 } else {
-    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) { 
+
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        redirect('index', 'uploadError');
     }
 }
 // vanaf hier gaan we de data in de database zetten.
