@@ -121,7 +121,7 @@ function loadCardBatch($nCards, $category, $title = ''){
                                         <p>€</p>
                                     </div>
                                     <div class="col s11" style="padding:0;">
-                                        <input type="number" name="bod" id="bod" placeholder="5.00">
+                                        <input type="number" step="0.1" name="bod" id="bod" placeholder="5.00">
                                     </div>
                                 </div>                            
                             </div>

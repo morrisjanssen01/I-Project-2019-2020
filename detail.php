@@ -74,7 +74,7 @@
                             <?php if(isset($_SESSION['username'])){echo '<form action="helpers/biddingScript.php?detail='.$voorwerpnummer.'" method="POST">
                                 <div class="form-field">
                                     <label for="bod">Bod</label>
-                                    <input type="number" name="bod" id="bod" placeholder="5.00">
+                                    <input type="number" step="0.01" name="bod" id="bod" placeholder="5.00">
                                 </div>
                                 <div class="form-field">
                                     <button class="btn-large warmSand waves-effect waves-warmSand darken-2 right" name="submit" id="submit">Bieden</button>

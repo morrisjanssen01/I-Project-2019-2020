@@ -2,7 +2,7 @@
     require('redirect.php');
     require('antiSQLinjectionScript.php');
     require('connectionDatabaseScript.php');
-    if(!isset($_POST['submitCredit']) || !isset($_POST['submitPost']) || !isset($_SESSION['verkoper'])){
+    if(!isset($_POST['submitCredit']) || !isset($_POST['submitPost']) || isset($_SESSION['verkoper'])){
         rickRoll();
     }
     else if(isset($_POST['questionList']) && $_POST['questionList'] == 'option1' && isset($_POST['submitCredit'])){
