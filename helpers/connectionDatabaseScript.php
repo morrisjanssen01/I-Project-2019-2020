@@ -25,7 +25,7 @@ $hostname = 'localhost';
 $dbname = 'EenmaalAndermaal2019';
 $username = 'sa';
 $password = 'SA'; */
-    
+        ini_set('max_execution_time', 900);
         global $dbh;
         $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname;ConnectionPooling=0", "$username", "$password");
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

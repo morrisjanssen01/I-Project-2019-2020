@@ -93,6 +93,9 @@
         else if($_GET['msg'] == 'logOutSuccess'){
             popupMessage('U bent succesvol uitgelogd!');
         }
+        else if($_GET['msg'] == 'offerSuccess'){
+            popupMessage('Veiling Geplaatst!');
+        }
         ?>
     </body>
 </html>
