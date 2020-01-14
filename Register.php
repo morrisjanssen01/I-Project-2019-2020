@@ -265,19 +265,19 @@ function loadForm(){
             </script>
             <?php
             if($_GET['msg'] == 'emptyFields'){
-                popupMessage('Vul alle velden in A.U.B.');
+                popupMessage('Vul alle velden in alstublieft!');
             }
             else if($_GET['msg'] == 'noVerification'){
-                popupMessage('Vul de verificatiecode correct in');
+                popupMessage('Vul de verificatiecode correct in!');
             }
             else if($_GET['msg'] == 'specialChars'){
-                popupMessage('Onrechtmatig gebruik van speciale tekens');
+                popupMessage('Onrechtmatig gebruik van speciale tekens!');
             }
             else if($_GET['msg'] == 'noRepeatPass'){
-                popupMessage('Herhalend wachtwoord klopt niet');
+                popupMessage('Herhalend wachtwoord klopt niet!');
             }
             else if($_GET['msg'] == 'redundantUsername'){
-                popupMessage('Deze gebruikersnaam is al in gebruik');
+                popupMessage('Deze gebruikersnaam is al in gebruik!');
             }
             ?>
         </div>

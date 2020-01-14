@@ -3,7 +3,7 @@ require ("antiSQLinjectionScript.php");
 require ("redirect.php");
 require ("connectionDatabaseScript.php");
 
-session_start();
+
 
 if(isset($_POST["submit"])){
    if(!isset($_SESSION["username"])){

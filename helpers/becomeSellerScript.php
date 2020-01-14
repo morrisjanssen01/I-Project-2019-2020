@@ -2,25 +2,27 @@
     require('redirect.php');
     require('antiSQLinjectionScript.php');
     require('connectionDatabaseScript.php');
-    if(!isset($_POST['submitCredit']) || !isset($_POST['submitPost']) || isset($_SESSION['verkoper'])){
+    if((!isset($_POST['submitCredit']) && !isset($_POST['submitPost'])) || isset($_SESSION['verkoper'])){
         rickRoll();
     }
     else if(isset($_POST['questionList']) && $_POST['questionList'] == 'option1' && isset($_POST['submitCredit'])){
         if(empty($_POST['creditcard'])){
-            redirect('becomeSeller', 'credit');
+            redirect('becomeSeller', 'noCredit');
         }
-        else if(!SpecialCharacters($_POST['creditcard'])){
+        else if(!SpecialCharacters($_POST)){
             try{
             global $dbh;
-            $stmt = 'update gebruikers set verkoper = 1 where gebruikers = '.$_SESSION["username"];
+            $stmt = "update gebruikers set verkoper = 1 where gebruikersnaam = '".$_SESSION["username"]."'";
             $query = $dbh->prepare($stmt);
             $query -> execute();
 
-            $stmt =  "INSERT INTO verkopers (gebruikersnaam, bank, bankrekening, controleoptie, creditcardnumber)
-                       VALUES(".$_SESSION['username'].", :bank, :bankrekening, :optie, :creditcard)";
+            $stmt =  "INSERT INTO verkopers (gebruikersnaam, bank, bankrekening, controleoptie, creditcardnummer)
+                       VALUES('".$_SESSION['username']."', :bank, :bankrekening, :optie, :creditcard)";
             $query = $dbh->prepare($stmt);
             $query -> execute(array(':bank'=> $_POST['bank'], ':bankrekening' => $_POST['bankNr'], ':optie' => $_POST['questionList'], ':creditcard' => $_POST['creditcard']));
-            redirect('index', 'seller');
+            session_unset();
+            session_destroy();
+            redirect('login', 'successSeller');
             }
             catch (PDOException $e) {
                 echo $e;
@@ -41,7 +43,9 @@
                    Values('".$_SESSION['username']."', :bank, :bankrekening, :optie)";           
         $query = $dbh->prepare($stmt);
         $query -> execute(array(':bank' => $_SESSION['bank'], ':bankrekening' => $_SESSION['bankNr'], ':optie' => $_SESSION['questionList']));
-        redirect('index', 'seller');
+        session_unset();
+        session_destroy();
+        redirect('login', 'successSeller');
         }
         catch (PDOException $e) {
             echo $e;

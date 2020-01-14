@@ -22,7 +22,7 @@ if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
 } 
-if ($_FILES["image"]["size"] > 500000) {
+if ($_FILES["image"]["size"] > 50000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 } 
@@ -32,7 +32,7 @@ if($imageFileType != "jpg" && $imageFileType != "jpeg" ) {
 } 
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
-    redirect('index', 'notUploaded');
+    //redirect('index', 'notUploaded');
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) { 
@@ -51,7 +51,7 @@ $payment_instruction ="'".$_POST['payment_instruction']."'";
 $city="'".$_POST['place']."'";
 $country="'".$_POST['country']."'";
 $runtime=$_POST['runtime'];
-$sending_price=$_POST['sending_cost'];
+$sending_price=floatval($_POST['sending_cost']);
 $sending_instruction="'".$_POST['sending_instruction']."'";
 $user="'".$_SESSION['username']."'";
 

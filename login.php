@@ -67,19 +67,22 @@ if(isset($_SESSION["username"])){
             </script>
             <?php
                 if($_GET['msg'] == 'emptyUidPass'){
-                    popupMessage('Gebruikersnaam en/of wachtwoord niet ingevuld');
+                    popupMessage('Gebruikersnaam en/of wachtwoord niet ingevuld!');
                 }
                 else if($_GET['msg'] == 'specialChars'){
-                    popupMessage('Onrechtmatig gebruik van speciale tekens');
+                    popupMessage('Onrechtmatig gebruik van speciale tekens!');
                 }
                 else if($_GET['msg'] == 'nonExisting'){
-                    popupMessage('Gebruiker bestaat niet');
+                    popupMessage('Gebruiker bestaat niet!');
                 }
                 else if($_GET['msg'] == 'wrongPass'){
-                    popupMessage('Verkeerd wachtwoord. Probeer het opnieuw');
+                    popupMessage('Verkeerd wachtwoord. Probeer het opnieuw!');
                 }
                 else if($_GET['msg'] == 'loggedOut'){
-                    popupMessage('Log in om deze actie voort te zetten');
+                    popupMessage('Log in om deze actie voort te zetten!');
+                }
+                else if($_GET['msg'] == 'successSeller'){
+                    popupMessage('Verificatie Geslaagd. Log opnieuw in alstublieft!');
                 }
             ?>
         </div>
