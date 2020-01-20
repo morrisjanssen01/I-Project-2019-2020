@@ -29,6 +29,8 @@ function loadCardBatch($nCards, $category, $title = ''){
                     where voorwerpnummer IN (select voorwerpnummer 
                                             from voorwerpenInRubrieken 
                                              where RubriekOpLaagsteNiveau IN (select rubrieknummer from rubrieken where rubrieknaam = '$category')) AND veilingGesloten = 0";
+    
+    $sqlNieuw = "select top $nCards * from voorwerpen order by voorwerpnummer desc";
 
     $sql = '';
 
@@ -41,6 +43,9 @@ function loadCardBatch($nCards, $category, $title = ''){
     }
     else if($category == 'koopjes'){
         $sql = $sqlKoopjes;
+    }
+    else if($category == 'nieuw'){
+        $sql = $sqlNieuw;
     }
     else{
         $sql = $sqlrubrieken;

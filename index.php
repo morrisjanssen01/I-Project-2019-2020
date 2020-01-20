@@ -17,10 +17,10 @@
             </div>
             <div class="box content">
                 <div class="carousel" style="height:500px;">
+                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Auto's banner.jpg" alt="Auto's"></a>
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Tech banner.jpg" alt="Technologie"></a>
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Mode banner.jpg" alt="Mode"></a>
                     <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Interieur banner.jpg" alt="Interieur"></a>
-                    <a href="#" class="carousel-item" style="width:75%; height:100%;"><img style="height:100%;" src="images/Auto's banner.jpg" alt="Auto's"></a>
                 </div>
                 <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
@@ -31,7 +31,7 @@
             </div>   
             <div class="container">
                 <div class="card" style="margin-bottom:0; margin-top:0%;">
-                    <?php loadCardBatch(6, 'koopjes', 'Koopjes!');
+                    <?php loadCardBatch(6, 'nieuw', 'Nieuwe artikelen');
 
                     //ja het klopt hier mist een div! niet toevoegen! anders breekt het! danku! ?>
             </div>
