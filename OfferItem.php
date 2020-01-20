@@ -91,8 +91,8 @@ function loadForm(){
                         </select>
                     </div> <br>
                 <div class="col s6 form-field">
-                    <label for="image">afbeelding*</label>
-                    <input type="file" name="image" id="image" required>
+                    <label for="image">afbeelding</label><br>
+                    <input type="file" name="image" id="image">
             </div> <br>
                 </div>
                 <label><span>Velden met * zijn verplicht</span></label>
